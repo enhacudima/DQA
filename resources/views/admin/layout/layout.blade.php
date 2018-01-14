@@ -11,6 +11,9 @@
     <link href="{{ asset('admin/css/datepicker3.css')}}" rel="stylesheet">
     <link href="{{ asset('admin/css/styles.css')}}" rel="stylesheet">
 
+    <script src="{{ asset('admin/js/jquery-1.11.1.min.js')}}"></script>
+    <script src="{{ asset('admin/js/jquery-3.2.0.min.js')}}"></script>
+
     <!-- Latest compiled and minified CSS -->
     <link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -51,7 +54,7 @@
         }
         .mega-dropdown-menu .dropdown-header {
             font-size: 18px;
-            color: #ff3546;
+            color: #30a5ff;
             padding: 5px 60px 5px 5px;
             line-height: 30px;
         }
@@ -124,75 +127,61 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Menu principal"><svg class="glyph stroked desktop"><use xlink:href="#stroked-desktop"></use></svg>Menu</a>
 
                     <ul class="dropdown-menu mega-dropdown-menu row">
-                        <li class="col-sm-3">
+                        <li class="col-sm-1">
                             <ul>
-                                <li class="dropdown-header">New in Stores</li>
-                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="item active">
-                                            <a href="#"><img src="http://placehold.it/254x150/3498db/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 1"></a>
-                                            <h4><small>Summer dress floral prints</small></h4>
-                                            <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
-                                        </div><!-- End Item -->
-    <div class="item">
-        <a href="#"><img src="http://placehold.it/254x150/ef5e55/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 2"></a>
-        <h4><small>Gold sandals with shiny touch</small></h4>
-        <button class="btn btn-primary" type="button">9,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
-    </div><!-- End Item -->
-    <div class="item">
-        <a href="#"><img src="http://placehold.it/254x150/2ecc71/f5f5f5/&text=New+Collection" class="img-responsive" alt="product 3"></a>
-        <h4><small>Denin jacket stamped</small></h4>
-        <button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>
-    </div><!-- End Item -->
-    </div><!-- End Carousel Inner -->
-    </div><!-- /.carousel -->
-    <li class="divider"></li>
-    <li><a href="#">View all Collection <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
-    </ul>
+                                <li class="dropdown-header">Dashboard</li>
+
+                            </ul>
+                            <hr>
     </li>
-    <li class="col-sm-3">
+    <li class="col-sm-2">
         <ul>
-            <li class="dropdown-header">Dresses</li>
-            <li><a href="#">Unique Features</a></li>
-            <li><a href="#">Image Responsive</a></li>
-            <li><a href="#">Auto Carousel</a></li>
-            <li><a href="#">Newsletter Form</a></li>
-            <li><a href="#">Four columns</a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Tops</li>
-            <li><a href="#">Good Typography</a></li>
+            <li class="dropdown-header">Resumo geral</li>
+            <hr>
         </ul>
     </li>
-    <li class="col-sm-3">
+    <li class="col-sm-2">
         <ul>
-            <li class="dropdown-header">Jackets</li>
-            <li><a href="#">Easy to customize</a></li>
-            <li><a href="#">Glyphicons</a></li>
-            <li><a href="#">Pull Right Elements</a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Pants</li>
-            <li><a href="#">Coloured Headers</a></li>
-            <li><a href="#">Primary Buttons & Default</a></li>
-            <li><a href="#">Calls to action</a></li>
+            <li class="dropdown-header">Quetionario Resumo</li>
+            <hr>
         </ul>
     </li>
-    <li class="col-sm-3">
+
+
+
+    <li class="col-sm-2">
         <ul>
-            <li class="dropdown-header">Accessories</li>
-            <li><a href="#">Default Navbar</a></li>
-            <li><a href="#">Lovely Fonts</a></li>
-            <li><a href="#">Responsive Dropdown </a></li>
-            <li class="divider"></li>
-            <li class="dropdown-header">Newsletter</li>
-            <form class="form" role="form">
-                <div class="form-group">
-                    <label class="sr-only" for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email">
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-            </form>
+            <li class="dropdown-header">Recontagem stock</li>
+            <hr>
+            <li><a href="{{route('entrada.index')}}">Entradas</a></li>
+            <li><a href="{{route('saida.index')}}">Saidas</a></li>
+            <li><a href="{{route('contagem.index')}}">Contagem Fisica</a></li>
+
         </ul>
     </li>
+    <li class="col-sm-2">
+        <ul>
+            <li class="dropdown-header">Questionario Stock</li>
+            <hr>
+            <li><a href="{{route('questionario.index')}}">Questionario</a></li>
+        </ul>
+    </li>
+
+     <li class="col-sm-2">
+        <ul>
+            <li class="dropdown-header">Recontagem</li>
+            <hr>
+        </ul>
+    </li>
+     <li class="col-sm-1">
+        <ul>
+            <li class="dropdown-header">Usuarios</li>
+            <hr>
+        </ul>
+    </li>
+
+
+
     </ul>
 
     </li>

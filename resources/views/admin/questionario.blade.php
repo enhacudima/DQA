@@ -17,7 +17,7 @@
             margin-right: 20px;
             white-space: pre-wrap;
         }
-      
+
     </style>
 <div class="col-md-10 col-md-offset-1">
     <div class="row bg-title">

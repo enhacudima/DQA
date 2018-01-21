@@ -72,10 +72,10 @@
                                 <div class="panel-group" id="accordion">
 
                                     <div class="panel panel-default">
-                                        <div class="panel-heading">
+                                        <div class="card-header">
                                             <h4 class="panel-title">
                                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th-list">
-                            </span >Cabeçalho</a>
+                                                </span >Cabeçalho</a>
                                             </h4>
                                         </div>
                                         <div id="collapseTwo" class="panel-collapse collapse">

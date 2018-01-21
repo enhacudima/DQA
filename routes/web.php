@@ -32,4 +32,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/questionario', 'QuestionarioController');
     Route::resource('/recontagem', 'RecontagemController');
     Route::resource('/resumo-stock', 'ResumoStockController');
+    Route::resource('/questionario-resumo', 'QuestionarioResumoController');
 });

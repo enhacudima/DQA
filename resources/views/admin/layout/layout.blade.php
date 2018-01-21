@@ -114,13 +114,13 @@
         <ul>
             <li class="dropdown-header">Resumo geral</li>
             <hr>
-            <li <a href="{{route('questionario.index')}}">Geral</a></li>
-            <li <a href="{{route('questionario.index')}}">Stock</a></li>
+            <li> <a href="{{route('questionario.index')}}">Geral</a></li>
+            <li><a href="{{route('questionario.index')}}">Stock</a></li>
         </ul>
     </li>
     <li class="col-sm-2">
         <ul>
-            <li class="dropdown-header">Quetionario Resumo</li>
+            <li class="dropdown-header"><a href="{{route('questionario-resumo.index')}}">Quetionario Resumo</a></li>
             <hr>
         </ul>
     </li>

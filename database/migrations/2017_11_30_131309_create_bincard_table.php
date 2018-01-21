@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEntradasTable extends Migration
+class CreatecontagemTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,21 @@ class CreateEntradasTable extends Migration
      */
     public function up()
     {
-        Schema::create('entradas', function (Blueprint $table) {
+        Schema::create('bincard', function (Blueprint $table) {
+            $table->double('ntrasacao');
+            $table->integer('franquia_id')->references('id')->on('franquias');
+            $table->dateTime('datadqa');
+            $table->dateTime('datainicio');
+            $table->dateTime('datafim');
+
+
             $table->increments('id');
             $table->double('saldo_inicial');
-            $table->double('entradas_bin_card');
-            $table->double('entradas_salesforce');
-            $table->string('mes',20);
+            $table->double('entradas');
+            $table->double('saidas');
+            $table->double('stock_balance');
             $table->text('comentario')->nullable(true);
             $table->boolean('status')->default(1);
-            $table->integer('franquia_id')->references('id')->on('franquias');
             $table->integer('produto_id')->references('id')->on('produtos');
             $table->integer('user_id')->references('id')->on('users');
             $table->timestamps();
@@ -35,6 +41,6 @@ class CreateEntradasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('entradas');
+        Schema::dropIfExists('contagem');
     }
 }

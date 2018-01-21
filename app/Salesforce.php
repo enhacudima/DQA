@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Saida extends Model
+class Salesforce extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,6 +12,6 @@ class Saida extends Model
      * @var array
      */
     protected $fillable = [
-        'quantidade', 'mes', 'comentario', 'user_id', 'produto_id', 'franquia_id'
+        'ntrasacao', 'franquia_id', 'datadqa', 'datainicio', 'datafim', 'saldo_inicial','entradas','saidas','stock_balance','comentario','produto_id','user_id'
     ];
 }

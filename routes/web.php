@@ -25,9 +25,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('/produtos', 'ProdutoController');
     Route::resource('/franquias', 'FranquiaController');
-    Route::resource('/entrada', 'EntradaController');
-    Route::resource('/saida', 'SaidaController');
+    Route::resource('/bincard', 'BincardController');
+    Route::resource('/salesforce', 'SalesforceController');
     Route::resource('/contagem', 'ContagemController');
     Route::resource('/users', 'UserController');
     Route::resource('/questionario', 'QuestionarioController');
+    Route::resource('/recontagem', 'RecontagemController');
+    Route::resource('/resumo-stock', 'ResumoStockController');
 });

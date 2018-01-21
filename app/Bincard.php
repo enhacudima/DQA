@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Entrada extends Model
+class Bincard extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,6 +12,8 @@ class Entrada extends Model
      * @var array
      */
     protected $fillable = [
-        'quantidade', 'mes', 'comentario', 'franquia_id', 'produto_id', 'user_id',
+        'ntrasacao', 'franquia_id', 'datadqa', 'datainicio', 'datafim', 'saldo_inicial','entradas','saidas','stock_balance','comentario','produto_id','user_id'
     ];
 }
+
+

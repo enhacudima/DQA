@@ -109,7 +109,7 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="../recontagem/painel.php">EVIDÊNCIAS <span> PSI MOZ</span></a>
+            <a class="navbar-brand" href="#">DQA <span> PSI MOZ</span></a>
             <ul class="user-menu">
                 <li class="dropdown pull-right">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> {{ Auth::user()->name }} <span class="caret"></span></a>
@@ -138,6 +138,8 @@
         <ul>
             <li class="dropdown-header">Resumo geral</li>
             <hr>
+            <li <a href="{{route('questionario.index')}}">Geral</a></li>
+            <li <a href="{{route('questionario.index')}}">Stock</a></li>
         </ul>
     </li>
     <li class="col-sm-2">
@@ -153,8 +155,8 @@
         <ul>
             <li class="dropdown-header">Recontagem stock</li>
             <hr>
-            <li><a href="{{route('entrada.index')}}">Entradas</a></li>
-            <li><a href="{{route('saida.index')}}">Saidas</a></li>
+            <li><a href="{{route('bincard.index')}}">Bin Card</a></li>
+            <li><a href="{{route('salesforce.index')}}">Salesforce</a></li>
             <li><a href="{{route('contagem.index')}}">Contagem Fisica</a></li>
 
         </ul>
@@ -171,12 +173,14 @@
         <ul>
             <li class="dropdown-header">Recontagem</li>
             <hr>
+            <li><a href="{{route('recontagem.index')}}">Recontagem</a></li>
         </ul>
     </li>
      <li class="col-sm-1">
         <ul>
             <li class="dropdown-header">Usuarios</li>
             <hr>
+            <li href="{{route('questionario.index')}}">Adicionar</li>
         </ul>
     </li>
 

@@ -42,6 +42,8 @@
                         <!--User ID-->
                         <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
 
+                        @include('admin.cabecalho')
+
                     <div class="form-group">
                         <table  class="table table-bordered table-hover table-sortable col-md-12">
                             <thead>

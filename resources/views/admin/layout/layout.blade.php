@@ -25,7 +25,8 @@
     <script src="{{ asset('admin/js/respond.min.js')}}"></script>
     <![endif]-->
 
-    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <!--ACTUALIZACAO DO BOOTSTRAP-->
     <!--
@@ -71,6 +72,9 @@
             background: #fff;
         }
 
+        .panel-title>a:hover{
+            text-decoration: none;
+        }
     </style>
 </head>
 <boby>
@@ -90,11 +94,9 @@
                 <li class="dropdown pull-right">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> {{ Auth::user()->name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a id="utilizadorLog" href="user.php"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Adicionar Utilizador</a>
-                        </li>
                         <li id="updateU"><a href="../recontagem/userUpdate.php"><svg class="glyph stroked lock"><use xlink:href="#stroked-lock"></use></svg> Mudar Password</a>
                         </li>
-                        <li><a href="../recontagem/"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Sair</a>
+                        <li><a href="{{ route('logout') }}"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Sair</a>
                         </li>
                     </ul>
                 </li>
@@ -120,8 +122,9 @@
     </li>
     <li class="col-sm-2">
         <ul>
-            <li class="dropdown-header"><a href="{{route('questionario-resumo.index')}}">Quetionario Resumo</a></li>
+            <li class="dropdown-header">Quetionario Resumo</li>
             <hr>
+            <li><a href="{{route('questionario-resumo.index')}}">Quetionario</a></li>
         </ul>
     </li>
 
@@ -156,7 +159,7 @@
         <ul>
             <li class="dropdown-header">Usuarios</li>
             <hr>
-            <li href="{{route('questionario.index')}}">Adicionar</li>
+            <li><a href="{{route('users.index')}}">Adicionar</a></li>
         </ul>
     </li>
 

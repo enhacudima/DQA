@@ -38,7 +38,6 @@
 <script src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
 <script src="{{ asset('assets/js/wow.js') }}"></script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
-<script src="{{ asset('assets/contactform/contactform.js') }}"></script>
 
 </body>
 

@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="logo text-center">
                     <a href="{{route('login')}}"><img src="{{ asset('assets/img/logo.png') }}" alt="logo" width="250"></a>
-                    <h2>PSI Moçambique | Logistica</h2>
+                    <h2>PSI Moçambique | DQA</h2>
                 </div>
 
                 <div class="subcription-info text-center" style="margin-top: 50px">

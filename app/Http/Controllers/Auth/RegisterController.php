@@ -22,12 +22,6 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
-    /**
-     * Where to redirect users after registration.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -36,7 +30,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
     }
 
     /**
@@ -65,7 +59,10 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'grupo' => $data['grupo'],
             'password' => bcrypt($data['password']),
         ]);
+
+        return redirect()->route('users.index')->with('message', 'Usuário registado com sucesso!');
     }
 }

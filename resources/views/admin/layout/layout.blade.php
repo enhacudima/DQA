@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>PSI Moz | DQA</title>
 
 
@@ -25,6 +25,15 @@
     <script src="{{ asset('admin/js/respond.min.js')}}"></script>
     <![endif]-->
 
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!--ACTUALIZACAO DO BOOTSTRAP-->
+    <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+-->
     <style>
         .mega-dropdown {
             margin-right: 20px;
@@ -58,46 +67,13 @@
             padding: 5px 60px 5px 5px;
             line-height: 30px;
         }
+        .white-box{
+            background: #fff;
+        }
 
     </style>
-
-
-
-
 </head>
 <boby>
-<br>
-
-
-
-<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
-<style>
-    /* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
-    #map {
-        height: 350px;
-    }
-    #titulo{
-        color: #1285de;
-        font-size: 2em;
-        font-weight: 900;
-        text-transform: uppercase;
-    }
-    #painel-link:hover{
-        text-decoration: none;
-        font-size: 1em;
-        font-weight: 700;
-    }
-    /* Optional: Makes the sample page fill the window. */
-</style>
-
-<div id="wrapper">
-    <div class="overlay"></div>
-
-    @yield('content')
-
-</div>
-
 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
@@ -193,10 +169,10 @@
     <!-- /.container-fluid -->
     </nav>
 
+    <div class="conteiner">
+        @yield('content')
+    </div>
 
-</boby>
-
-</html>
 
 
 <script src="{{ asset('admin/js/jquery-1.11.1.min.js')}}"></script>
@@ -234,4 +210,6 @@
 </script>
 
 
+</boby>
+</html>
 

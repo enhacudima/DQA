@@ -8,8 +8,8 @@ Version 1.0
 
 body {
 	background: #f1f4f7;
-	padding-top: 50px;
 	color: #5f6468;
+	padding-top: 80px;
 }
 
 p {
@@ -87,7 +87,7 @@ h3, h4 {
 }
 
 .navbar-header .navbar-brand {
-	color: #fff;
+	k2color: #fff;
 	font-size: 16px;
 	text-transform: uppercase;
 	font-weight: 500;

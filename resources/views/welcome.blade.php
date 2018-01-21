@@ -1,95 +1,104 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.pag')
 
-        <title>Laravel</title>
+@section('content')
+    <style>
+        .login{
+            background-color: #73a534;
+            border: 2px solid #73a534;
+            color: #FFFFFF;
+            width: 30%;
+            display: block;
+            word-spacing: 1px;
+            outline: none;
+            margin: 0 auto;
+            font-size: 13px;
+            text-transform: uppercase;
+            margin-top: 10px;
+            font-weight: 700;
+            padding: 10px;
+            -webkit-transition: all 0.3s ease-in-out !important;
+            -moz-transition: all 0.3s ease-in-out !important;
+            -ms-transition: all 0.3s ease-in-out !important;
+            -o-transition: all 0.3s ease-in-out !important;
+            transition: all 0.3s ease-in-out !important;
+        }
+    </style>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+    <div class="content">
+        <div class="container wow fadeInUp delay-03s">
+            <div class="row">
+                <div class="logo text-center">
+                    <a href="{{route('login')}}"><img src="{{ asset('assets/img/logo.png') }}" alt="logo" width="250"></a>
+                    <h2>PSI Moçambique | Logistica</h2>
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="subcription-info text-center" style="margin-top: 50px">
+                    <a href="{{route('login')}}" class="login">Login</a>
+                    <p class="sub-p">We Promise to never span you.</p>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+        <!--
+                <section>
+                    <div class="container">
+                        <div class="row bort text-center">
+                            <div class="social">
+                                <ul>
+                                    <li>
+                                        <a href=""><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href=""><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href=""><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 text-center">
+                        <div class="about-title">
+                            <h2>About Us</h2>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium </br>voluptatum deleniti atque corrupti quos dolores e</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp delay-02s">
+                            <div class="img">
+                                <i class="fa fa-refresh"></i>
+                            </div>
+                            <h3 class="abt-hd">Our process</h3>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp delay-04s">
+                            <div class="img">
+                                <i class="fa fa-eye"></i>
+                            </div>
+                            <h3 class="abt-hd">Our Vision</h3>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp delay-06s">
+                            <div class="img">
+                                <i class="fa fa-cogs"></i>
+                            </div>
+                            <h3 class="abt-hd">Our Approach</h3>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp delay-08s">
+                            <div class="img">
+                                <i class="fa fa-dot-circle-o"></i>
+                            </div>
+                            <h3 class="abt-hd">Our Objective</h3>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+@endsection

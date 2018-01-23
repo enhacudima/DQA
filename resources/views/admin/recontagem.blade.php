@@ -24,194 +24,290 @@
         }
         .glyphicon { margin-right:5px; }
 
+        .linha-cin{
+            background: #f9fbe7;
+        }
+
+        .nrPagina{
+            border: 1px solid #30a5ff;
+            box-shadow: inset 0px 0px 0px 1px #30a5ff;
+        }
     </style>
-    <div class="col-md-10 col-md-offset-1">
-        <div class="row bg-title">
-            <div class="col-lg-5">
-                <h4 class="page-title">Recontagem do Livro de Registro</h4> </div>
-        </div>
-        <!-- /.row -->
 
 
-
-                <form class="form-horizontal form-material" method="POST" action="{{ route('recontagem.store')}}">
-                    {{ csrf_field() }}
-
-                        <!--User ID-->
-                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-                        @include('admin.cabecalho')
-
-                    <div class="form-group">
+                    <div class="row">
+                                    <form class="form-horizontal" id="header_recontagem" action="{{ route('recontagem.store')}}" method="post">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        @include('admin.cabecalho')
+                                    </div>
                     <!--htlm-->
-                        <div class="panel panel-default" id="contTabela">
-                            <div>
+                        <div class="panel panel-default col-md-12" id="contTabela">
 
                                 <div class="panel-heading"><svg class="glyph stroked desktop"><use xlink:href="#stroked-desktop"></use></svg>Recontagem Livro de registo</div>
                                 <div class="panel-body">
 
-                                    <form class="form-horizontal" onsubmit="adicionarCampos(); return false;">
                                         <table>
                                             <tr>
-                                                <td width="215"><input style="border: 1px solid #31708f" id="add_fields" name="add_fields" type="number" class="form-control" placeholder="Número máximo de páginas" value="+add"></td>
-                                                <td><input id="add_btn" name="add-btn" type="button" class="btn btn-info btn-md pull-right" value="+add" onclick="adicionarCampos(); return false"></td>
+                                                <td width="215"><input style="border: 1px solid #31708f" id="add_fields" name="add_fields" type="number" class="form-control nrPagina" placeholder="Número da páginas" value="+add"></td>
                                             </tr>
                                         </table>
-                                    </form>
 
-                                    <form class="form-horizontal" id="header_recontagem" action="" method="post">
+                                        {{ csrf_field() }}
+                                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                                         <input id="headerID" type="hidden">
                                         <fieldset>
                                             <table  class="table table-bordered table-hover table-sortable">
                                                 <thead>
                                                 <tr id="tHeader1">
-                                                    <th colspan="6">Registos por pagina</th>
+                                                    <th colspan="7" class="text-center">Registos por pagina</th>
                                                 </tr>
                                                 <tr id="tHeader2">
-                                                    <th>Indicador</th>
-                                                    <th>Desagregacao1</th>
-                                                    <th>Desagregacao2</th>
-                                                    <th>1</th>
-                                                    <th>2</th>
-                                                    <th>3</th>
+                                                    <th colspan="2" class="text-center">Desagredação</th>
+                                                    <th><=19 anos</th>
+                                                    <th>20 - 24 anos</th>
+                                                    <th>>=25 anos</th>
+                                                    <th>N/A</th>
+                                                    <th>Total</th>
                                                 </tr>
                                                 </thead>
-                                                <tbody>
+                                                <tbody id="corpo">
+                                                <!--Linha 1 (Distribuição de contraceptivos 25+ e 25-)-->
+                                                    <tr>
+                                                        <td colspan="2">Distribuição de contraceptivos 25+ e 25-</td>
+                                                        <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                        <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                    </tr>
 
-                                                <tr id="trDistribuicao"></tr>
+                                                    <!--Linha 2 (Nova utente de PF)-->
+                                                    <tr class="linha-cin">
+                                                        <tr class="linha-cin">
+                                                            <td rowspan="4">Nova utente de PF</td>
+                                                            <td>Pílula</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <!--********Novas PF******************************************************-->
-                                                <tr id="novasPfPilulaXIX"></tr>
-                                                <tr id="novasPfPilulaXXIV"></tr>
-                                                <tr id="novasPfPilulaXXV"></tr>
+                                                        <tr class="linha-cin">
+                                                            <td>Injectavel</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <tr id="novasPfInjectaveisXIX"></tr>
-                                                <tr id="novasPfInjectaveisXXIV"></tr>
-                                                <tr id="novasPfInjectaveisXXV"></tr>
+                                                        <tr class="linha-cin">
+                                                            <td>Implante</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <tr id="novasPfImplanteXIX"></tr>
-                                                <tr id="novasPfImplanteXXIV"></tr>
-                                                <tr id="novasPfImplanteXXV"></tr>
+                                                        <tr class="linha-cin">
+                                                            <td>DIU</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
+                                                    </tr>
 
-                                                <tr id="novasPfDiuXIX"></tr>
-                                                <tr id="novasPfDiuXXIV"></tr>
-                                                <tr id="novasPfDiuXXV"></tr>
+                                                    <!--Linha 3 (Continuadora de PF)-->
+                                                    <tr class="linha-cin">
+                                                        <tr>
+                                                            <td rowspan="4">Continuadora de PF</td>
+                                                            <td>Pílula</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <tr id="novasPfNa"></tr>
-                                                <tr id="novasPfTotal"></tr>
+                                                        <tr>
+                                                            <td>Injectavel</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <!--*****Continuadoras de PF*********************************************************-->
-                                                <tr id="continuadoraPfPilulaXIX"></tr>
-                                                <tr id="continuadoraPfPilulaXXIV"></tr>
-                                                <tr id="continuadoraPfPilulaXXV"></tr>
+                                                        <tr>
+                                                            <td>Implante</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <tr id="continuadoraPfInjectaveisXIX"></tr>
-                                                <tr id="continuadoraPfInjectaveisXXIV"></tr>
-                                                <tr id="continuadoraPfInjectaveisXXV"></tr>
+                                                        <tr>
+                                                            <td>DIU</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
+                                                    </tr>
 
-                                                <tr id="continuadoraPfImplanteXIX"></tr>
-                                                <tr id="continuadoraPfImplanteXXIV"></tr>
-                                                <tr id="continuadoraPfImplanteXXV"></tr>
+                                                    <!--Linha 4 (Pílula)-->
+                                                    <tr class="linha-cin">
+                                                        <tr class="linha-cin">
+                                                            <td rowspan="4">Pílula</td>
+                                                            <td>Utentes Novas no método</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <tr id="continuadoraPfDiuXIX"></tr>
-                                                <tr id="continuadoraPfDiuXXIV"></tr>
-                                                <tr id="continuadoraPfDiuXXV"></tr>
+                                                        <tr class="linha-cin">
+                                                            <td>Utentes que continuam o metodo</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <tr id="continuadoraPfNa"></tr>
-                                                <tr id="continuadoraPfTotal"></tr>
+                                                        <tr class="linha-cin">
+                                                            <td>Total de ciclos</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
+                                                    </tr>
 
-                                                <!--********Pílula******************************************************-->
-                                                <tr id="pilulaNovasXIX"></tr>
-                                                <tr id="pilulaNovasXXIV"></tr>
-                                                <tr id="pilulaNovasXXV"></tr>
+                                                    <!--Linha 4 (Injectavel)-->
+                                                    <tr class="linha-cin">
+                                                        <tr>
+                                                            <td rowspan="4">Injectaveis</td>
+                                                            <td>Utentes Novas</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <tr id="pilulaContinuamXIX"></tr>
-                                                <tr id="pilulaContinuamXXIV"></tr>
-                                                <tr id="pilulaContinuamXXV"></tr>
+                                                        <tr>
+                                                            <td>Utentes seguintes</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <tr id="pilulaTotalCiclosXIX"></tr>
-                                                <tr id="pilulaTotalCiclosXXIV"></tr>
-                                                <tr id="pilulaTotalCiclosXXV"></tr>
+                                                        <tr>
+                                                            <td>Total de injectaveis por tipo</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
+                                                    </tr>
 
-                                                <tr id="pilulaNa"> </tr>
-                                                <tr id="pilulaTotal"></tr>
+                                                    <!--Linha 4 (Implante)-->
+                                                    <tr class="linha-cin">
+                                                        <tr class="linha-cin">
+                                                            <td rowspan="4">Implante</td>
+                                                            <td>Utentes Novas</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <!--**************************************************************-->
-                                                <tr id="InjectaveisNovasXIX"></tr>
-                                                <tr id="InjectaveisNovasXXIV"></tr>
-                                                <tr id="InjectaveisNovasXXV"></tr>
+                                                        <tr class="linha-cin">
+                                                            <td>Utentes que continuam o método</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <tr id="InjectaveisContinuamXIX"></tr>
-                                                <tr id="InjectaveisContinuamXXIV"></tr>
-                                                <tr id="InjectaveisContinuamXXV"></tr>
+                                                        <tr class="linha-cin">
+                                                            <td>Total de Implantes por tipo</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
+                                                    </tr>
 
-                                                <tr id="InjectaveisTotalCiclosXIX"></tr>
-                                                <tr id="InjectaveisTotalCiclosXXIV"></tr>
-                                                <tr id="InjectaveisTotalCiclosXXV"></tr>
+                                                    <!--Linha 4 (DIU)-->
+                                                    <tr class="linha-cin">
+                                                        <tr>
+                                                            <td rowspan="4">DIU</td>
+                                                            <td>Utentes Novas</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <tr id="InjectaveisNa"> </tr>
-                                                <tr id="InjectaveisTotal"></tr>
+                                                        <tr>
+                                                            <td>Utentes que continuam o método</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
 
-                                                <!--**************************************************************-->
-                                                <tr id="ImplantesNovasXIX"></tr>
-                                                <tr id="ImplantesNovasXXIV"></tr>
-                                                <tr id="ImplantesNovasXXV"></tr>
-
-                                                <tr id="ImplantesContinuamXIX"></tr>
-                                                <tr id="ImplantesContinuamXXIV"></tr>
-                                                <tr id="ImplantesContinuamXXV"></tr>
-
-                                                <tr id="ImplantesTotalCiclosXIX"></tr>
-                                                <tr id="ImplantesTotalCiclosXXIV"></tr>
-                                                <tr id="ImplantesTotalCiclosXXV"></tr>
-
-                                                <tr id="ImplantesNa"> </tr>
-                                                <tr id="ImplantesTotal"></tr>
-
-                                                <!--**************************************************************-->
-                                                <tr id="DIUNovasXIX"></tr>
-                                                <tr id="DIUNovasXXIV"></tr>
-                                                <tr id="DIUNovasXXV"></tr>
-
-                                                <tr id="DIUContinuamXIX"></tr>
-                                                <tr id="DIUContinuamXXIV"></tr>
-                                                <tr id="DIUContinuamXXV"></tr>
-
-                                                <tr id="DIUTotalCiclosXIX"></tr>
-                                                <tr id="DIUTotalCiclosXXIV"></tr>
-                                                <tr id="DIUTotalCiclosXXV"></tr>
-
-                                                <tr id="DIUNa"> </tr>
-                                                <tr id="DIUTotal"></tr>
-
+                                                        <tr>
+                                                            <td>Total de DIU por tipo</td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        </tr>
+                                                    </tr>
 
                                                 </tbody>
                                             </table>
                                         </fieldset>
-                                    </form>
 
-                                    <!-- Form actions -->
-                                    <div class="form-group">
-                                        <div class="col-md-12 widget-left">
-                                            <button name="submit" type="submit" class="btn btn-success btn-md pull-left" onclick="confirmarTransacao();">Gravar</button>
+                                        <!-- Form actions -->
+                                        <div class="form-group">
+                                            <div class="col-md-12 widget-left">
+                                                <button name="submit" type="submit" class="btn btn-success btn-md pull-left" onclick="confirmarTransacao();">Gravar</button>
+                                            </div>
                                         </div>
-                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-
+                           </div>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <div class="col-sm-12">
-                            <button class="btn btn-success pull-right">Gravar</button>
-                        </div>
-                    </div>
-
-                </form>
-        </div>
-
     </div>
 
+    <script>
+        $(document).ready(function () {
+            var linhas='<tr>' +
+                '<td> <input id="' + 'contraceptivos' + i + '" name="' + 'contraceptivos' + i + '" type="number" class="form-control tableInput" min="0"></td></tr>';
 
+            $('#corpo').html(linhas);
+        })
+    </script>
 
 @endsection()

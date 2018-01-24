@@ -291,9 +291,9 @@
                                                 <tr>
                                                     <tr>
                                                     <td colspan="2">N/A</td>
-                                                    <td><input type="number" class="form-control tableInput" min="0" disabled></td>
-                                                    <td><input type="number" class="form-control tableInput" min="0" disabled></td>
-                                                    <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                    <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                    <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                    <td><input type="number" class="form-control tableInput" min="0"></td>
                                                     <td><input type="number" class="form-control tableInput" min="0"></td>
                                                     <td><input type="number" class="form-control tableInput" min="0" disabled></td>
                                                     </tr>

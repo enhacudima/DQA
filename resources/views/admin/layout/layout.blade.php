@@ -35,150 +35,147 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 -->
+
+
+
     <style>
-        .mega-dropdown {
-            margin-right: 20px;
-            position: static !important;
+
+        body{
+            background: rgba(137, 153, 168, 0.22);
         }
-        .mega-dropdown-menu {
-            padding: 20px 0px;
-            width: 100%;
-            box-shadow: none;
+        .navbar, .dropdown-menu{
+            background: rgba(134, 135, 133, 0.99);
+            border: none;
+
+        }
+
+        .nav>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a, .dropdown-menu>li{
+            border-bottom: 3px solid transparent;
+        }
+        .nav>li>a:focus, .nav>li>a:hover,.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+            border-bottom: 3px solid transparent;
+            background: none;
+        }
+        .navbar a, .dropdown-menu>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .navbar-toggle{
+            color: #fff;
+        }
+        .dropdown-menu{
             -webkit-box-shadow: none;
+            box-shadow:none;
         }
-        .mega-dropdown-menu > li > ul {
-            padding: 0;
-            margin: 0;
+
+        .nav li:hover:nth-child(8n+1), .nav li.active:nth-child(8n+1){
+            border-bottom: #C4E17F 3px solid;
         }
-        .mega-dropdown-menu > li > ul > li {
-            list-style: none;
+        .nav li:hover:nth-child(8n+2), .nav li.active:nth-child(8n+2){
+            border-bottom: #F7FDCA 3px solid;
         }
-        .mega-dropdown-menu > li > ul > li > a {
-            display: block;
-            color: #222;
-            padding: 3px 5px;
+        .nav li:hover:nth-child(8n+3), .nav li.active:nth-child(8n+3){
+            border-bottom: #FECF71 3px solid;
         }
-        .mega-dropdown-menu > li ul > li > a:hover,
-        .mega-dropdown-menu > li ul > li > a:focus {
-            text-decoration: none;
+        .nav li:hover:nth-child(8n+4), .nav li.active:nth-child(8n+4){
+            border-bottom: #F0776C 3px solid;
         }
-        .mega-dropdown-menu .dropdown-header {
-            font-size: 18px;
-            color: #30a5ff;
-            padding: 5px 60px 5px 5px;
-            line-height: 30px;
+        .nav li:hover:nth-child(8n+5), .nav li.active:nth-child(8n+5){
+            border-bottom: #DB9DBE 3px solid;
         }
-        .white-box{
+        .nav li:hover:nth-child(8n+6), .nav li.active:nth-child(8n+6){
+            border-bottom: #C49CDE 3px solid;
+        }
+        .nav li:hover:nth-child(8n+7), .nav li.active:nth-child(8n+7){
+            border-bottom: #669AE1 3px solid;
+        }
+        .nav li:hover:nth-child(8n+8), .nav li.active:nth-child(8n+8){
+            border-bottom: #62C2E4 3px solid;
+        }
+
+        .navbar-toggle .icon-bar{
+            color: #fff;
             background: #fff;
         }
 
-        .panel-title>a:hover{
-            text-decoration: none;
-        }
     </style>
+
+
 </head>
 <boby>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
-                <span class="sr-only">Comutar Navegação</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#">DQA <span> PSI MOZ</span></a>
-            <ul class="user-menu">
-                <li class="dropdown pull-right">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> {{ Auth::user()->name }} <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li id="updateU"><a href="../recontagem/userUpdate.php"><svg class="glyph stroked lock"><use xlink:href="#stroked-lock"></use></svg> Mudar Password</a>
-                        </li>
-                        <li><a href="{{ route('logout') }}"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Sair</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="dropdown mega-dropdown pull-right img-circle" id="menu_principal">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Menu principal"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
-
-                    <ul class="dropdown-menu mega-dropdown-menu row">
-                        <li class="col-sm-1">
-                            <ul>
-                                <li class="dropdown-header">Dashboard</li>
-
-                            </ul>
-                            <hr>
-    </li>
-    <li class="col-sm-2">
-        <ul>
-            <li class="dropdown-header">Resumo geral</li>
-            <hr>
-            <li> <a href="{{route('questionario.index')}}">Geral</a></li>
-            <li><a href="{{route('questionario.index')}}">Stock</a></li>
-        </ul>
-    </li>
-    <li class="col-sm-2">
-        <ul>
-            <li class="dropdown-header">Quetionario Resumo</li>
-            <hr>
-            <li><a href="{{route('questionario-resumo.index')}}">Quetionario</a></li>
-        </ul>
-    </li>
 
 
+    <div>
+    <div class="navbar-wrapper">
+        <div class="container-fluid">
+            <nav class="navbar navbar-fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">DQA <span> PSI MOZ</span></a>
 
-    <li class="col-sm-2">
-        <ul>
-            <li class="dropdown-header">Recontagem stock</li>
-            <hr>
-            <li><a href="{{route('bincard.index')}}">Bin Card</a></li>
-            <li><a href="{{route('salesforce.index')}}">Salesforce</a></li>
-            <li><a href="{{route('contagem.index')}}">Contagem Fisica</a></li>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="{{route('home')}}" class="">Dashboard</a></li>
 
-        </ul>
-    </li>
-    <li class="col-sm-2">
-        <ul>
-            <li class="dropdown-header">Questionario Stock</li>
-            <hr>
-            <li><a href="{{route('questionario.index')}}">Questionario</a></li>
-        </ul>
-    </li>
+                            <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resum Geral <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Add New</a></li>
 
-     <li class="col-sm-2">
-        <ul>
-            <li class="dropdown-header">Recontagem</li>
-            <hr>
-            <li><a href="{{route('recontagem.index')}}">Recontagem</a></li>
-        </ul>
-    </li>
-     <li class="col-sm-1">
-        <ul>
-            <li class="dropdown-header">Usuarios</li>
-            <hr>
-            <li><a href="{{route('users.index')}}">Adicionar</a></li>
-        </ul>
-    </li>
+                                </ul>
+                            </li>
 
+                            <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quetionario <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{route('questionario.index')}}">Stock</a></li>
+                                    <li><a href="{{route('questionario-resumo.index')}}">Resumo</a></li>
+                                    <li><a href="#">Add New</a></li>
 
+                                </ul>
+                            </li>
+                            <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recontagem stock <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{route('bincard.index')}}">Bin Card</a></li>
+                                    <li><a href="{{route('salesforce.index')}}">Salesforce</a></li>
+                                    <li><a href="{{route('contagem.index')}}">Contagem Fisica</a></li>
+                                    <li><a href="#">Add New</a></li>
+                                </ul>
+                            </li>
 
-    </ul>
+                            <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recontagem Livro <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{route('recontagem.index')}}">Recontagem</a></li>
+                                    <li><a href="#">Add New</a></li>
+                                </ul>
+                            </li>
 
-    </li>
-
-    </ul>
+                            <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parametrizaçao <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{route('users.index')}}">Adicionar</a></li>
+                                    <li><a href="#">Produtos</a></li>
+                                    <li><a href="#">Franquias</a></li>
+                                    <li><a href="#">Add New</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> {{ Auth::user()->name }} <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li id="updateU"><a href="../recontagem/userUpdate.php"><svg class="glyph stroked lock"><use xlink:href="#stroked-lock"></use></svg> Mudar Password</a>
+                                    </li>
+                                    <li><a href="{{ route('logout') }}"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Sair</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
 
     </div>
-    <!-- /.container-fluid -->
-    </nav>
 
     <div class="conteiner">
         @yield('content')
     </div>
+
 
 
 

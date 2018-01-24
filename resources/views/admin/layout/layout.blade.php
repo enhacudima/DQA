@@ -102,7 +102,7 @@
                 </li>
 
                 <li class="dropdown mega-dropdown pull-right img-circle" id="menu_principal">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Menu principal"><svg class="glyph stroked desktop"><use xlink:href="#stroked-desktop"></use></svg>Menu</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Menu principal"><i class="fa fa-bars" aria-hidden="true"></i> Menu</a>
 
                     <ul class="dropdown-menu mega-dropdown-menu row">
                         <li class="col-sm-1">

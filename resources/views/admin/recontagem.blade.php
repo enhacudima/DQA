@@ -32,6 +32,10 @@
             border: 1px solid #30a5ff;
             box-shadow: inset 0px 0px 0px 1px #30a5ff;
         }
+        .titulo{
+            color: #30a5ff;
+            font-size: 18px;
+        }
     </style>
 
 
@@ -43,14 +47,8 @@
                     <!--htlm-->
                         <div class="panel panel-default col-md-12" id="contTabela">
 
-                                <div class="panel-heading"><svg class="glyph stroked desktop"><use xlink:href="#stroked-desktop"></use></svg>Recontagem Livro de registo</div>
+                                <div class="panel-heading"><svg class="glyph stroked table"><use xlink:href="#stroked-table"/></svg>Recontagem Livro de registo</div>
                                 <div class="panel-body">
-
-                                        <table>
-                                            <tr>
-                                                <td width="215"><input style="border: 1px solid #31708f" id="add_fields" name="add_fields" type="number" class="form-control nrPagina" placeholder="Número da páginas" value="+add"></td>
-                                            </tr>
-                                        </table>
 
                                         {{ csrf_field() }}
                                         <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
@@ -59,13 +57,18 @@
                                             <table  class="table table-bordered table-hover table-sortable">
                                                 <thead>
                                                 <tr id="tHeader1">
-                                                    <th colspan="7" class="text-center">Registos por pagina</th>
+                                                    <th colspan="7" class="text-center titulo"> Registos por pagina</th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="2" class="linha-cin text-center" style="color: #30a5ff"> Número da página</th>
+                                                    <th width="215" class="linha-cin"><input id="add_fields" name="add_fields" type="number" class="form-control nrPagina" placeholder="0"></th>
+                                                    <th colspan="4"></th>
                                                 </tr>
                                                 <tr id="tHeader2">
                                                     <th colspan="2" class="text-center">Desagredação</th>
-                                                    <th><=19 anos</th>
+                                                    <th>&le;19 anos</th>
                                                     <th>20 - 24 anos</th>
-                                                    <th>>=25 anos</th>
+                                                    <th>&ge;25 anos</th>
                                                     <th>N/A</th>
                                                     <th>Total</th>
                                                 </tr>

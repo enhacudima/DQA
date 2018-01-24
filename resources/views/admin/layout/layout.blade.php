@@ -155,11 +155,11 @@
                         </ul>
                         <ul class="nav navbar-nav pull-right">
                             <li class="dropdown pull-right">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> {{ Auth::user()->name }} <span class="caret"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o" aria-hidden="true"></i></use></svg> {{ Auth::user()->name }} <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li id="updateU"><a href="../recontagem/userUpdate.php"><svg class="glyph stroked lock"><use xlink:href="#stroked-lock"></use></svg> Mudar Password</a>
+                                    <li id="updateU"><a href="../recontagem/userUpdate.php"><i class="fa fa-key" aria-hidden="true"></i> Mudar Password</a>
                                     </li>
-                                    <li><a href="{{ route('logout') }}"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Sair</a>
+                                    <li><a href="{{ route('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a>
                                     </li>
                                 </ul>
                             </li>

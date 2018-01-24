@@ -257,7 +257,7 @@
                                                     <!--Linha 4 (DIU)-->
                                                     <tr class="linha-cin">
                                                         <tr>
-                                                            <td rowspan="4">DIU</td>
+                                                            <td rowspan="3">DIU</td>
                                                             <td>Utentes Novas</td>
                                                             <td><input type="number" class="form-control tableInput" min="0"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0"></td>
@@ -285,6 +285,16 @@
                                                         </tr>
                                                     </tr>
 
+                                                <tr>
+                                                    <tr>
+                                                    <td colspan="2">N/A</td>
+                                                    <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                    <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                    <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                    <td><input type="number" class="form-control tableInput" min="0"></td>
+                                                    <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                    </tr>
+                                                </tr>
                                                 </tbody>
                                             </table>
                                         </fieldset>

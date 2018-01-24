@@ -35,4 +35,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/questionario-resumo', 'QuestionarioResumoController');
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
     Route::resource('/users', 'UserController');
+    Route::resource('/produtos', 'ProdutoController');
 });

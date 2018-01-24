@@ -41,7 +41,7 @@
     <style>
 
         body{
-            background: rgba(137, 153, 168, 0.22);
+            background: #222222;
         }
         .navbar, .dropdown-menu{
             background: rgba(134, 135, 133, 0.99);
@@ -140,8 +140,8 @@
 
                             <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parametrizaçao <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{route('users.index')}}">Adicionar</a></li>
-                                    <li><a href="#">Produtos</a></li>
+                                    <li><a href="{{route('users.index')}}">Adicionar User</a></li>
+                                    <li><a href="{{route('produtos.index')}}">Produtos</a></li>
                                     <li><a href="#">Franquias</a></li>
                                 </ul>
                             </li>

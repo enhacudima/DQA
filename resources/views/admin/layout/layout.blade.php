@@ -111,12 +111,10 @@
 
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="{{route('home')}}" class="">Dashboard</a></li>
+                            <li class="#"><a href="{{route('home')}}" class="">Dashboard</a></li>
 
                             <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resum Geral <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Add New</a></li>
-
                                 </ul>
                             </li>
 
@@ -124,8 +122,6 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="{{route('questionario.index')}}">Stock</a></li>
                                     <li><a href="{{route('questionario-resumo.index')}}">Resumo</a></li>
-                                    <li><a href="#">Add New</a></li>
-
                                 </ul>
                             </li>
                             <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recontagem stock <span class="caret"></span></a>
@@ -133,14 +129,12 @@
                                     <li><a href="{{route('bincard.index')}}">Bin Card</a></li>
                                     <li><a href="{{route('salesforce.index')}}">Salesforce</a></li>
                                     <li><a href="{{route('contagem.index')}}">Contagem Fisica</a></li>
-                                    <li><a href="#">Add New</a></li>
                                 </ul>
                             </li>
 
                             <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recontagem Livro <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="{{route('recontagem.index')}}">Recontagem</a></li>
-                                    <li><a href="#">Add New</a></li>
                                 </ul>
                             </li>
 
@@ -149,7 +143,6 @@
                                     <li><a href="{{route('users.index')}}">Adicionar</a></li>
                                     <li><a href="#">Produtos</a></li>
                                     <li><a href="#">Franquias</a></li>
-                                    <li><a href="#">Add New</a></li>
                                 </ul>
                             </li>
                         </ul>

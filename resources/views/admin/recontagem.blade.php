@@ -292,7 +292,7 @@
                                         <!-- Form actions -->
                                         <div class="form-group">
                                             <div class="col-md-12 widget-left">
-                                                <button name="submit" type="submit" class="btn btn-success btn-md pull-left" onclick="confirmarTransacao();">Gravar</button>
+                                                <button name="submit" type="submit" class="btn btn-success btn-md pull-left col-md-3" onclick="confirmarTransacao();">Gravar</button>
                                             </div>
                                         </div>
                                 </div>

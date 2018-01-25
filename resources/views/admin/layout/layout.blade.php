@@ -94,6 +94,8 @@
             background: #fff;
         }
 
+
+
     </style>
 
 
@@ -168,8 +170,6 @@
     <div class="conteiner">
         @yield('content')
     </div>
-
-
 
 
 

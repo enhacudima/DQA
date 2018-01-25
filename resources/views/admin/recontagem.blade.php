@@ -31,6 +31,11 @@
         .nrPagina{
             border: 1px solid #30a5ff;
             box-shadow: inset 0px 0px 0px 1px #30a5ff;
+            color: #222;
+        }
+        .botao-nr-pag{
+            color: #FFFFFF;
+            background: #30a5ff;
         }
         .titulo{
             color: #30a5ff;
@@ -60,8 +65,23 @@
                                                     <th colspan="7" class="text-center titulo"> Registos por pagina</th>
                                                 </tr>
                                                 <tr>
-                                                    <th colspan="2" class="linha-cin text-center" style="color: #30a5ff"> Número da página</th>
-                                                    <th width="215" class="linha-cin"><input id="add_fields" name="add_fields" type="number" class="form-control nrPagina" placeholder="0"></th>
+                                                    <th colspan="2" class="linha-cin text-right" style="color: #30a3ff;"> Número da página</th>
+                                                    <th class="linha-cin">
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn botao-nr-pag" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                    <input type="text" class="form-control text-center nrPagina" value="1" min="1">
+                                                                    <span class="input-group-btn data-up">
+                                                                        <button class="btn botao-nr-pag" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </th>
+
                                                     <th colspan="4"></th>
                                                 </tr>
                                                 <tr id="tHeader2">
@@ -315,12 +335,39 @@
     </div>
 
     <script>
-        $(document).ready(function () {
-            var linhas='<tr>' +
-                '<td> <input id="' + 'contraceptivos' + i + '" name="' + 'contraceptivos' + i + '" type="number" class="form-control tableInput" min="0"></td></tr>';
+        /**
+         * Input adicionar o numero de página
+         */
+        $(function() {
+            var action;
+            $(".number-spinner button").mousedown(function () {
+                btn = $(this);
+                input = btn.closest('.number-spinner').find('input');
+                btn.closest('.number-spinner').find('button').prop("disabled", false);
 
-            $('#corpo').html(linhas);
-        })
+                if (btn.attr('data-dir') == 'up') {
+                    action = setInterval(function(){
+                        if ( input.attr('max') == undefined || parseInt(input.val()) < parseInt(input.attr('max')) ) {
+                            input.val(parseInt(input.val())+1);
+                        }else{
+                            btn.prop("disabled", true);
+                            clearInterval(action);
+                        }
+                    }, 50);
+                } else {
+                    action = setInterval(function(){
+                        if ( input.attr('min') == undefined || parseInt(input.val()) > parseInt(input.attr('min')) ) {
+                            input.val(parseInt(input.val())-1);
+                        }else{
+                            btn.prop("disabled", true);
+                            clearInterval(action);
+                        }
+                    }, 50);
+                }
+            }).mouseup(function(){
+                clearInterval(action);
+            });
+        });
     </script>
 
 @endsection()

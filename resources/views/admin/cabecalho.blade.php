@@ -4,34 +4,43 @@
             <div class="panel-group" id="accordion">
 
                 <div class="panel panel-default">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                     <div class="card-header">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                <i class="fa fa-puzzle-piece" aria-hidden="true"></i> Cabeçalho</a>
+                                <i class="fa fa-puzzle-piece" aria-hidden="true"></i> Adicionar Cabeçalho
                         </h4>
                     </div>
+                            </a>
+                    <form action="">
+                        {{ csrf_field() }}
                     <div id="collapseTwo" class="panel-collapse collapse">
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Número da transação" required />
+                                        <div class="col-md-12">
+                                            <input type="text" class="form-control" placeholder="Número da transação" required />
+                                        </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <select name="franquia_id" id="franquia_id" class="form-control form-control-line">
-                                            <option value="">Seleciona a Franquia...</option>
-                                            @if(isset($franquias))
-                                                @foreach($franquias as $franquia)
-                                                    <option value="{{$franquia->id}}">{{$franquia->nome}}</option>
-                                                @endforeach
-                                            @endif
+                                        <div class="col-md-12">
+                                            <select name="franquia_id" id="franquia_id" class="form-control form-control-line">
+                                                <option value="">Seleciona a Franquia...</option>
+                                                @if(isset($franquias))
+                                                    @foreach($franquias as $franquia)
+                                                        <option value="{{$franquia->id}}">{{$franquia->nome}}</option>
+                                                    @endforeach
+                                                @endif
 
-                                        </select>
+                                            </select>
+                                        </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <input id="nTransacao" name="nTransacao" type="number" placeholder="Número da transação" class="form-control">
+                                        <div class="col-md-12">
+                                            <input id="nTransacao" name="nTransacao" type="number" placeholder="Número da transação" class="form-control">
+                                        </div>
                                     </div>
 
                                 </div>
@@ -64,10 +73,19 @@
 
                                 </div>
 
+                                <!-- Form actions -->
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <div class="col-md-12 widget-left">
+                                            <button name="submit" type="submit" class="btn btn-success btn-md pull-center col-md-3 col" onclick="confirmarTransacao();">Gravar</button>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>

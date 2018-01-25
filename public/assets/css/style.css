@@ -5,7 +5,7 @@ body {
     height: 100%;
     background: #463125 url('../img/back1.jpg') no-repeat center top;
     background-size: cover;
-    background: #463125;
+    /*background: #463125;*/
 
     font-family: 'PT Serif', serif;
     font-size: 12pt;

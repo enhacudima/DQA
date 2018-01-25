@@ -1,11 +1,25 @@
 
 
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+<style>
+    footer {
+        padding: 30px;
+        color: #fff;
+        text-align: center;
+        background-color: #f57f17;
+        position:relative;
+        bottom:0;
+        left: 0;
+        right: 0;
+    }
+
+
+</style>
 
 
 
-<div>
+<div >
 <!-- Footer -->
+    <div class="table-responsive">
 <footer class="footer">
     <div class="container">
         <div class="row bort">
@@ -17,4 +31,5 @@
         </div>
     </div>
 </footer>
+    </div>
 </div>

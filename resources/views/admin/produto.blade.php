@@ -155,13 +155,14 @@
                     </div>
 
         </div>
-        @include('admin.footer')
-
-    </div>
-
 
 
     </div>
+
+
+
+    </div>
+
 
     <!--/.main-->
 

@@ -11,7 +11,7 @@
                         </h4>
                     </div>
                             </a>
-                    <form action="">
+                    <form onsubmit="return false;">
                         {{ csrf_field() }}
                     <div id="collapseTwo" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -19,7 +19,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <input type="text" class="form-control" placeholder="Número da transação" required />
+                                            <input name="transacao" type="text" class="form-control" placeholder="Número da transação" required />
                                         </div>
                                     </div>
 
@@ -34,12 +34,6 @@
                                                 @endif
 
                                             </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <input id="nTransacao" name="nTransacao" type="number" placeholder="Número da transação" class="form-control">
                                         </div>
                                     </div>
 

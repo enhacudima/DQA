@@ -26,4 +26,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Get the cabecalho for the user post.
+     */
+    public function cabecalho()
+    {
+        return $this->hasMany('App\cabecalho');
+    }
 }

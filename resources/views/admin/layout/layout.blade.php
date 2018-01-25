@@ -96,6 +96,21 @@
 
 
 
+        footer {
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            background-color: #f57f17;
+            position:fixed;
+            bottom:0%;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        }
+        .footer a
+        {
+            color: #ccc;
+        }
     </style>
 
 
@@ -169,6 +184,17 @@
         @yield('content')
     </div>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="row bort">
+
+                <div class="copyright">
+                    2017 © Copyright Logistica | PSI Moz. <a href="http://evidevi.com/" target="_blank">Powered by: evidevi.com</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 
 
 

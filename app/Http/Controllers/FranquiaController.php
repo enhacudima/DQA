@@ -21,8 +21,9 @@ class FranquiaController extends Controller
      */
     public function index()
     {
-        $franquias = $this->franquia->all();
-        //return view('admin.franquia', compact('franquias'));
+       // $franquias = $this->franquia->all();
+       // return view('admin.franquia', compact('franquias'));
+        return view('admin.franquia');
     }
 
     /**

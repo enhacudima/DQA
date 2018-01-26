@@ -7,7 +7,7 @@
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                     <div class="card-header">
                         <h4 class="panel-title">
-                                <i class="fa fa-puzzle-piece" aria-hidden="true"></i> Adicionar Cabeçalho
+                            <i class="fa fa-info-circle" aria-hidden="true"></i></i> Adicionar Cabeçalho
                         </h4>
                     </div>
                             </a>

@@ -120,6 +120,12 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success pull-left">Caregar Ficheiro</button>
+                                        </div>
+                                    </div>
+
 
                                 </div>
 

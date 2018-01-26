@@ -153,6 +153,7 @@
                                 </ul>
                             </li>
 
+                            @if(Auth::user()->grupo=='2')
                             <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parametrizaçao <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="{{route('users.index')}}">Adicionar User</a></li>
@@ -160,6 +161,7 @@
                                     <li><a href="#">Franquias</a></li>
                                 </ul>
                             </li>
+                            @endif
                         </ul>
                         <ul class="nav navbar-nav pull-right">
                             <li class="dropdown pull-right">
@@ -189,7 +191,7 @@
             <div class="row bort">
 
                 <div class="copyright">
-                    2017 © Copyright Logistica | PSI Moz. <a href="http://evidevi.com/" target="_blank">Powered by: evidevi.com</a>
+                    2017 © Copyright DQA | PSI Moz. <a href="http://evidevi.com/" target="_blank">Powered by: evidevi.com</a>
                 </div>
 
             </div>

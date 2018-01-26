@@ -36,4 +36,19 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
     Route::resource('/users', 'UserController');
     Route::resource('/produtos', 'ProdutoController');
+
+
+    //Preencher a tabela gerar código
+    Route::post('save-cabecalho', function (){
+      /*  if(Request::ajax()){
+            $data = DB::table('prov_cods')
+                ->join('users', 'users.id', '=', 'prov_cods.user_id')
+                ->select('prov_cods.*', 'users.name as user')
+                ->orderByRaw('prov_cods.id DESC')
+                ->get();
+
+            return Response::json($data);
+        }*/
+        return Response::json('rota para o inferno');
+    });
 });

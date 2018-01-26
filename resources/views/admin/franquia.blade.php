@@ -178,18 +178,19 @@
 
                 </div>
 
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <br>
-                        <button class="btn btn-success pull-right">Gravar</button>
-                    </div>
-                </div>
+
 
 
 
             </form>
 
 
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12">
+            <br>
+            <button class="btn btn-success pull-right">Gravar</button>
         </div>
     </div>
 

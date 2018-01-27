@@ -90,7 +90,7 @@
                                         <div class="col-md-8">
                                             <input type="text" placeholder="Jeito 24 " name="nome" class="form-control form-control-line"> </div>
                                     </div>
-                                </div>
+
 
 
                                 <div class="form-group">

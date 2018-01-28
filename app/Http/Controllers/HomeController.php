@@ -30,7 +30,7 @@ class HomeController extends Controller
             ->orderByRaw('nome DESC')
             ->get();
 
-        return view('home');
+        return view('home', compact('controle'));
     }
 
     public function showChangePasswordForm(){

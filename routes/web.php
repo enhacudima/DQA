@@ -53,3 +53,17 @@ Route::group(['middleware' => ['auth']], function () {
         return Response::json('rota para o inferno');
     });
 });
+
+Route::get('/get/districts', function (){
+    $province = DB::table('provice_of_mozambique')
+        ->select(DB::raw('id'))
+        ->where('province', $_GET['province'])
+        ->get();
+
+    if(Request::ajax()){
+        $data = DB::table('districts_of_mozambique')
+            ->where('provice_of_mozambique_id', $province[0]->id)->get();
+
+        return Response::json($data);
+    }
+});

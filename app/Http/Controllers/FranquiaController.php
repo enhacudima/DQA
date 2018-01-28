@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Franquia;
 use App\Http\Requests\FranquiaRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FranquiaController extends Controller
 {
@@ -23,7 +24,10 @@ class FranquiaController extends Controller
     {
        // $franquias = $this->franquia->all();
        // return view('admin.franquia', compact('franquias'));
-        return view('admin.franquia');
+        $province = DB::table('provice_of_mozambique')
+            ->orderByRaw('province DESC')
+            ->get();
+        return view('admin.franquia', compact('province'));
     }
 
     /**

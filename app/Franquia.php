@@ -12,6 +12,6 @@ class Franquia extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'provincia', 'distrito', 'user_id',
+        'franquia_id', 'province', 'districts', 'user_id','bairro','tipo','modelo','nome','telefone','observacoes','lat','log','enfermeira',
     ];
 }

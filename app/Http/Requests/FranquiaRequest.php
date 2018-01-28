@@ -24,9 +24,6 @@ class FranquiaRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|min:2|max:150',
-            'provincia'=>'min:4|max:255',
-            'distrito'=>'required|min:4|max:100',
             'user_id'=>'required|integer|min:1',
         ];
     }

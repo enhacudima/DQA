@@ -42,3 +42,20 @@ Route::group(['middleware' => ['auth']], function () {
     //Preencher a tabela gerar código
     Route::get('/save-cabecalho', 'CabecalhoController@saveCabecalho');
 });
+
+Route::get('/get/districts', function (){
+    $province = DB::table('provice_of_mozambique')
+        ->select(DB::raw('id'))
+        ->where('province', $_GET['province'])
+        ->get();
+
+    if(Request::ajax()){
+        $data = DB::table('districts_of_mozambique')
+            ->where('provice_of_mozambique_id', $province[0]->id)->get();
+
+        return Response::json($data);
+    }
+
+    Route::get('/save-cabecalho', 'CabecalhoController@saveCabecalho');
+
+});

@@ -78,8 +78,16 @@
 
                                     <div class="form-group">
                                         <div class="col-md-12">
+                                            <input name="franquia_id" type="text" class="form-control" placeholder=" Id Exterior " required/>
+                                            </input>
+                                        </div>
+                                    </div>
+
+                                        <div class="form-group">
+                                        <div class="col-md-12">
                                             <select name="provincia_id" id="provincia_id" class="form-control form-control-line" required>
                                                 <option value="">Seleciona a Provincia...</option>
+
                                             </select>
                                         </div>
                                     </div>
@@ -100,7 +108,7 @@
 
                                     <div class="form-group">
                                         <div class="col-md-12">
-                                            <select name="tipo" id="topo" class="form-control form-control-line" required>
+                                            <select name="tipo" id="tipo" class="form-control form-control-line" required>
                                                 <option value="">Seleciona a Tipo...</option>
                                                 <option value="">Pública</option>
                                                 <option value="">Privada</option>
@@ -120,11 +128,6 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <div class="col-sm-12">
-                                            <button class="btn btn-success pull-left">Caregar Ficheiro</button>
-                                        </div>
-                                    </div>
 
 
                                 </div>
@@ -168,6 +171,13 @@
                                     </div>
 
 
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success pull-right">Gravar</button>
+                                        </div>
+                                    </div>
+
+
 
                                 </div>
 
@@ -190,7 +200,7 @@
     <div class="form-group">
         <div class="col-sm-12">
             <br>
-            <button class="btn btn-success pull-right">Gravar</button>
+            <button class="btn btn-success pull-left">Caregar Ficheiro</button>
         </div>
     </div>
 

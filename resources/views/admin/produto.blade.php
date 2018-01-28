@@ -59,17 +59,18 @@
         <!-- /.row -->
 
         <div class="col-xs-12">
-            <form class="form-horizontal form-material" method="POST" action="{{ route('contagem.store')}}">
+            <form class="form-horizontal form-material" method="POST" action="{{ route('produtos.store')}}">
             {{ csrf_field() }}
 
             <!--User ID-->
                 <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-            @include('admin.cabecalho')
+
 
 
 
                 <!--QUESTIONARIO-->
                 <div class="white-box">
+                    @include('admin.mensagens.msg')
                     <div class="card">
                         <h5 class="card-header">Registro de Produtos</h5>
                         <div class="panel-body">
@@ -82,13 +83,13 @@
                                     <div class="form-group">
                                         <label class="col-md-3 control-label" for="dataDQA">Código do produto</label>
                                         <div class="col-md-8">
-                                            <input type="text" placeholder="CONS-PROJECT-000" name="codigo" class="form-control form-control-line"> </div>
+                                            <input type="text" placeholder="CONS-PROJECT-000" name="codigo" class="form-control form-control-line" required> </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label class="col-md-3 control-label" for="dataInicio">Produto</label>
                                         <div class="col-md-8">
-                                            <input type="text" placeholder="Jeito 24 " name="nome" class="form-control form-control-line"> </div>
+                                            <input type="text" placeholder="Jeito 24 " name="nome" class="form-control form-control-line" required> </div>
                                     </div>
 
 
@@ -96,9 +97,25 @@
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="dataFim">Descrição do produto</label>
                                     <div class="col-md-8">
-                                        <input type="text" placeholder="Ex: Esta é uma descrição do produto" name="descricao" class="form-control form-control-line">
+                                        <input type="text" placeholder="Ex: Esta é uma descrição do produto" name="descricao" class="form-control form-control-line" >
                                     </div>
                                 </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="dataFim">Unidade</label>
+                                    <div class="col-md-8">
+                                        <input type="number" placeholder="Ex: 1" name="unidade" class="form-control form-control-line" required>
+                                    </div>
+                                </div>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <br>
+                                            <button type="submit" class="btn btn-success pull-right">
+                                                Gravar
+                                            </button>
+                                        </div>
+                                    </div>
 
 
 
@@ -116,16 +133,7 @@
                     </div>
 
 
-
-
-
             </form>
-        <div class="form-group">
-            <div class="col-sm-12">
-                <br>
-                <button class="btn btn-success pull-right">Gravar</button>
-            </div>
-        </div>
 
 
 
@@ -151,6 +159,7 @@
                         <th>Código</th>
                         <th>Nome</th>
                         <th>Descricao</th>
+                        <th>Unidade</th>
                         <th>&</th>
                     </tr>
                     </thead>
@@ -160,6 +169,7 @@
                             <td>{{$cli->codigo}}</td>
                             <td>{{$cli->nome}}</td>
                             <td>{{$cli->descricao}}</td>
+                            <td>{{$cli->unidade}}</td>
                             <td width="50">
                                 <a href="" class="actions edit text-warning"><i class="fa fa-pencil" aria-hidden="true"> edit</i></a>
                             </td>

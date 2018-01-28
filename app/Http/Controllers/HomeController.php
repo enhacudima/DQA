@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Hash;
 use Auth;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $controle = DB::table('produtos')
+            ->orderByRaw('nome DESC')
+            ->get();
+
         return view('home');
     }
 

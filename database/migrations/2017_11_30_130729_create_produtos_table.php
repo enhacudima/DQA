@@ -17,6 +17,7 @@ class CreateProdutosTable extends Migration
             $table->increments('id');
             $table->string('nome', 150);
             $table->string('descricao', 255)->nullable(true);
+            $table->integer('unidade');
             $table->string('codigo', 100)->unique();
             $table->boolean('status')->default(1);
             $table->integer('user_id')->references('id')->on('users');

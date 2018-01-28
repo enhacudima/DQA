@@ -1,6 +1,15 @@
 @extends('admin.layout.layout')
 
 @section('content')
+    {!! Charts::assets() !!}
+
+
+    <style>
+        body {
+            background: #22222226;
+        }
+
+    </style>
 <div class="container">
     <!-- Page Content -->
 
@@ -12,13 +21,13 @@
 
     <!--row -->
     <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <div class="white-box">
-                <h4 class="box-title">Lista de Produtos</h4>
-
-
-            </div>
+        <div class="col-md-6">
+            {!! $chart->render() !!}
         </div>
+        <div class="col-md-6">
+            {!! $user->render() !!}
+        </div>
+
     </div>
 
 

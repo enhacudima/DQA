@@ -48,7 +48,7 @@
                                     <div class="col-md-10 col-md-offset-1">
                                         @include('admin.cabecalho')
                                     </div>
-                                    <form class="form-horizontal" id="header_recontagem" action="{{ route('recontagem.store')}}" method="post">
+                                    <form class="form-horizontal" id="header_recontagem" onsubmit="return false;" action="{{ route('recontagem.store')}}" method="post">
                     <!--htlm-->
                         <div class="panel panel-default col-md-12" id="contTabela">
 

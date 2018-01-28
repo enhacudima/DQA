@@ -1,3 +1,7 @@
+<?php
+$produtos = \App\Produto::all();
+?>
+
 
 @extends('admin.layout.layout')
 @section('content')
@@ -138,61 +142,74 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-    <div class="col-md-12">
-        <br>
-        <div class="panel panel-default">
-
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover table-sortable">
-                    <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Nome</th>
-                        <th>Descricao</th>
-                        <th>Unidade</th>
-                        <th>&</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($produtos as $cli)
-                        <tr>
-                            <td>{{$cli->codigo}}</td>
-                            <td>{{$cli->nome}}</td>
-                            <td>{{$cli->descricao}}</td>
-                            <td>{{$cli->unidade}}</td>
-                            <td width="50">
-                                <a href="" class="actions edit text-warning"><i class="fa fa-pencil" aria-hidden="true"> edit</i></a>
-                            </td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
-            </div>
-
         </div>
 
+            <div class="col-md-12 ">
+
+                <div class="white-box">
+                    <div class="card">
+                        <h5 class="card-header">Lista de Produtos</h5>
+                        <div class="panel-body">
+                                <div class="row">
+                       <div id="morris-area-chart2" style="height: 370px; overflow: scroll;">
+                                                <table class="table display nowrap "  id="example" cellspacing="0" style="width: 100%">
+                                                    <thead>
+                                                    <th>Produto</th>
+                                                    <th>Descrição</th>
+                                                    <th>Unidade</th>
+                                                    <th>Codigo</th>
+                                                    </thead>
+                                                    <tbody>
+                                                    @foreach($produtos as $cli)
+                                                        <tr>
+                                                            <td>{{$cli->nome}}</td>
+                                                            <td>{{$cli->descricao}}</td>
+                                                            <td>{{$cli->unidade}}</td>
+                                                            <td>{{$cli->codigo}}</td>
+
+                                                        </tr>
+                                                    @endforeach
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
 
 
 
 
     </div>
 
-    </div>
-    </div>
-    </div>
+    <script>
+    $(document).ready(function() {
+        $('#example').DataTable( {
+            "scrollY": 200,
+            "scrollX": true,
+            dom: 'Bfrtip',
+            buttons: [
+                'csv', 'excel', 'pdf', 'print'
+            ]
+        } );
 
 
-    </div>
+    } );
+    </script>
+
+
+
+
+
 
 
 @endsection()

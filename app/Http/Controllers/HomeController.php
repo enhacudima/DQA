@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use ConsoleTVs\Charts\Facades\Charts;
 use Illuminate\Http\Request;
 use Hash;
 use Auth;
@@ -26,11 +28,29 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $chart = Charts::create('bar', 'highcharts')
+            ->title('Produtos mais vendidos') // Título do gráfico
+            ->labels(['Smartphone', 'Notebook', 'TV']) // Propriedades que vão ser adicionadas
+            ->values([100, 20, 30]) // Valores das propriedades
+            ->dimensions(500, 300) // Dimensão = 500 largura x 300 altura
+            ->responsive(false) // É utilizado para se adaptar ao tamanho do box que se encontra
+            ->elementLabel("Total de vendas"); // Legenda para o gráfico
+
+        $user = Charts::database(User::all(), 'pie', 'highcharts')
+            ->title("Séries assistidas pelos usuários")
+            ->elementLabel("Total")
+            ->dimensions(500, 300)
+            ->responsive(false)
+            ->groupBy('grupo'); // Usuários vão ser agrupados pelo campo série
+
+
+
+
         $controle = DB::table('produtos')
             ->orderByRaw('nome DESC')
             ->get();
 
-        return view('home');
+        return view('home',['chart' => $chart],['user' => $user], compact('controle'));
     }
 
     public function showChangePasswordForm(){

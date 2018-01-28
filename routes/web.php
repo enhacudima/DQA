@@ -36,7 +36,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
     Route::resource('/users', 'UserController');
     Route::resource('/produtos', 'ProdutoController');
-
+    Route::get('/changePassword','HomeController@showChangePasswordForm');
+    Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
 
     //Preencher a tabela gerar código
     Route::post('save-cabecalho', function (){

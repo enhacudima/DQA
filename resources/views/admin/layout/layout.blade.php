@@ -167,7 +167,7 @@
                             <li class="dropdown pull-right">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o" aria-hidden="true"></i></use></svg> {{ Auth::user()->name }} <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li id="updateU"><a href="{{ route('password.request') }}"><i class="fa fa-key" aria-hidden="true"></i> Mudar Password</a>
+                                    <li id="updateU"><a href="{{ route('changePassword') }}"><i class="fa fa-key" aria-hidden="true"></i> Mudar Password</a>
                                     </li>
                                     <li><a href="{{ route('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a>
                                     </li>

@@ -40,16 +40,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
 
     //Preencher a tabela gerar código
-    Route::post('save-cabecalho', function (){
-      /*  if(Request::ajax()){
-            $data = DB::table('prov_cods')
-                ->join('users', 'users.id', '=', 'prov_cods.user_id')
-                ->select('prov_cods.*', 'users.name as user')
-                ->orderByRaw('prov_cods.id DESC')
-                ->get();
-
-            return Response::json($data);
-        }*/
-        return Response::json('rota para o inferno');
-    });
+    Route::get('/save-cabecalho', 'CabecalhoController@saveCabecalho');
 });

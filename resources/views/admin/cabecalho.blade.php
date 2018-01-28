@@ -1,3 +1,7 @@
+<?php
+ $franquias = \App\Franquia::all();
+?>
+
 <div class="#">
     <div class="row">
         <div class="col-md-12">
@@ -11,8 +15,13 @@
                         </h4>
                     </div>
                             </a>
-                    <form onsubmit="return false;">
+
+                    <div class="alert alert-success hidden text-center"></div>
+
+                    <form onsubmit="return false;" id="cab">
                         {{ csrf_field() }}
+                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+
                         <div id="collapseTwo" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <div class="row">
@@ -45,25 +54,25 @@
                                     <div class="col-md-6">
                                         <!-- data_dqa -->
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label" for="dataDQA">Data do DQA</label>
+                                            <label class="col-md-3 control-label" for="data_DQA">Data do DQA</label>
                                             <div class="col-md-8">
-                                                <input id="dataDQA" name="dataDQA" type="date" placeholder="Data do DQA" class="form-control ">
+                                                <input id="data_DQA" name="data_DQA" type="date" placeholder="Data do DQA" class="form-control ">
                                             </div>
                                         </div>
 
                                         <!-- Data do Início do Período sob Avaliação -->
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label" for="dataInicio">Início </label>
+                                            <label class="col-md-3 control-label" for="data_inicio">Início </label>
                                             <div class="col-md-8">
-                                                <input id="dataInicio" name="dataInicio" type="date" placeholder="Data do Início do Período sob Avaliação" class="form-control ">
+                                                <input id="data_inicio" name="data_inicio" type="date" placeholder="Data do Início do Período sob Avaliação" class="form-control ">
                                             </div>
                                         </div>
 
                                         <!-- Fim do Período sob Avaliação-->
                                         <div class="form-group">
-                                            <label class="col-md-3 control-label" for="dataFim">Fim </label>
+                                            <label class="col-md-3 control-label" for="data_Fim">Fim </label>
                                             <div class="col-md-8">
-                                                <input id="dataFim" name="dataFim" type="date" placeholder="Fim do Período sob Avaliação" class="form-control">
+                                                <input id="data_Fim" name="data_Fim" type="date" placeholder="Fim do Período sob Avaliação" class="form-control">
                                             </div>
                                         </div>
 
@@ -95,23 +104,37 @@
         }
     });
 
+    //pega todos os dados do formulário e retorna um array onde o indice é o nome do input
+    function getFormObj(formId) {
+        var formObj = {};
+        var inputs = $('#'+formId).serializeArray();
+        $.each(inputs, function (i, input) {
+            formObj[input.name] = input.value;
+        });
+        return formObj;
+    }
+
     $('#saveHeader').click(function () {
-        //alert('ok');
-        //var pais = $('#saveHeader').val();
+        var formData = getFormObj('cab');
+
+        //console.log(formData);
+
         $.ajax({
-            type:"POST",
+            type:"get",
             url: '{{url('save-cabecalho')}}',
-            data: {pais: 'ok'},
+            data: {data: formData},
             success: function (data) {
-               /* var html = '<option value="">Selecione a Província</option>';
-                for(var i = 0; i < data.length; i++){
-                    html += '<option value="'+ data[i].name +'">'+data[i].name+'</option>';
-                }
-                $('#provincia').html(html).show();
-                */
+                $('.alert').removeClass('hidden');
+                $('.alert').html('Cabeçalho adicionado com sucesso!');
+                $('input').addClass('disablad');
+                $('select').val('');
                 console.log(data);
 
             }
         })
     });
+
+    $('input').click(function () {
+        $('.alert').addClass('hidden');
+    })
  </script>

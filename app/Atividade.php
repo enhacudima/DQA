@@ -12,7 +12,7 @@ class Atividade extends Model
     protected $table = 'atividades';
 
     protected $fillable = [
-        'franquia_id', 'data_dqa', 'data_inicio', 'data_fim', 'nr_pagina', 'total', 'codigo', 'user_id'
+        'codigo', 'atividade', 'tipo_atividade', 'faixa_etaria', 'user_id'
     ];
 
     /**

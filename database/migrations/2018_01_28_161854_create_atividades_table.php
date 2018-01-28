@@ -15,7 +15,7 @@ class CreateAtividadesTable extends Migration
     {
         Schema::create('atividades', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('codigo',10);
+            $table->string('codigo',20);
             $table->string('atividade',100);
             $table->string('tipo_atividade',100);
             $table->string('faixa_etaria',20);

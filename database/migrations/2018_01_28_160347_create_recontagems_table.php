@@ -22,7 +22,7 @@ class CreateRecontagemsTable extends Migration
 
             $table->integer('nr_pagina');
             $table->integer('total');
-            $table->string('codigo',10)->references('codigo')->on('atividades');
+            $table->string('codigo',20)->references('codigo')->on('atividades');
 
             $table->integer('user_id')->references('id')->on('users');
             $table->softDeletes();

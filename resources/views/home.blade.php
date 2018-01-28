@@ -16,28 +16,7 @@
             <div class="white-box">
                 <h4 class="box-title">Lista de Produtos</h4>
 
-                <div id="morris-area-chart2" style="height: 370px; overflow: scroll;">
-                    <table class="table display nowrap "  id="example" cellspacing="0" style="width: 100%">
-                        <thead>
-                        <th>Franquia</th>
-                        <th>Descrição</th>
-                        <th>Unidade</th>
-                        <th>Codigo</th>
-                         </thead>
-                        <tbody>
-                        @foreach($controle as $cli)
-                            <tr>
-                                <td>{{$cli->nome}}</td>
-                                <td>{{$cli->descricao}}</td>
-                                <td>{{$cli->unidade}}</td>
-                                <td>{{$cli->codigo}}</td>
 
-                            </tr>
-                        @endforeach
-                        </tbody>
-
-                    </table>
-                </div>
             </div>
         </div>
     </div>

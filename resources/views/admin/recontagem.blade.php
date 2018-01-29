@@ -45,11 +45,12 @@
 
 
                     <div class="row">
-                                    <div class="col-md-10 col-md-offset-1">
-                                        @include('admin.cabecalho')
-                                    </div>
                                     <form class="form-horizontal" id="header_recontagem" onsubmit="return false;" action="{{ route('recontagem.store')}}" method="post">
                     <!--htlm-->
+
+                                        <div class="col-md-10 col-md-offset-1">
+                                            @include('admin.cabecalho')
+                                        </div>
                         <div class="panel panel-default col-md-12" id="contTabela">
 
                                 <div class="panel-heading"><svg class="glyph stroked table"><use xlink:href="#stroked-table"/></svg>Recontagem Livro de registo</div>

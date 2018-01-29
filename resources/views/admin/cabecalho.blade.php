@@ -78,15 +78,6 @@
 
                                     </div>
 
-                                    <!-- Form actions -->
-                                    <div class="form-group">
-                                        <div class="col-md-12">
-                                            <div class="col-md-12 widget-left">
-                                                <button name="submit" id="saveHeader" type="submit" class="btn btn-success btn-md pull-center col-md-3 col" >Gravar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>

@@ -1,5 +1,6 @@
 @extends('admin.layout.layout')
 
+
 @section('content')
     {!! Charts::assets() !!}
 
@@ -10,6 +11,7 @@
         }
 
     </style>
+
 <div class="container">
     <!-- Page Content -->
 
@@ -21,13 +23,12 @@
 
     <!--row -->
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             {!! $chart->render() !!}
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             {!! $user->render() !!}
         </div>
-
     </div>
 
 
@@ -35,25 +36,5 @@
 </div>
 
 
-<script>
-    $(document).ready(function() {
-        $('#example').DataTable( {
-            "scrollY": 200,
-            "scrollX": true,
-            dom: 'Bfrtip',
-            buttons: [
-                'csv', 'excel', 'pdf', 'print'
-            ]
-        } );
 
-        $('#sal_inicial').DataTable( {
-            "scrollY": 200,
-            "scrollX": true,
-            dom: 'Bfrtip',
-            buttons: [
-                'csv', 'excel', 'pdf', 'print'
-            ]
-        } );
-    } );
-</script>
 @endsection

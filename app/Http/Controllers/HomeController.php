@@ -1,13 +1,19 @@
 <?php
 
+
+
 namespace App\Http\Controllers;
 
+use App\Franquia;
+use App\Produto;
 use App\User;
 use ConsoleTVs\Charts\Facades\Charts;
 use Illuminate\Http\Request;
 use Hash;
 use Auth;
 use Illuminate\Support\Facades\DB;
+
+
 
 class HomeController extends Controller
 {
@@ -28,18 +34,26 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $chart = Charts::create('bar', 'highcharts')
-            ->title('Produtos mais vendidos') // Título do gráfico
-            ->labels(['Smartphone', 'Notebook', 'TV']) // Propriedades que vão ser adicionadas
-            ->values([100, 20, 30]) // Valores das propriedades
-            ->dimensions(500, 300) // Dimensão = 500 largura x 300 altura
-            ->responsive(false) // É utilizado para se adaptar ao tamanho do box que se encontra
-            ->elementLabel("Total de vendas"); // Legenda para o gráfico
+
+      $clinica = Charts::database(Franquia::all(), 'bar', 'highcharts')
+            ->title("Franquia")
+            ->elementLabel("Total")
+            ->dimensions(300, 200)
+            ->responsive(false)
+            ->groupBy('province');
+
+
+        $chart = Charts::database(User::all(), 'bar', 'highcharts')
+            ->title("Usuarios por grupo")
+            ->elementLabel("Total")
+            ->dimensions(300, 200)
+            ->responsive(false)
+            ->groupBy('grupo');
 
         $user = Charts::database(User::all(), 'pie', 'highcharts')
-            ->title("Séries assistidas pelos usuários")
+            ->title("Usuarios por grupo")
             ->elementLabel("Total")
-            ->dimensions(500, 300)
+            ->dimensions(300, 200)
             ->responsive(false)
             ->groupBy('grupo'); // Usuários vão ser agrupados pelo campo série
 
@@ -50,7 +64,7 @@ class HomeController extends Controller
             ->orderByRaw('nome DESC')
             ->get();
 
-        return view('home',['chart' => $chart],['user' => $user], compact('controle'));
+        return view('home',['chart' => $chart],['user' => $user],['clinica' => $clinica], compact('controle'));
     }
 
     public function showChangePasswordForm(){

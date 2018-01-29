@@ -40,7 +40,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
 
     //Preencher a tabela gerar código
-    Route::get('/save-cabecalho', 'CabecalhoController@saveCabecalho');
+    Route::get('/save/recontagem', 'RecontagemController@store');
 });
 
 Route::get('/get/districts', function (){
@@ -55,7 +55,5 @@ Route::get('/get/districts', function (){
 
         return Response::json($data);
     }
-
-    Route::get('/save-cabecalho', 'CabecalhoController@saveCabecalho');
 
 });

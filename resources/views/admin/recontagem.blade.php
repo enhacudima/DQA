@@ -45,19 +45,19 @@
 
 
                     <div class="row">
-                                    <form class="form-horizontal" id="header_recontagem" onsubmit="return false;" action="{{ route('recontagem.store')}}" method="post">
-                    <!--htlm-->
-
                                         <div class="col-md-10 col-md-offset-1">
                                             @include('admin.cabecalho')
+                                            <div class="alert alert-success hidden text-center"></div>
                                         </div>
+                                    <form class="form-horizontal" id="header_recontagem" onsubmit="return false;">
+                    <!--htlm-->
+
                         <div class="panel panel-default col-md-12" id="contTabela">
 
                                 <div class="panel-heading"><svg class="glyph stroked table"><use xlink:href="#stroked-table"/></svg>Recontagem Livro de registo</div>
                                 <div class="panel-body">
 
                                         {{ csrf_field() }}
-                                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                                         <input id="headerID" type="hidden">
                                         <fieldset>
                                             <table  class="table table-bordered table-hover table-sortable">
@@ -74,7 +74,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn botao-nr-pag" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                    <input type="text" class="form-control text-center nrPagina" value="1" min="1">
+                                                                    <input type="text" id="nrPagina" class="form-control text-center nrPagina" value="1" min="1">
                                                                     <span class="input-group-btn data-up">
                                                                         <button class="btn botao-nr-pag" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -326,7 +326,7 @@
                                         <!-- Form actions -->
                                         <div class="form-group">
                                             <div class="col-md-12 widget-left">
-                                                <button name="submit" type="submit" class="btn btn-success btn-md pull-left col-md-3" onclick="confirmarTransacao();">Gravar</button>
+                                                <button name="submit" id="saveRecontagem" type="submit" class="btn btn-success btn-md pull-left col-md-3">Gravar</button>
                                             </div>
                                         </div>
                                 </div>
@@ -334,6 +334,56 @@
                         </form>
                     </div>
     </div>
+
+
+    <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-Token':'{{ csrf_token() }}',
+            }
+        });
+
+        //pega todos os dados do formulário e retorna um array onde o indice é o nome do input
+        function getFormObj(formId) {
+            var formObj = {};
+            var inputs = $('#'+formId).serializeArray();
+            $.each(inputs, function (i, input) {
+                formObj[input.name] = input.value;
+            });
+            return formObj;
+        }
+
+        var input = null;
+
+        $('.tableInput').change(function () {
+            var formData = getFormObj('cabec');
+            var nr_pagina = $('#nrPagina').val();
+
+            input = $(this);
+            var valor = input.val(); //get value from input
+            var name = input.attr("name"); //get input name
+            //alert(name);
+
+            console.log(formData);
+
+            $.ajax({
+                type:"get",
+                url: '{{url('/save/recontagem')}}',
+                data: {data: formData, nr_pagina: nr_pagina, total:valor, codigo:name},
+                success: function (data) {
+                    input.css("background-color", "#c5e1a5");
+
+                    console.log(data);
+                },
+
+                error: function (data) {
+                    input.css("background-color", "rgba(245, 170, 78, 0.38)");
+                    console.log(data);
+                }
+            })
+        });
+
+    </script>
 
     <script>
         /**

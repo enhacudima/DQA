@@ -213,22 +213,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-    <!--DATA TABLE & EXPORT FILE-->
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
-    <script type="text/javascript" src="{{ asset('DataTables/datatables.min.js') }}"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-flash-1.4.2/b-html5-1.4.2/b-print-1.4.2/fc-3.2.3/fh-3.1.3/kt-2.3.2/r-2.2.0/datatables.min.js"></script>
-
-    <script type="text/javascript" src="{{ asset('DataTables/outros/jquery-1.12.4.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables/outros/jquery.dataTables.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables/outros/dataTables.buttons.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables/outros/buttons.flash.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables/outros/jszip.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables/outros/pdfmake.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables/outros/vfs_fonts.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables/outros/buttons.html5.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables/outros/buttons.print.min.js') }}"></script>
 
 
 <script>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Recontagem;
 use Illuminate\Http\Request;
 
 class recontagemController extends Controller
@@ -34,15 +35,28 @@ class recontagemController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $data = $request->data;
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+                $recontagem = Recontagem::create([
+                    'nr_pagina' => $request->nr_pagina,
+                    'total' => $request->total,
+                    'codigo' => $request->codigo,
+                    'transacao' => $data['transacao'],
+                    'franquia_id' => $data['franquia_id'],
+                    'data_dqa' => $data['data_DQA'],
+                    'data_inicio' => $data['data_inicio'],
+                    'data_fim' => $data['data_Fim'],
+                    'user_id' => $data['user_id']
+                ]);
+                return $recontagem;
+     }
+
+            /**
+             * Display the specified resource.
+             *
+             * @param  int  $id
+             * @return \Illuminate\Http\Response
+             */
     public function show($id)
     {
         //

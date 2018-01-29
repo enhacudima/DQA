@@ -10,7 +10,7 @@ class CabecalhoController extends Controller
 {
     public function saveCabecalho(Request $request){
         $data = $request->data;
-
+/*
         $cabecalho = cabecalho::create([
             'transacao' => $data['transacao'],
             'franquia_id' => $data['franquia_id'],
@@ -26,7 +26,7 @@ class CabecalhoController extends Controller
         }
 */
         //cabecalho::created($data);
-        return $cabecalho;
+        return '$cabecalho';
        // return Responsdata_fime::json('rota para o inferno');
     }
 }

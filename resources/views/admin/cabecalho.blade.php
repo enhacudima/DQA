@@ -16,10 +16,8 @@
                     </div>
                             </a>
 
-                    <div class="alert alert-success hidden text-center"></div>
+                    <form id="cabec" onsubmit="return false;">
 
-                    <form onsubmit="return false;" id="cab">
-                        {{ csrf_field() }}
                         <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
 
                         <div id="collapseTwo" class="panel-collapse collapse">
@@ -27,15 +25,15 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                             <label class="col-md-12 control-label" for="transacao">Número da transação</label>
                                             <div class="col-md-12">
+                                                <label class="control-labe text-left" for="transacao">Número da transação</label>
                                                 <input name="transacao" id="transacao" type="text" class="form-control" placeholder="KH3-12" required />
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                                <label class="col-md-12 control-label" for="transacao">Número da transação</label>
                                             <div class="col-md-12">
+                                                <label class="control-label" for="transacao">Número da transação</label>
                                                 <select name="franquia_id" id="franquia_id" class="form-control form-control-line">
                                                     <option value="">Seleciona a Franquia...</option>
                                                     @if(isset($franquias))
@@ -88,44 +86,3 @@
     </div>
 </div>
 
-<script>
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-Token':'{{ csrf_token() }}',
-        }
-    });
-
-    //pega todos os dados do formulário e retorna um array onde o indice é o nome do input
-    function getFormObj(formId) {
-        var formObj = {};
-        var inputs = $('#'+formId).serializeArray();
-        $.each(inputs, function (i, input) {
-            formObj[input.name] = input.value;
-        });
-        return formObj;
-    }
-
-    $('#saveHeader').click(function () {
-        var formData = getFormObj('cab');
-
-        //console.log(formData);
-
-        $.ajax({
-            type:"get",
-            url: '{{url('save-cabecalho')}}',
-            data: {data: formData},
-            success: function (data) {
-                $('.alert').removeClass('hidden');
-                $('.alert').html('Cabeçalho adicionado com sucesso!');
-                $('input').addClass('disablad');
-                $('select').val('');
-                console.log(data);
-
-            }
-        })
-    });
-
-    $('input').click(function () {
-        $('.alert').addClass('hidden');
-    })
- </script>

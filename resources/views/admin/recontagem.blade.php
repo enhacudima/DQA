@@ -97,11 +97,11 @@
                                                 <!--Linha 1 (Distribuição de contraceptivos 25+ e 25-)-->
                                                     <tr>
                                                         <td colspan="2">Distribuição de contraceptivos 25+ e 25-</td>
-                                                        <td><input type="number" class="form-control tableInput" min="0" disabled></td>
-                                                        <td><input type="number" class="form-control tableInput" min="0" disabled></td>
-                                                        <td><input type="number" class="form-control tableInput" min="0" disabled></td>
-                                                        <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                        <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                        <td><input type="number" class="form-control tableInput" min="0"disabled></td>
+                                                        <td><input type="number" class="form-control tableInput" min="0"disabled></td>
+                                                        <td><input type="number" class="form-control tableInput" min="0"disabled></td>
+                                                        <td><input type="number" class="form-control tableInput" min="0" name="dc_na" id="dc_na" ></td>
+                                                        <td><input type="number" class="form-control tableInput" min="0" name="dc_na_t" id="dc_na_t" disabled></td>
                                                     </tr>
 
                                                     <!--Linha 2 (Nova utente de PF)-->
@@ -109,38 +109,38 @@
                                                         <tr class="linha-cin">
                                                             <td rowspan="4">Nova utente de PF</td>
                                                             <td>Pílula</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_pill_19" id="nup_pill_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_pill_24" id="nup_pill_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_pil_25" id="nup_pil_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_pil_na" id="nup_pil_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_pil_t" id="nup_pil_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>Injectavel</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_19" id="nup_inj_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_24" id="nup_inj_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_25" id="nup_inj_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_na" id="nup_inj_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_t" id="nup_inj_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>Implante</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_19" id="nup_imp_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_24" id="nup_imp_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_25" id="nup_imp_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_na" id="nup_imp_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_t" id="nup_imp_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>DIU</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_19" id="nup_diu_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_24" id="nup_diu_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_25" id="nup_diu_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_na" id="nup_diu_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_t" id="nup_diu_t" disabled></td>
                                                         </tr>
                                                     </tr>
 
@@ -149,38 +149,38 @@
                                                         <tr>
                                                             <td rowspan="4">Continuadora de PF</td>
                                                             <td>Pílula</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_19" id="cp_pil_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_24" id="cp_pil_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_25" id="cp_pil_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_na" id="cp_pil_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_t" id="cp_pil_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Injectavel</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_19" id="cp_inj_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_24" id="cp_inj_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_25" id="cp_inj_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_na" id="cp_inj_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_t" id="cp_inj_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Implante</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_19" id="cp_imp_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_24" id="cp_imp_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_25" id="cp_imp_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_na" id="cp_imp_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_t" id="cp_imp_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>DIU</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_19" id="cp_diu_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_24" id="cp_diu_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_25" id="cp_diu_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_na" id="cp_diu_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_t" id="cp_diu_t" disabled></td>
                                                         </tr>
                                                     </tr>
 
@@ -189,29 +189,29 @@
                                                         <tr class="linha-cin">
                                                             <td rowspan="4">Pílula</td>
                                                             <td>Utentes Novas no método</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_19" id="pil_unm_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_24" id="pil_unm_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_25" id="pil_unm_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_na" id="pil_unm_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_t" id="pil_unm_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>Utentes que continuam o metodo</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_19" id="pil_ucm_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_24" id="pil_ucm_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_25" id="pil_ucm_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_na" id="pil_ucm_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_t" id="pil_ucm_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>Total de ciclos</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_19" id="pil_tc_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_24" id="pil_tc_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_25" id="pil_tc_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_na" id="pil_tc_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_t" id="pil_tc_t" disabled></td>
                                                         </tr>
                                                     </tr>
 
@@ -220,29 +220,29 @@
                                                         <tr>
                                                             <td rowspan="4">Injectaveis</td>
                                                             <td>Utentes Novas</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_un_19" id="inj_un_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_un_24" id="inj_un_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_un_25" id="inj_un_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_un_na" id="inj_un_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_un_t" id="inj_un_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Utentes seguintes</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_us_19" id="inj_us_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_us_24" id="inj_us_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_us_25" id="inj_us_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_us_na" id="inj_us_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_us_t" id="inj_us_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Total de injectaveis por tipo</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_19" id="inj_tipt_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_24" id="inj_tipt_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_25" id="inj_tipt_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_na" id="inj_tipt_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_t" id="inj_tipt_t" disabled></td>
                                                         </tr>
                                                     </tr>
 
@@ -251,29 +251,29 @@
                                                         <tr class="linha-cin">
                                                             <td rowspan="4">Implante</td>
                                                             <td>Utentes Novas</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_un_19" id="imp_un_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_un_24" id="imp_un_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_un_25" id="imp_un_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_un_na" id="imp_un_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_un_t" id="imp_un_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>Utentes que continuam o método</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_19" id="imp_ucm_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_24" id="imp_ucm_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_25" id="imp_ucm_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_na" id="imp_ucm_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_t" id="imp_ucm_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>Total de Implantes por tipo</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_19" id="imp_tipt_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_24" id="imp_tipt_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_25" id="imp_tipt_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_na" id="imp_tipt_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_t" id="imp_tipt_t" disabled></td>
                                                         </tr>
                                                     </tr>
 
@@ -282,40 +282,40 @@
                                                         <tr>
                                                             <td rowspan="3">DIU</td>
                                                             <td>Utentes Novas</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_un_19" id="diu_un_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_un_24" id="diu_un_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_un_25" id="diu_un_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_un_na" id="diu_un_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_un_t" id="diu_un_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Utentes que continuam o método</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_19" id="diu_ucm_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_24" id="diu_ucm_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_25" id="diu_ucm_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_na" id="diu_ucm_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_t" id="diu_ucm_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Total de DIU por tipo</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_19" id="diu_tdpt_19"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_24" id="diu_tdpt_24"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_25" id="diu_tdpt_25"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_na" id="diu_tdpt_na"></td>
+                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_t" id="diu_tdpt_t" disabled></td>
                                                         </tr>
                                                     </tr>
 
                                                 <tr>
                                                     <tr>
                                                     <td colspan="2">N/A</td>
-                                                    <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                    <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                    <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                    <td><input type="number" class="form-control tableInput" min="0"></td>
-                                                    <td><input type="number" class="form-control tableInput" min="0" disabled></td>
+                                                    <td><input type="number" class="form-control tableInput" min="0" name="na_19" id="na_19"></td>
+                                                    <td><input type="number" class="form-control tableInput" min="0" name="na_24" id="na_24"></td>
+                                                    <td><input type="number" class="form-control tableInput" min="0" name="na_25" id="na_25"></td>
+                                                    <td><input type="number" class="form-control tableInput" min="0" name="na_na" id="na_na"></td>
+                                                    <td><input type="number" class="form-control tableInput" min="0" name="na_t" id="na_t" disabled></td>
                                                     </tr>
                                                 </tr>
                                                 </tbody>

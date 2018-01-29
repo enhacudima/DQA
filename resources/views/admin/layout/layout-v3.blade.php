@@ -39,20 +39,59 @@
 
 
     <style>
-        .hoves:hover > .dropdown-menu {
-            display:block !important;
-            -webkit-transition: height .5s ease;
-            -webkit-transition-delay: .4s;
-        }
-        .dropdown-submenu{position:relative;}
-        .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;        -webkit-transition: height .5s ease;
-            -webkit-transition-delay: .4s;}
-        .dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
-        .dropdown-submenu:hover>a:after{border-left-color:#555;}
-        .dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
 
-        .dropdown-submenu {
-            position: relative;
+        body{
+            background: #222222;
+        }
+        .navbar, .dropdown-menu{
+            background: rgba(134, 135, 133, 0.99);
+            border: none;
+
+        }
+
+        .nav>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a, .dropdown-menu>li{
+            border-bottom: 3px solid transparent;
+        }
+        .nav>li>a:focus, .nav>li>a:hover,.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+            border-bottom: 3px solid transparent;
+            background: none;
+        }
+        .navbar a, .dropdown-menu>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .navbar-toggle{
+            color: #fff;
+        }
+        .dropdown-menu{
+            -webkit-box-shadow: none;
+            box-shadow:none;
+        }
+
+        .nav li:hover:nth-child(8n+1), .nav li.active:nth-child(8n+1){
+            border-bottom: #C4E17F 3px solid;
+        }
+        .nav li:hover:nth-child(8n+2), .nav li.active:nth-child(8n+2){
+            border-bottom: #F7FDCA 3px solid;
+        }
+        .nav li:hover:nth-child(8n+3), .nav li.active:nth-child(8n+3){
+            border-bottom: #FECF71 3px solid;
+        }
+        .nav li:hover:nth-child(8n+4), .nav li.active:nth-child(8n+4){
+            border-bottom: #F0776C 3px solid;
+        }
+        .nav li:hover:nth-child(8n+5), .nav li.active:nth-child(8n+5){
+            border-bottom: #DB9DBE 3px solid;
+        }
+        .nav li:hover:nth-child(8n+6), .nav li.active:nth-child(8n+6){
+            border-bottom: #C49CDE 3px solid;
+        }
+        .nav li:hover:nth-child(8n+7), .nav li.active:nth-child(8n+7){
+            border-bottom: #669AE1 3px solid;
+        }
+        .nav li:hover:nth-child(8n+8), .nav li.active:nth-child(8n+8){
+            border-bottom: #62C2E4 3px solid;
+        }
+
+        .navbar-toggle .icon-bar{
+            color: #fff;
+            background: #fff;
         }
 
 
@@ -72,106 +111,80 @@
         {
             color: #ccc;
         }
-
-
-
     </style>
 
 
 </head>
 <boby>
+
     <div>
-        <div class="navbar-wrapper">
-            <div class="container-fluid">
-                <nav class="navbar navbar-fixed-top">
+    <div class="navbar-wrapper">
+        <div class="container-fluid">
+            <nav class="navbar navbar-fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">DQA <span> PSI MOZ</span></a>
 
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="#"><a href="{{route('home')}}" class="">Dashboard</a></li>
 
-    <div class="conteiner">
+                            <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Resum Geral <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                </ul>
+                            </li>
 
-        <!--menu bar-->
-        <nav class="navbar navbar-inverse navbar-static-top marginBottom-0" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#" target="_blank">PSI | Mozambique</a>
-
-
-
-            <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">DQA</a></li>
-                    <li><a href="#">About</a></li>
-                    <li class="dropdown hoves"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{route('home')}}" class="">Dashboard</a></li>
-                            <li><a href="#">Resumo Geral</a></li>
-                            <li><a href="#">Reports</a></li>
-                            <li class="divider"></li>
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Quetionario</a>
+                            <li class=" dropdown"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Quetionario <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="{{route('questionario.index')}}">Stock</a></li>
                                     <li><a href="{{route('questionario-resumo.index')}}">Resumo</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Recontagem</a>
+                            <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recontagem stock <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="{{route('bincard.index')}}">Bin Card</a></li>
                                     <li><a href="{{route('salesforce.index')}}">Salesforce</a></li>
                                     <li><a href="{{route('contagem.index')}}">Contagem Fisica</a></li>
-                                    <li class="divider"></li>
-
-                                    <li><a href="{{route('recontagem.index')}}">Recontagem do livro</a></li>
-
                                 </ul>
                             </li>
 
-                            <li class="divider"></li>
+                            <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recontagem Livro <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{route('recontagem.index')}}">Recontagem</a></li>
+                                </ul>
+                            </li>
+
                             @if(Auth::user()->grupo=='2')
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Parametrização</a>
+                            <li class=" down"><a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parametrizaçao <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="{{route('users.index')}}">Adicionar User</a></li>
                                     <li><a href="{{route('produtos.index')}}">Produtos</a></li>
                                     <li><a href="{{route('franquias.index')}}">Franquias</a></li>
-
                                 </ul>
                             </li>
                             @endif
                         </ul>
-                    </li>
-
-                </ul>
-
-                <ul class="nav navbar-nav pull-right">
-                    <li class="dropdown pull-right">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o" aria-hidden="true"></i></use></svg> {{ Auth::user()->name }} <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li id="updateU"><a href="{{ route('changePassword') }}"><i class="fa fa-key" aria-hidden="true"></i> Mudar Password</a>
-                            </li>
-                            <li><a href="{{ route('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a>
+                        <ul class="nav navbar-nav pull-right">
+                            <li class="dropdown pull-right">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o" aria-hidden="true"></i></use></svg> {{ Auth::user()->name }} <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li id="updateU"><a href="{{ route('changePassword') }}"><i class="fa fa-key" aria-hidden="true"></i> Mudar Password</a>
+                                    </li>
+                                    <li><a href="{{ route('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
-                    </li>
-                </ul>
-
-            </div><!-- /.navbar-collapse -->
-            </div>
-
-        </nav>
-        <!--and menu-->
-
-    </div>
- </div>
+                    </div>
+                </div>
+            </nav>
         </div>
-
-        @yield('content')
+    </div>
 
     </div>
 
-
+    <div class="conteiner">
+        @yield('content')
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -218,24 +231,25 @@
     <script type="text/javascript" src="{{ asset('DataTables/outros/buttons.print.min.js') }}"></script>
 
 
+<script>
 
-    <script>
-        $('#dropdown').hover(function() {
-            $(this).AddClass('open');
-        })
-    </script>
-    <script>
-        (function($){
-            $(document).ready(function(){
-                $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    $(this).parent().siblings().removeClass('open');
-                    $(this).parent().toggleClass('open');
-                });
-            });
-        })(jQuery);
-    </script>
+    !function ($) {
+        $(document).on("click","ul.nav li.parent > a > span.icon", function(){
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+
+    /******************SIDEBAR********************/
+
+</script>
 
 
 </boby>

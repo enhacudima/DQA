@@ -33,7 +33,7 @@
     </div>
 
 
-            <form class="form-horizontal form-material" method="POST" action="{{ route('contagem.store')}}">
+            <form class="form-horizontal form-material" method="POST" action="{{ route('contagemfisica.store')}}">
                 {{ csrf_field() }}
 
                     <!--User ID-->
@@ -95,7 +95,7 @@
             var total = parseInt($('#add_v').val());
             var distribuicao = '<tr>'+
                 '<td>'+
-                '<select id="produto_id'+ i + '" name="produto_id[]" class="form-control nprodutos" oninput=" Calctotal(\'untqd' + i + '\', \'qd' + i + '\', \'total' + i + '\');" onchange="fillUnidade(\'nprodutos'+ i + '\', \'untqd' + i + '\');  Calctotal(\'untqd' + i + '\', \'qd' + i + '\', \'total' + i + '\');">'+
+                '<select id="produtos_id'+ i + '" name="produtos_id[]" class="form-control nprodutos" oninput=" Calctotal(\'untqd' + i + '\', \'qd' + i + '\', \'total' + i + '\');" onchange="fillUnidade(\'nprodutos'+ i + '\', \'untqd' + i + '\');  Calctotal(\'untqd' + i + '\', \'qd' + i + '\', \'total' + i + '\');">'+
                 '<option value="">Carregar Lista Produto...</option>'+
                     @if(isset($produtos))
                         @foreach($produtos as $produto)

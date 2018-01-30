@@ -26,6 +26,7 @@
         <div class="col-md-4">
             {!! $chart->render() !!}
         </div>
+
         <div class="col-md-4">
             {!! $user->render() !!}
         </div>

@@ -5,15 +5,14 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-
-class Salesforce extends Model
+class Contagemfisica extends Model
 {
     use SoftDeletes;
 
     protected $table = 'cabecalhos';
 
     protected $fillable = [
-        'produtos_id', 'saldo_inicial', 'entradas', 'saidas', 'stock_balance', 'comentario','user_id',
+        'produtos_id', 'saldo_inicial', 'saldo', 'contagem_fisica', 'variance', 'comentario','user_id',
     ];
 
     /**
@@ -41,5 +40,4 @@ class Salesforce extends Model
         'remember_token',
     ];
 }
-
 

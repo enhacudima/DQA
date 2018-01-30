@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Recontagem;
+use App\contagemfisica;
 use Illuminate\Http\Request;
 
 class recontagemController extends Controller
@@ -37,7 +37,7 @@ class recontagemController extends Controller
     {
         $data = $request->data;
 
-                $recontagem = Recontagem::create([
+                $recontagem = contagemfisica::create([
                     'nr_pagina' => $request->nr_pagina,
                     'total' => $request->total,
                     'codigo' => $request->codigo,

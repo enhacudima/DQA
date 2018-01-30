@@ -27,7 +27,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/franquias', 'FranquiaController');
     Route::resource('/bincard', 'BincardController');
     Route::resource('/salesforce', 'SalesforceController');
-    Route::resource('/contagem', 'ContagemController');
+    Route::resource('/contagemfisica', 'ContagemfisicaController');
     Route::resource('/users', 'UserController');
     Route::resource('/questionario', 'QuestionarioController');
     Route::resource('/recontagem', 'RecontagemController');

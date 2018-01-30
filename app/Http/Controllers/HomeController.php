@@ -38,23 +38,23 @@ class HomeController extends Controller
       $clinica = Charts::database(Franquia::all(), 'bar', 'highcharts')
             ->title("Franquia")
             ->elementLabel("Total")
-            ->dimensions(300, 200)
-            ->responsive(false)
+            ->dimensions(200, 150)
+            ->responsive(true)
             ->groupBy('province');
 
 
         $chart = Charts::database(User::all(), 'bar', 'highcharts')
             ->title("Usuarios por grupo")
             ->elementLabel("Total")
-            ->dimensions(300, 200)
-            ->responsive(false)
+            ->dimensions(200, 150)
+            ->responsive(true)
             ->groupBy('grupo');
 
         $user = Charts::database(User::all(), 'pie', 'highcharts')
             ->title("Usuarios por grupo")
             ->elementLabel("Total")
-            ->dimensions(300, 200)
-            ->responsive(false)
+            ->dimensions(200, 150)
+            ->responsive(true)
             ->groupBy('grupo'); // Usuários vão ser agrupados pelo campo série
 
 

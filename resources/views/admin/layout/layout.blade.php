@@ -97,7 +97,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" target="_blank">PSI | Mozambique</a>
+                <a class="navbar-brand" href="#" target="_blank">PSI | Moz</a>
 
 
 
@@ -121,7 +121,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a href="{{route('bincard.index')}}">Bin Card</a></li>
                                     <li><a href="{{route('salesforce.index')}}">Salesforce</a></li>
-                                    <li><a href="{{route('contagem.index')}}">Contagem Fisica</a></li>
+                                    <li><a href="{{route('contagemfisica.index')}}">Contagem Fisica</a></li>
                                     <li class="divider"></li>
 
                                     <li><a href="{{route('recontagem.index')}}">Recontagem do livro</a></li>

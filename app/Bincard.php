@@ -3,16 +3,41 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Bincard extends Model
 {
+    use SoftDeletes;
+
+    protected $table = 'cabecalhos';
+
+    protected $fillable = [
+        'produtos_id', 'saldo_inicial', 'entradas', 'saidas', 'stock_balance', 'comentario','user_id',
+    ];
+
     /**
-     * The attributes that are mass assignable.
+     * The attributes that should be mutated to dates.
      *
      * @var array
      */
-    protected $fillable = [
-        'ntrasacao', 'franquia_id', 'datadqa', 'datainicio', 'datafim', 'saldo_inicial','entradas','saidas','stock_balance','comentario','produto_id','user_id'
+    protected $dates = ['deleted_at'];
+
+
+    /**
+     * Get the cabecalho that owns the user.
+     */
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'remember_token',
     ];
 }
 

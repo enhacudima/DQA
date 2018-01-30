@@ -36,6 +36,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
     Route::resource('/users', 'UserController');
     Route::resource('/produtos', 'ProdutoController');
+    Route::resource('/report', 'ReportController');
+    Route::resource('/resumogeral', 'ResumogeralController');
     Route::get('/changePassword','HomeController@showChangePasswordForm');
     Route::post('/changePassword','HomeController@changePassword')->name('changePassword');
 

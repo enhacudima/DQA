@@ -60,7 +60,7 @@
     <!-- /.row -->
 
     <div class="col-xs-12">
-            <form class="form-horizontal form-material" method="POST" action="{{ route('contagem.store')}}">
+            <form class="form-horizontal form-material" method="POST" action="{{ route('questionario.store')}}">
                 {{ csrf_field() }}
 
                     <!--User ID-->
@@ -77,11 +77,11 @@
                             <div class="col">
                                 <h5 class="card-title">Será que a Franquia está a usar o Bin card padrão?</h5>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio1" name="customRadio1" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio1">Sim</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio1" name="customRadio1" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio2">Não</label>
                                 </div>
                                 <hr>
@@ -89,11 +89,11 @@
                             <div class="col">
                                 <h5 class="card-title">Será que as franquias  tem a documentação dos kits que passam pela Promotora?</h5>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio2" name="customRadio2" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio3">Sim</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio2" name="customRadio2" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio4">Não</label>
                                 </div>
                                 <hr>
@@ -101,11 +101,11 @@
                             <div class="col">
                                 <h5 class="card-title">Para franquia publica, todos produtos que entraram na franquia foram declarados?</h5>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio3" name="customRadio3" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio5">Sim</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio3" name="customRadio3" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio6">Não</label>
                                 </div>
                                 <hr>
@@ -113,11 +113,11 @@
                             <div class="col">
                                 <h5 class="card-title">Se os produtos de PF tiverem sido transferidos para outra clínica, será que existe documentação que prova isso?</h5>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio4" name="customRadio4" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio1">Sim</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio4" name="customRadio4" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio2">Não</label>
                                 </div>
                                 <hr>
@@ -125,11 +125,11 @@
                             <div class="col">
                                 <h5 class="card-title">Em conclusão, será que o número de kits usados por cartão de estoque, está geralmente adicionado ao número relatado( por exemplo, mais ou menos de 10%)?</h5>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio5" name="customRadio5" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio1">Sim</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio5" name="customRadio5" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio2">Não</label>
                                 </div>
                                 <hr>
@@ -137,11 +137,11 @@
                             <div class="col">
                                 <h5 class="card-title">Caso não, será que eles têm  um motivo plausível?</h5>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio6" name="customRadio6" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio1">Sim</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio6" name="customRadio6" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio2">Não</label>
                                 </div>
                                 <hr>
@@ -149,11 +149,11 @@
                             <div class="col">
                                 <h5 class="card-title">Faz a distincão dos produtos por proveniencia (MISAU, PSI)?</h5>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio7" name="customRadio7" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio1">Sim</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio7" name="customRadio7" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio2">Não</label>
                                 </div>
                                 <hr>
@@ -161,11 +161,11 @@
                             <div class="col">
                                 <h5 class="card-title">Será que eles têm documentação pelos motivos?</h5>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio8" name="customRadio8" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio1">Sim</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                    <input type="radio" id="customRadio8" name="customRadio8" class="custom-control-input">
                                     <label class="custom-control-label" for="customRadio2">Não</label>
                                 </div>
                                 <hr>

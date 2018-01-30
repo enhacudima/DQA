@@ -87,44 +87,7 @@
 
 
 
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-                <div class="panel-body">
 
-                    <div class="col-md-12">
-                        <h3 class="box-title titulo">lista de usuários</h3>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover table-sortable">
-                                <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>Email</th>
-                                    <th>Grupo</th>
-                                    <th>&</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach($users as $cli)
-                                    <tr>
-                                        <td>{{$cli->name}}</td>
-                                        <td>{{$cli->email}}</td>
-                                        @if( $cli->grupo == 2)
-                                            <td>Admin</td>
-                                        @else
-                                            <td>Normal</td>
-                                        @endif
-                                        <td width="50">
-                                            <a href="" class="actions edit text-warning"><i class="fa fa-pencil" aria-hidden="true"> edit</i></a>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <!--/.main-->
 @endsection()

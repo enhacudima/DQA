@@ -35,7 +35,7 @@ class HomeController extends Controller
     public function index()
     {
 
-      $clinica = Charts::database(Franquia::all(), 'bar', 'highcharts')
+      $clinica1 = Charts::database(Franquia::all(), 'bar', 'highcharts')
             ->title("Franquia")
             ->elementLabel("Total")
             ->dimensions(200, 150)
@@ -64,7 +64,7 @@ class HomeController extends Controller
             ->orderByRaw('nome DESC')
             ->get();
 
-        return view('home',['chart' => $chart],['user' => $user],['clinica' => $clinica], compact('controle'));
+        return view('home',['chart' => $chart],['user' => $user],['clinica1' => $clinica1], compact('controle'), compact('clinica'));
     }
 
     public function showChangePasswordForm(){

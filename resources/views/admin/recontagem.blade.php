@@ -74,7 +74,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn botao-nr-pag" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                    <input type="text" id="nrPagina" class="form-control text-center nrPagina" value="1" min="1">
+                                                                    <input type="text" id="nrPagina" class="form-control text-center nrPagina index" value="1" min="1">
                                                                     <span class="input-group-btn data-up">
                                                                         <button class="btn botao-nr-pag" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -98,11 +98,11 @@
                                                 <!--Linha 1 (Distribuição de contraceptivos 25+ e 25-)-->
                                                     <tr>
                                                         <td colspan="2">Distribuição de contraceptivos 25+ e 25-</td>
-                                                        <td><input type="number" class="form-control tableInput" min="0"disabled></td>
-                                                        <td><input type="number" class="form-control tableInput" min="0"disabled></td>
-                                                        <td><input type="number" class="form-control tableInput" min="0"disabled></td>
+                                                        <td><input type="number" class="form-control" min="0"disabled></td>
+                                                        <td><input type="number" class="form-control" min="0"disabled></td>
+                                                        <td><input type="number" class="form-control" min="0"disabled></td>
                                                         <td><input type="number" class="form-control tableInput" min="0" name="dc_na" id="dc_na" ></td>
-                                                        <td><input type="number" class="form-control tableInput" min="0" name="dc_na_t" id="dc_na_t" disabled></td>
+                                                        <td><input type="number" class="form-control" min="0" name="dc_na_t" id="dc_na_t" disabled></td>
                                                     </tr>
 
                                                     <!--Linha 2 (Nova utente de PF)-->
@@ -114,7 +114,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="nup_pill_24" id="nup_pill_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="nup_pil_25" id="nup_pil_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="nup_pil_na" id="nup_pil_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_pil_t" id="nup_pil_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="nup_pil_t" id="nup_pil_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
@@ -123,7 +123,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_24" id="nup_inj_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_25" id="nup_inj_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_na" id="nup_inj_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_t" id="nup_inj_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="nup_inj_t" id="nup_inj_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
@@ -132,7 +132,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_24" id="nup_imp_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_25" id="nup_imp_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_na" id="nup_imp_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_t" id="nup_imp_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="nup_imp_t" id="nup_imp_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
@@ -141,7 +141,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_24" id="nup_diu_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_25" id="nup_diu_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_na" id="nup_diu_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_t" id="nup_diu_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="nup_diu_t" id="nup_diu_t" disabled></td>
                                                         </tr>
                                                     </tr>
 
@@ -154,7 +154,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_24" id="cp_pil_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_25" id="cp_pil_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_na" id="cp_pil_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_t" id="cp_pil_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="cp_pil_t" id="cp_pil_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
@@ -163,7 +163,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_24" id="cp_inj_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_25" id="cp_inj_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_na" id="cp_inj_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_t" id="cp_inj_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="cp_inj_t" id="cp_inj_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
@@ -172,7 +172,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_24" id="cp_imp_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_25" id="cp_imp_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_na" id="cp_imp_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_t" id="cp_imp_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="cp_imp_t" id="cp_imp_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
@@ -181,7 +181,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_24" id="cp_diu_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_25" id="cp_diu_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_na" id="cp_diu_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_t" id="cp_diu_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="cp_diu_t" id="cp_diu_t" disabled></td>
                                                         </tr>
                                                     </tr>
 
@@ -194,7 +194,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_24" id="pil_unm_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_25" id="pil_unm_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_na" id="pil_unm_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_t" id="pil_unm_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="pil_unm_t" id="pil_unm_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
@@ -203,7 +203,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_24" id="pil_ucm_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_25" id="pil_ucm_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_na" id="pil_ucm_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_t" id="pil_ucm_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="pil_ucm_t" id="pil_ucm_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
@@ -212,7 +212,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_24" id="pil_tc_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_25" id="pil_tc_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_na" id="pil_tc_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_t" id="pil_tc_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="pil_tc_t" id="pil_tc_t" disabled></td>
                                                         </tr>
                                                     </tr>
 
@@ -225,7 +225,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="inj_un_24" id="inj_un_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="inj_un_25" id="inj_un_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="inj_un_na" id="inj_un_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_un_t" id="inj_un_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="inj_un_t" id="inj_un_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
@@ -234,7 +234,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="inj_us_24" id="inj_us_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="inj_us_25" id="inj_us_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="inj_us_na" id="inj_us_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_us_t" id="inj_us_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="inj_us_t" id="inj_us_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
@@ -243,7 +243,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_24" id="inj_tipt_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_25" id="inj_tipt_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_na" id="inj_tipt_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_t" id="inj_tipt_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="inj_tipt_t" id="inj_tipt_t" disabled></td>
                                                         </tr>
                                                     </tr>
 
@@ -256,7 +256,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="imp_un_24" id="imp_un_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="imp_un_25" id="imp_un_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="imp_un_na" id="imp_un_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_un_t" id="imp_un_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="imp_un_t" id="imp_un_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
@@ -265,7 +265,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_24" id="imp_ucm_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_25" id="imp_ucm_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_na" id="imp_ucm_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_t" id="imp_ucm_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="imp_ucm_t" id="imp_ucm_t" disabled></td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
@@ -274,7 +274,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_24" id="imp_tipt_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_25" id="imp_tipt_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_na" id="imp_tipt_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_t" id="imp_tipt_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="imp_tipt_t" id="imp_tipt_t" disabled></td>
                                                         </tr>
                                                     </tr>
 
@@ -287,7 +287,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="diu_un_24" id="diu_un_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="diu_un_25" id="diu_un_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="diu_un_na" id="diu_un_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_un_t" id="diu_un_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="diu_un_t" id="diu_un_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
@@ -296,7 +296,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_24" id="diu_ucm_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_25" id="diu_ucm_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_na" id="diu_ucm_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_t" id="diu_ucm_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="diu_ucm_t" id="diu_ucm_t" disabled></td>
                                                         </tr>
 
                                                         <tr>
@@ -305,7 +305,7 @@
                                                             <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_24" id="diu_tdpt_24"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_25" id="diu_tdpt_25"></td>
                                                             <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_na" id="diu_tdpt_na"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_t" id="diu_tdpt_t" disabled></td>
+                                                            <td><input type="number" class="form-control" min="0" name="diu_tdpt_t" id="diu_tdpt_t" disabled></td>
                                                         </tr>
                                                     </tr>
 
@@ -316,19 +316,12 @@
                                                     <td><input type="number" class="form-control tableInput" min="0" name="na_24" id="na_24"></td>
                                                     <td><input type="number" class="form-control tableInput" min="0" name="na_25" id="na_25"></td>
                                                     <td><input type="number" class="form-control tableInput" min="0" name="na_na" id="na_na"></td>
-                                                    <td><input type="number" class="form-control tableInput" min="0" name="na_t" id="na_t" disabled></td>
+                                                    <td><input type="number" class="form-control" min="0" name="na_t" id="na_t" disabled></td>
                                                     </tr>
                                                 </tr>
                                                 </tbody>
                                             </table>
                                         </fieldset>
-
-                                        <!-- Form actions -->
-                                        <div class="form-group">
-                                            <div class="col-md-12 widget-left">
-                                                <button name="submit" id="saveRecontagem" type="submit" class="btn btn-success btn-md pull-left col-md-3">Gravar</button>
-                                            </div>
-                                        </div>
                                 </div>
                            </div>
                         </form>
@@ -337,6 +330,10 @@
 
 
     <script>
+        $(document).ready(function () {
+            $('.tableInput').prop("disabled", true);;
+        })
+
         $.ajaxSetup({
             headers: {
                 'X-CSRF-Token':'{{ csrf_token() }}',
@@ -353,36 +350,74 @@
             return formObj;
         }
 
+
         var input = null;
 
         $('.tableInput').change(function () {
             var formData = getFormObj('cabec');
             var nr_pagina = $('#nrPagina').val();
 
-            input = $(this);
-            var valor = input.val(); //get value from input
-            var name = input.attr("name"); //get input name
-            //alert(name);
+            //var blank = (formData.transacao) ? true:false;
+                if(formData.franquia_id && formData.data_DQA && formData.data_inicio && formData.data_Fim){
+                    input = $(this);
+                    var valor = input.val(); //get value from input
+                    var name = input.attr("name"); //get input name
+                    //alert(name);
 
-            console.log(formData);
+                    console.log(formData);
 
-            $.ajax({
-                type:"get",
-                url: '{{url('/save/recontagem')}}',
-                data: {data: formData, nr_pagina: nr_pagina, total:valor, codigo:name},
-                success: function (data) {
-                    input.css("background-color", "#c5e1a5");
+                    $.ajax({
+                        type: "get",
+                        url: '{{url('/save/recontagem')}}',
+                        data: {data: formData, nr_pagina: nr_pagina, total: valor, codigo: name},
+                        success: function (data) {
+                            input.css("background-color", "#c5e1a5");
 
-                    console.log(data);
-                },
+                            console.log(data);
+                        },
 
-                error: function (data) {
-                    input.css("background-color", "rgba(245, 170, 78, 0.38)");
-                    console.log(data);
-                }
-            })
+                        error: function (data) {
+                            input.css("background-color", "rgba(245, 170, 78, 0.38)");
+                            console.log(data);
+                        }
+                    })
+                }else alert('Erro.:\n\n Verifique se todos campos do cabeçalho foram preenchidos!');
         });
 
+
+        $('.index').change(function () {
+            fillFiels();
+        });
+        $('.botao-nr-pag').click(function () {
+            fillFiels();
+        });
+
+        function fillFiels(){
+            $('.tableInput').val('');
+
+            var formData = getFormObj('cabec');
+            var nrPagina = $('#nrPagina').val();
+
+            if(formData.franquia_id && formData.data_DQA && formData.data_inicio && formData.data_Fim && nrPagina){
+                $('.tableInput').prop("disabled", false);
+                $.ajax({
+                    type: "get",
+                    url: '{{url('/getAll/recontagem')}}',
+                    data: {data: formData, nr_pagina: nrPagina},
+                    success: function (data) {
+                        for(i=0; i<data.length; i++){
+                            $('#'+data[i].codigo).val(data[i].total);
+                           // $('#'+data[i].codigo).css("background-color", "#c5e1a5");
+                        }
+                        console.log(data);
+                    },
+
+                    error: function (data) {
+                        console.log(data);
+                    }
+                })
+            }else $('.tableInput').prop("disabled", true);
+        }
     </script>
 
     <script>

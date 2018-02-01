@@ -43,6 +43,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     //Preencher a tabela gerar código
     Route::get('/save/recontagem', 'RecontagemController@store');
+    Route::get('/getAll/recontagem', 'RecontagemController@getAll');
 });
 
 Route::get('/get/districts', function (){

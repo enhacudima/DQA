@@ -24,17 +24,11 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <div class="col-md-12">
-                                                <label class="control-labe text-left" for="transacao">Número da transação</label>
-                                                <input name="transacao" id="transacao" type="text" class="form-control" placeholder="KH3-12" required />
-                                            </div>
-                                        </div>
 
                                         <div class="form-group">
                                             <div class="col-md-12">
                                                 <label class="control-label" for="transacao">Número da transação</label>
-                                                <select name="franquia_id" id="franquia_id" class="form-control form-control-line">
+                                                <select name="franquia_id" id="franquia_id" class="form-control form-control-line index">
                                                     <option value="">Seleciona a Franquia...</option>
                                                     @if(isset($franquias))
                                                         @foreach($franquias as $franquia)
@@ -54,7 +48,7 @@
                                         <div class="form-group">
                                             <label class="col-md-3 control-label" for="data_DQA">Data do DQA</label>
                                             <div class="col-md-8">
-                                                <input id="data_DQA" name="data_DQA" type="date" placeholder="Data do DQA" class="form-control ">
+                                                <input id="data_DQA" name="data_DQA" type="date" placeholder="Data do DQA" class="form-control index">
                                             </div>
                                         </div>
 
@@ -62,7 +56,7 @@
                                         <div class="form-group">
                                             <label class="col-md-3 control-label" for="data_inicio">Início </label>
                                             <div class="col-md-8">
-                                                <input id="data_inicio" name="data_inicio" type="date" placeholder="Data do Início do Período sob Avaliação" class="form-control ">
+                                                <input id="data_inicio" name="data_inicio" type="date" placeholder="Data do Início do Período sob Avaliação" class="form-control index">
                                             </div>
                                         </div>
 
@@ -70,7 +64,7 @@
                                         <div class="form-group">
                                             <label class="col-md-3 control-label" for="data_Fim">Fim </label>
                                             <div class="col-md-8">
-                                                <input id="data_Fim" name="data_Fim" type="date" placeholder="Fim do Período sob Avaliação" class="form-control">
+                                                <input id="data_Fim" name="data_Fim" type="date" placeholder="Fim do Período sob Avaliação" class="form-control index">
                                             </div>
                                         </div>
 

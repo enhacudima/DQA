@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\contagemfisica;
+use App\Recontagem;
 use Illuminate\Http\Request;
 
 class recontagemController extends Controller
@@ -30,69 +31,61 @@ class recontagemController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         $data = $request->data;
-
-                $recontagem = contagemfisica::create([
+        /*
+                $recontagem = Recontagem::create([
                     'nr_pagina' => $request->nr_pagina,
                     'total' => $request->total,
                     'codigo' => $request->codigo,
-                    'transacao' => $data['transacao'],
                     'franquia_id' => $data['franquia_id'],
                     'data_dqa' => $data['data_DQA'],
                     'data_inicio' => $data['data_inicio'],
                     'data_fim' => $data['data_Fim'],
                     'user_id' => $data['user_id']
                 ]);
-                return $recontagem;
-     }
+*/
+        $recontagem = Recontagem::updateOrCreate(
+            [
+                'nr_pagina' => $request->nr_pagina,
+                'codigo' => $request->codigo,
+                'franquia_id' => $data['franquia_id'],
+                'data_dqa' => $data['data_DQA'],
+                'data_inicio' => $data['data_inicio'],
+                'data_fim' => $data['data_Fim']
+            ],
+            [
+                'nr_pagina' => $request->nr_pagina,
+                'total' => $request->total,
+                'codigo' => $request->codigo,
+                'franquia_id' => $data['franquia_id'],
+                'data_dqa' => $data['data_DQA'],
+                'data_inicio' => $data['data_inicio'],
+                'data_fim' => $data['data_Fim'],
+                'user_id' => $data['user_id']
+            ]
+        );
 
-            /**
-             * Display the specified resource.
-             *
-             * @param  int  $id
-             * @return \Illuminate\Http\Response
-             */
-    public function show($id)
-    {
-        //
+        return $recontagem;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function getAll(Request $request)
     {
-        //
-    }
+        $data = $request->data;
+        $nrPagina = $request->nr_pagina;
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $recontagem = Recontagem::where([
+            ['nr_pagina', $nrPagina],
+            ['data_dqa', $data['data_DQA']],
+            ['data_inicio', $data['data_inicio']],
+            ['data_Fim', $data['data_Fim']]
+            ])->get();
+
+        return $recontagem;
     }
 }

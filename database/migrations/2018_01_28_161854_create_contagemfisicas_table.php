@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAtividadesTable extends Migration
+class CreateContagemfisicasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,7 +15,12 @@ class CreateAtividadesTable extends Migration
     {
         Schema::create('contagemfisicas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('cabecalhos_id',20)->references('id')->on('cabecalhos');
+
+            $table->integer('franquia_id');
+            $table->date('data_dqa');
+            $table->date('data_inicio');
+            $table->date('data_fim');
+
             $table->string('produtos_id',20)->references('id')->on('produtos');
             $table->double('saldo');
             $table->double('contagem_fisica');

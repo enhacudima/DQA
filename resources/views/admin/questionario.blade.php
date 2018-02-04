@@ -59,15 +59,14 @@
     </div>
     <!-- /.row -->
 
+    <div>
+        @include('admin.cabecalho')
+        <div id="alert" class="alert alert-success text-center hidden"></div>
+    </div>
+
     <div class="col-xs-12">
-            <form class="form-horizontal form-material" method="POST" action="{{ route('questionario.store')}}">
+            <form class="form-horizontal form-material" id="main_form" onsubmit="return false;">
                 {{ csrf_field() }}
-
-                    <!--User ID-->
-                    <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-                @include('admin.cabecalho')
-
-
 
                     <!--QUESTIONARIO-->
                 <div class="white-box">
@@ -170,15 +169,15 @@
                                 </div>
                                 <hr>
                             </div>
+
+
+                            <div class="form-group">
+                                <div class="col-sm-12" >
+                                    <br>
+                                    <button class="btn btn-success pull-right" id="save_contagem" style="margin-bottom: 50px">Gravar</button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                </div>
-
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <br>
-                        <button class="btn btn-success pull-right">Gravar</button>
                     </div>
                 </div>
 
@@ -192,6 +191,83 @@
     </div>
 
 </div>
+    <script>
+
+        $(document).ready(function () {
+            $('.tableInput').prop("disabled", true);
+        })
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-Token':'{{ csrf_token() }}',
+            }
+        });
+
+        //pega todos os dados do formulário e retorna um array onde o indice é o nome do input
+        function getFormObj(formId) {
+            var formObj = {};
+            var inputs = $('#'+formId).serializeArray();
+            $.each(inputs, function (i, input) {
+                formObj[input.name] = input.value;
+            });
+            return formObj;
+        }
+
+        $('#save_contagem').click(function () {
+            var cabecalho = getFormObj('cabec');
+            var main_form = getFormObj('main_form');
+            var params = {data: cabecalho, main_form: main_form};
+
+            if(cabecalho.franquia_id && cabecalho.data_DQA && cabecalho.data_inicio && cabecalho.data_Fim){
+
+
+                    console.log(params);
+
+                        $.ajax({
+                            type: "get",
+                            url: '{{url('/save/salesforce')}}',
+                            data: params,
+                            success: function (data) {
+                                $('#alert').removeClass('hidden');
+                                $('#alert').removeClass('danger');
+                                $('#alert').addClass('success');
+                                $('#alert').html('Dados salvos com sucesso!');
+                                alert('salvo');
+
+                                console.log(data);
+
+                                $("input[type='radio']").val(0);
+                            },
+
+                            error: function (data) {
+
+                                $('#alert').removeClass('hidden');
+                                $('#alert').removeClass('success');
+                                $('#alert').addClass('danger');
+                                $('#alert').html('Erro ao gravar!');
+
+                                console.log(data);
+                            }
+                        });
+            }else alert('Erro.:\n\n Verifique se todos campos do cabeçalho foram preenchidos!');
+        });
+
+
+        $('.index').change(function () {
+            var cabecalho = getFormObj('cabec');
+
+            if(cabecalho.franquia_id && cabecalho.data_DQA && cabecalho.data_inicio && cabecalho.data_Fim) {
+                $('.tableInput').prop("disabled", false);
+                $('#add').prop("disabled", false);
+                fillFiels();
+            }else{
+                $('.tableInput').prop("disabled", true);
+                $('#add').prop("disabled", true);
+            }
+        });
+
+    </script>
+
     <script>
         var totalInput=5;
         $(document).ready(function () {

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Produto;
+use App\Salesforce;
 use Illuminate\Http\Request;
 
 class SalesforceController extends Controller
@@ -13,7 +15,8 @@ class SalesforceController extends Controller
      */
     public function index()
     {
-        return view('admin.salesforce');
+        $produtos = Produto::all();
+        return view('admin.salesforce',compact('produtos'));
     }
 
     /**
@@ -34,51 +37,38 @@ class SalesforceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->data;
+        $main_form = $request->main_form;
+
+        $salesforce = Salesforce::create([
+            'produtos_id' => $request->produtos_id,
+            'saldo_inicial' => $request->saldo_inicial,
+            'entradas' => $request->entradas_bin_card,
+            'saidas' => $request->saidas,
+            'stock_balance' => $request->stock_balance,
+            'comentario' => $request->comentario,
+
+            'franquia_id' => $data['franquia_id'],
+            'data_dqa' => $data['data_DQA'],
+            'data_inicio' => $data['data_inicio'],
+            'data_fim' => $data['data_Fim'],
+            'user_id' => $data['user_id']
+        ]);
+
+        return $salesforce;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function getAll(Request $request)
     {
-        //
-    }
+        $data = $request->data;
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+        $salesforce = Salesforce::where([
+            ['data_dqa', $data['data_DQA']],
+            ['data_inicio', $data['data_inicio']],
+            ['data_Fim', $data['data_Fim']]
+        ])->get();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return $salesforce;
     }
 }

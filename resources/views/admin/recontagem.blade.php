@@ -350,12 +350,20 @@
             return formObj;
         }
 
+        function calcularTotal() {
+            var $row = $(this).closest("tr"),        // Finds the closest row <tr>
+                $tds = $row.find("td:nth-child(4)"); // Finds the 2nd <td> element
+
+           // alert($tds);
+        }
 
         var input = null;
 
         $('.tableInput').change(function () {
             var formData = getFormObj('cabec');
             var nr_pagina = $('#nrPagina').val();
+
+            calcularTotal();
 
             //var blank = (formData.transacao) ? true:false;
                 if(formData.franquia_id && formData.data_DQA && formData.data_inicio && formData.data_Fim){
@@ -394,6 +402,7 @@
 
         function fillFiels(){
             $('.tableInput').val('');
+            $('.tableInput').css("background-color", "#fff");
 
             var formData = getFormObj('cabec');
             var nrPagina = $('#nrPagina').val();
@@ -418,6 +427,8 @@
                 })
             }else $('.tableInput').prop("disabled", true);
         }
+
+
     </script>
 
     <script>

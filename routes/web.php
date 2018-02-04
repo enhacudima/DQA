@@ -44,6 +44,16 @@ Route::group(['middleware' => ['auth']], function () {
     //Preencher a tabela gerar código
     Route::get('/save/recontagem', 'RecontagemController@store');
     Route::get('/getAll/recontagem', 'RecontagemController@getAll');
+
+    Route::get('/save/contagem-fisica', 'ContagemfisicaController@store');
+    Route::get('/getAll/contagem-fisica', 'ContagemfisicaController@getAll');
+
+    Route::get('/save/bin-card', 'BincardController@store');
+    Route::get('/getAll/bin-card', 'BincardController@getAll');
+
+    Route::get('/save/salesforce', 'SalesforceController@store');
+    Route::get('/getAll/salesforce', 'SalesforceController@getAll');
+
 });
 
 Route::get('/get/districts', function (){

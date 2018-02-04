@@ -10,10 +10,10 @@ class Salesforce extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'cabecalhos';
+    protected $table = 'salesforces';
 
     protected $fillable = [
-        'produtos_id', 'saldo_inicial', 'entradas', 'saidas', 'stock_balance', 'comentario','user_id',
+        'franquia_id', 'data_dqa', 'data_inicio', 'data_fim', 'produtos_id', 'saldo_inicial', 'entradas', 'saidas', 'stock_balance', 'comentario','user_id',
     ];
 
     /**

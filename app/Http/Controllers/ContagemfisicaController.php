@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Contagemfisica;
+use App\Produto;
 use Illuminate\Http\Request;
 
 class ContagemfisicaController extends Controller
@@ -13,7 +15,8 @@ class ContagemfisicaController extends Controller
      */
     public function index()
     {
-        return view('admin.contagemfisica');
+        $produtos = Produto::all();
+        return view('admin.contagemfisica', compact('produtos'));
     }
 
     /**
@@ -29,56 +32,41 @@ class ContagemfisicaController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->data;
+
+                $contagemfisica = Contagemfisica::create([
+                    'produtos_id' => $request->produto_id,
+                    'saldo' => $request->saldo,
+                    'contagem_fisica' => $request->contagem_fisica,
+                    'variance' => $request->variance,
+                    'comentario' => $request->comentario,
+
+                    'franquia_id' => $data['franquia_id'],
+                    'data_dqa' => $data['data_DQA'],
+                    'data_inicio' => $data['data_inicio'],
+                    'data_fim' => $data['data_Fim'],
+                    'user_id' => $data['user_id']
+                ]);
+
+        return $contagemfisica;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function getAll(Request $request)
     {
-        //
-    }
+        $data = $request->data;
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+        $contagemfisica = Contagemfisica::where([
+            ['data_dqa', $data['data_DQA']],
+            ['data_inicio', $data['data_inicio']],
+            ['data_Fim', $data['data_Fim']]
+        ])->get();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return $contagemfisica;
     }
 }

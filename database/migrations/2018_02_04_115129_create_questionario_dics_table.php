@@ -16,6 +16,7 @@ class CreateQuestionarioDicsTable extends Migration
         Schema::create('questionario_dics', function (Blueprint $table) {
             $table->increments('id');
             $table->string('codigo',30);
+            $table->string('titulo_questionario',60);
             $table->string('questao');
             $table->timestamps();
         });

@@ -54,6 +54,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/save/salesforce', 'SalesforceController@store');
     Route::get('/getAll/salesforce', 'SalesforceController@getAll');
 
+    Route::get('/save/questionario-stock', 'QuestionarioController@store');
+
 });
 
 Route::get('/get/districts', function (){

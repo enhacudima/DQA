@@ -450,7 +450,7 @@
                             btn.prop("disabled", true);
                             clearInterval(action);
                         }
-                    }, 50);
+                    }, 80);
                 } else {
                     action = setInterval(function(){
                         if ( input.attr('min') == undefined || parseInt(input.val()) > parseInt(input.attr('min')) ) {
@@ -459,7 +459,7 @@
                             btn.prop("disabled", true);
                             clearInterval(action);
                         }
-                    }, 50);
+                    }, 80);
                 }
             }).mouseup(function(){
                 clearInterval(action);

@@ -66,6 +66,7 @@
 
     <div class="col-xs-12">
             <form class="form-horizontal form-material" id="main_form" onsubmit="return false;">
+                <div id="alert" class="alert alert-success text-center hidden"></div>
                 {{ csrf_field() }}
 
                     <!--QUESTIONARIO-->
@@ -73,102 +74,22 @@
                     <div class="card">
                         <h5 class="card-header">Perguntas</h5>
                         <div class="card-body">
-                            <div class="col">
-                                <h5 class="card-title">Será que a Franquia está a usar o Bin card padrão?</h5>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio1" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Sim</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio1" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio2">Não</label>
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="col">
-                                <h5 class="card-title">Será que as franquias  tem a documentação dos kits que passam pela Promotora?</h5>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio2" name="customRadio2" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio3">Sim</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio2" name="customRadio2" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio4">Não</label>
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="col">
-                                <h5 class="card-title">Para franquia publica, todos produtos que entraram na franquia foram declarados?</h5>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio3" name="customRadio3" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio5">Sim</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio3" name="customRadio3" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio6">Não</label>
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="col">
-                                <h5 class="card-title">Se os produtos de PF tiverem sido transferidos para outra clínica, será que existe documentação que prova isso?</h5>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio4" name="customRadio4" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Sim</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio4" name="customRadio4" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio2">Não</label>
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="col">
-                                <h5 class="card-title">Em conclusão, será que o número de kits usados por cartão de estoque, está geralmente adicionado ao número relatado( por exemplo, mais ou menos de 10%)?</h5>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio5" name="customRadio5" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Sim</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio5" name="customRadio5" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio2">Não</label>
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="col">
-                                <h5 class="card-title">Caso não, será que eles têm  um motivo plausível?</h5>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio6" name="customRadio6" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Sim</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio6" name="customRadio6" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio2">Não</label>
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="col">
-                                <h5 class="card-title">Faz a distincão dos produtos por proveniencia (MISAU, PSI)?</h5>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio7" name="customRadio7" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Sim</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio7" name="customRadio7" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio2">Não</label>
-                                </div>
-                                <hr>
-                            </div>
-                            <div class="col">
-                                <h5 class="card-title">Será que eles têm documentação pelos motivos?</h5>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio8" name="customRadio8" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Sim</label>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio8" name="customRadio8" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio2">Não</label>
-                                </div>
-                                <hr>
-                            </div>
+                            @if(isset($questoes))
+                                @foreach($questoes as $q)
+                                    <div class="col">
+                                        <h5 class="card-title">{{$q->questao}}</h5>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="{{'id-1-'.$q->id}}" name="{{$q->codigo}}" value="Sim" class="custom-control-input tableInput">
+                                            <label class="custom-control-label" for="{{'id-1-'.$q->id}}">Sim</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="Não" class="custom-control-input tableInput">
+                                            <label class="custom-control-label" for="{{'id-2-'.$q->id}}">Não</label>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                @endforeach
+                            @endif
 
 
                             <div class="form-group">
@@ -215,23 +136,30 @@
 
         $('#save_contagem').click(function () {
             var cabecalho = getFormObj('cabec');
-            var main_form = getFormObj('main_form');
-            var params = {data: cabecalho, main_form: main_form};
 
             if(cabecalho.franquia_id && cabecalho.data_DQA && cabecalho.data_inicio && cabecalho.data_Fim){
 
+                @if(isset($questoes))
+                    @foreach($questoes as $q)
+                        /*
+                        var tipoQuestionario = '{$q->codigo}}'.slice(0, '{$q->codigo}}'.indexOf("-"));
+                        alert(res);
 
-                    console.log(params);
+                        if()
+                        */
+
+                        var resposta = ($('input[name="{{$q->codigo}}"]:checked').val());
+                        var questao = ($('input[name="{{$q->codigo}}"]:checked').attr("name"));
 
                         $.ajax({
                             type: "get",
-                            url: '{{url('/save/salesforce')}}',
-                            data: params,
+                            url: '{{url('/save/questionario-stock')}}',
+                            data: {cabecalho:cabecalho, resposta:resposta, questao:questao},
                             success: function (data) {
-                                $('#alert').removeClass('hidden');
-                                $('#alert').removeClass('danger');
-                                $('#alert').addClass('success');
-                                $('#alert').html('Dados salvos com sucesso!');
+                                $('.alert').removeClass('hidden');
+                                $('.alert').removeClass('danger');
+                                $('.alert').addClass('success');
+                                $('.alert').html('Dados salvos com sucesso!');
                                 alert('salvo');
 
                                 console.log(data);
@@ -249,6 +177,8 @@
                                 console.log(data);
                             }
                         });
+                    @endforeach
+                @endif
             }else alert('Erro.:\n\n Verifique se todos campos do cabeçalho foram preenchidos!');
         });
 
@@ -259,7 +189,6 @@
             if(cabecalho.franquia_id && cabecalho.data_DQA && cabecalho.data_inicio && cabecalho.data_Fim) {
                 $('.tableInput').prop("disabled", false);
                 $('#add').prop("disabled", false);
-                fillFiels();
             }else{
                 $('.tableInput').prop("disabled", true);
                 $('#add').prop("disabled", true);

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\QuestionarioDic;
+use App\QuestionarioStock;
 use Illuminate\Http\Request;
 
 class QuestionarioController extends Controller
@@ -13,7 +15,10 @@ class QuestionarioController extends Controller
      */
     public function index()
     {
-        return view('admin.questionario');
+        $questoes=QuestionarioDic::where([
+            ['titulo_questionario', 'stock']
+        ])->get();
+        return view('admin.questionario',compact('questoes'));
     }
 
     /**
@@ -34,7 +39,20 @@ class QuestionarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->cabecalho;
+
+        $questionario = QuestionarioStock::create([
+            'questao' => $request->questao,
+            'resposta' => $request->resposta,
+
+            'franquia_id' => $data['franquia_id'],
+            'data_dqa' => $data['data_DQA'],
+            'data_inicio' => $data['data_inicio'],
+            'data_fim' => $data['data_Fim'],
+            'user_id' => $data['user_id']
+        ]);
+
+        return $questionario;
     }
 
     /**

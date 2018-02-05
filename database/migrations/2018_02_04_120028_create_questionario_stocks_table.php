@@ -15,6 +15,12 @@ class CreateQuestionarioStocksTable extends Migration
     {
         Schema::create('questionario_stocks', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('franquia_id');
+            $table->date('data_dqa');
+            $table->date('data_inicio');
+            $table->date('data_fim');
+
             $table->string('questao',30);
             $table->string('resposta');
             $table->integer('user_id')->references('id')->on('users');

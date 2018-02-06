@@ -5,7 +5,6 @@
 namespace App\Http\Controllers;
 
 use App\Franquia;
-use App\Produto;
 use App\User;
 use ConsoleTVs\Charts\Facades\Charts;
 use Illuminate\Http\Request;
@@ -27,6 +26,8 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+
+
     /**
      * Show the application dashboard.
      *
@@ -35,7 +36,7 @@ class HomeController extends Controller
     public function index()
     {
 
-      $clinica1 = Charts::database(Franquia::all(), 'bar', 'highcharts')
+      $clinica = Charts::database(Franquia::all(), 'bar', 'highcharts')
             ->title("Franquia")
             ->elementLabel("Total")
             ->dimensions(200, 150)
@@ -58,13 +59,17 @@ class HomeController extends Controller
             ->groupBy('grupo'); // Usuários vão ser agrupados pelo campo série
 
 
+          $percent=Charts::create('percentage', 'justgage')
+                    ->title('My nice chart')
+                    ->elementLabel('My nice label')
+                    ->values([65,0,100])
+                    ->responsive(false)
+                    ->height(300)
+                    ->width(0);
 
 
-        $controle = DB::table('produtos')
-            ->orderByRaw('nome DESC')
-            ->get();
 
-        return view('home',['chart' => $chart],['user' => $user],['clinica1' => $clinica1], compact('controle'), compact('clinica'));
+        return view('home',compact(['chart','user','clinica','percent']));
     }
 
     public function showChangePasswordForm(){

@@ -20,11 +20,11 @@ class CreateContagemfisicasTable extends Migration
             $table->date('data_dqa');
             $table->date('data_inicio');
             $table->date('data_fim');
-
+            $table->string('bincards_id',20)->references('id')->on('bincards');
             $table->string('produtos_id',20)->references('id')->on('produtos');
-            $table->double('saldo');
+            $table->double('saldo')->nullable(true);
             $table->double('contagem_fisica');
-            $table->double('variance');
+            $table->double('variance')->nullable(true);
             $table->string('comentario',225)->nullable(true);
             $table->integer('user_id')->references('id')->on('users');
             $table->softDeletes();

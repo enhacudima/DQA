@@ -74,20 +74,61 @@
             color: #ccc;
         }
 
+        #isOnline{
+            background: rgba(217, 155, 9, 0.43);
+            width: 150px;
+            border-radius: 20px 0 0 20px;
+            position: fixed;
+            right: 0;
+            top: 50px;
+            z-index: 20;
+        }
 
-
+        #isOnline>h4{
+            font-size: 15px;
+            text-align: center;
+            color: #fff;
+        }
     </style>
 
+    <script>
+        window.addEventListener('load', function(e) {
+            if (navigator.onLine) {
+                $('#isOnline h4').html('We\'re online!');
+                $('#isOnline').css('background','rgb(182, 202, 160)');
+                console.log('We\'re online!');
+            } else {
+                $('#isOnline h4').html('We\'re offline...');
+                $('#isOnline').css('background','rgba(217, 155, 9, 0.43)');
+                console.log('We\'re offline...');
+            }
+        }, false);
+
+        window.addEventListener('online', function(e) {
+            $('#isOnline h4').html('And we\'re back :).');
+            $('#isOnline').css('background','rgb(182, 202, 160)');
+            console.log('And we\'re back :).');
+        }, false);
+
+        window.addEventListener('offline', function(e) {
+            $('#isOnline h4').html('Connection is down.');
+            $('#isOnline').css('background','rgba(217, 155, 9, 0.43)');
+            console.log('Connection is down.');
+        }, false);
+    </script>
 
 </head>
 <boby>
-    <div>
+    <div id="isOnline" class="offline">
+        <h4></h4>
+    </div>
+
         <div class="navbar-wrapper">
-            <div class="container-fluid">
+           <!-- <div class="container-fluid">-->
                 <nav class="navbar navbar-fixed-top">
 
+                    <div class="conteiner">
 
-    <div class="conteiner">
 
         <!--menu bar-->
         <nav class="navbar navbar-inverse navbar-static-top marginBottom-0" role="navigation">
@@ -98,7 +139,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" target="_blank">PSI | Moz</a>
+                <a class="navbar-brand" href="{{route('home')}}" >PSI | Moz</a>
 
 
 
@@ -132,7 +173,8 @@
 
                             <li class="divider"></li>
                             @if(Auth::user()->grupo=='2')
-                            <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Parametrização</a>
+
+                            <li class="dropdown dropdown-submenu "><a href="#" class="dropdown-toggle" data-toggle="dropdown">Parametrização</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="{{route('users.index')}}">Adicionar User</a></li>
                                     <li><a href="{{route('produtos.index')}}">Produtos</a></li>
@@ -163,14 +205,12 @@
 
         </nav>
         <!--and menu-->
-
     </div>
- </div>
-        </div>
+                </nav>
 
         @yield('content')
 
-    </div>
+</div>
 
 
 
@@ -202,22 +242,19 @@
 
 
     <!--DATA TABLE & EXPORT FILE-->
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
-    <script type="text/javascript" src="{{ asset('DataTables-1.10.16/js/dataTables.bootstrap.js') }}"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.2.1/jszip-2.5.0/dt-1.10.16/b-1.4.2/b-flash-1.4.2/b-html5-1.4.2/b-print-1.4.2/fc-3.2.3/fh-3.1.3/kt-2.3.2/r-2.2.0/datatables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css">
 
-    <script type="text/javascript" src="{{ asset('DataTables-1.10.16/outros/jquery-1.12.4.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables-1.10.16/outros/jquery.dataTables.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables-1.10.16/outros/dataTables.buttons.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables-1.10.16/outros/buttons.flash.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables-1.10.16/outros/jszip.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables-1.10.16/outros/pdfmake.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables-1.10.16/outros/vfs_fonts.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables-1.10.16/outros/buttons.html5.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('DataTables-1.10.16/outros/buttons.print.min.js') }}"></script>
 
+    <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.flash.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
 
     <script>
         $('#dropdown').hover(function() {

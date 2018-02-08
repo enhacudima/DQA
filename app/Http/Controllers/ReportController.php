@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Franquia;
 use App\Http\Requests\ProdutoRequest;
 use App\Produto;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ReportController extends Controller
 {
@@ -16,7 +19,34 @@ class ReportController extends Controller
      */
     public function index()
     {
-        return view('admin.report');
+        $produtos = Produto::all();
+        $franquias = Franquia::all();
+        $users=User::all();
+
+        $recontagems = DB::table('recontagems_v')
+            ->orderByRaw('id DESC')
+            ->get();
+
+        $contagens=DB::table('contagemfisicas_v')
+            ->orderByRaw('id DESC')
+
+            ->groupBy('produto','nome','data_dqa','data_inicio','data_fim')
+            ->get();
+
+        $salesforce=DB::table('salesforces_v')
+            ->orderByRaw('id DESC')
+            ->get();
+
+        $bincard=DB::table('bincards_v')
+            ->orderByRaw('id DESC')
+            ->get();
+
+        $questionario_stocks=DB::table('questionario_stocks_v')
+            ->orderByRaw('id DESC')
+            ->get();
+
+
+        return view('admin.report',compact(['recontagems','franquias','users','produtos','contagens','salesforce','bincard','questionario_stocks'])  );
      }
 
     /**

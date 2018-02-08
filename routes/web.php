@@ -56,7 +56,6 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/save/questionario-stock', 'QuestionarioController@store');
 
-    Route::get('/save/questionario-resumo', 'QuestionarioResumoController@store');
 
 });
 

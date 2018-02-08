@@ -2,7 +2,7 @@
 
 
 @section('content')
-    {!! Charts::assets() !!}
+    {!! \ConsoleTVs\Charts\Facades\Charts::styles() !!}
 
 
     <style>
@@ -30,11 +30,34 @@
         <div class="col-md-4">
             {!! $user->render() !!}
         </div>
+        <div class="col-md-4">
+            {!! $clinica->render() !!}
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-4">
+            {!! $percent->render() !!}
+        </div>
+
+        <div class="col-md-4">
+            {!! $user->render() !!}
+        </div>
+        <div class="col-md-4">
+            {!! $clinica->render() !!}
+        </div>
+
     </div>
 
 
 </div>
-</div>
+
+
+    {!! \ConsoleTVs\Charts\Facades\Charts::scripts() !!}
+    {!! $chart->script() !!}
 
 
 

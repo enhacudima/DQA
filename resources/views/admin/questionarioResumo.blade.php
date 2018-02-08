@@ -37,12 +37,13 @@
         </div>
         <!-- /.row -->
 
+        <div>
+            @include('admin.cabecalho')
+            <div id="alert" class="alert alert-success text-center hidden"></div>
+        </div>
+
                 <form class="form-horizontal form-material" method="POST" action="{{ route('bincard.store')}}">
                     {{ csrf_field() }}
-                        <!--User ID-->
-                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-
-                        @include('admin.cabecalho')
 
                     <div class="form-group">
                         <table  class="table table-bordered table-hover table-sortable col-md-12">
@@ -75,29 +76,28 @@
                             <div class="card">
                                 <h5 class="card-header">Perguntas</h5>
                                 <div class="card-body">
-                                    <div class="col">
-                                        <h5 class="card-title">1) Quais foram as outras causas ou outros motivos principais pelos resultados? (i.e., erros de  inserção de dados,erros aritméticos,armazenamento inconsistente ou impróprio, etc)</h5>
-                                            <div class="">
-                                                <textarea rows="5" placeholder="... " class="form-control textarea"></textarea>
-                                            </div>
-                                        <hr>
-                                    </div>
-                                    <div class="col">
-                                        <h5 class="card-title">2.) Quais são pelo menos três recomendações para colocá-las no relatório da área a partir dos resultados do VF e instrumento do RDQA para melhorar a qualidade de dados?</h5>
-                                        <div >
-                                            <textarea rows="5" placeholder="..." class="form-control textarea"></textarea>
-                                        </div>
-                                        <hr>
-                                    </div>
+                                    @if(isset($questoes))
+                                        @foreach($questoes as $q)
+                                            @if($q->tipo_input=='textarea')
+                                                <div class="col">
+                                                    <h5 class="card-title">{{$q->questao}}</h5>
+                                                        <div class="">
+                                                            <textarea rows="5" placeholder="... " id="{{$q->codigo.$q->id}}" name="{{$q->codigo}}" class="form-control textarea tableInput"></textarea>
+                                                        </div>
+                                                    <hr>
+                                                </div>
+                                            @endif
+                                        @endforeach
+                                    @endif
                                 </div>
                             </div>
 
                         </div>
 
                         <div class="form-group">
-                            <div class="col-sm-12">
+                            <div class="col-sm-12" >
                                 <br>
-                                <button class="btn btn-success pull-right">Gravar</button>
+                                <button class="btn btn-success pull-right" id="save_contagem" style="margin-bottom: 50px">Gravar</button>
                             </div>
                         </div>
 
@@ -106,11 +106,105 @@
         </div>
 
     </div>
+
     <script>
-        var totalInput=5;
+        @if(isset($questoes))
+            @foreach($questoes as $q)
+                @if($q->tipo_input=='in-table')
+                @endif
+            @endforeach
+        @endif
+    </script>
+
+    <script>
+
         $(document).ready(function () {
             createForm(totalInput);
+            $('.tableInput').prop("disabled", true);
+
+        })
+
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-Token':'{{ csrf_token() }}',
+            }
         });
+
+        //pega todos os dados do formulário e retorna um array onde o indice é o nome do input
+        function getFormObj(formId) {
+            var formObj = {};
+            var inputs = $('#'+formId).serializeArray();
+            $.each(inputs, function (i, input) {
+                formObj[input.name] = input.value;
+            });
+            return formObj;
+        }
+
+        $('#save_contagem').click(function () {
+            var cabecalho = getFormObj('cabec');
+
+            if(cabecalho.franquia_id && cabecalho.data_DQA && cabecalho.data_inicio && cabecalho.data_Fim){
+
+                @if(isset($questoes))
+                @foreach($questoes as $q)
+                /*
+                 var tipoQuestionario = '{$q->codigo}}'.slice(0, '{$q->codigo}}'.indexOf("-"));
+                 alert(res);
+
+                 if()
+                 */
+
+                var resposta = ($('input[name="{{$q->codigo}}"]:checked').val());
+                var questao = ($('input[name="{{$q->codigo}}"]:checked').attr("name"));
+
+                $.ajax({
+                    type: "get",
+                    url: '{{url('/save/questionario-stock')}}',
+                    data: {cabecalho:cabecalho, resposta:resposta, questao:questao},
+                    success: function (data) {
+                        $('.alert').removeClass('hidden');
+                        $('.alert').removeClass('danger');
+                        $('.alert').addClass('success');
+                        $('.alert').html('Dados salvos com sucesso!');
+                        alert('salvo');
+
+                        console.log(data);
+
+                        $("input[type='radio']").val(0);
+                    },
+
+                    error: function (data) {
+
+                        $('#alert').removeClass('hidden');
+                        $('#alert').removeClass('success');
+                        $('#alert').addClass('danger');
+                        $('#alert').html('Erro ao gravar!');
+
+                        console.log(data);
+                    }
+                });
+                @endforeach
+                @endif
+            }else alert('Erro.:\n\n Verifique se todos campos do cabeçalho foram preenchidos!');
+        });
+
+
+        $('.index').change(function () {
+            var cabecalho = getFormObj('cabec');
+
+            if(cabecalho.franquia_id && cabecalho.data_DQA && cabecalho.data_inicio && cabecalho.data_Fim) {
+                $('.tableInput').prop("disabled", false);
+                $('#add').prop("disabled", false);
+            }else{
+                $('.tableInput').prop("disabled", true);
+                $('#add').prop("disabled", true);
+            }
+        });
+
+    </script>
+
+    <script>
+        var totalInput=5;
 
         $(document).on('click','button.remove', function () {
             $(this).closest('tr').remove();
@@ -123,10 +217,10 @@
             var total = parseInt($('#add_v').val());
             var distribuicao = '<tr>'+
                 '<td>'+
-                '<input id="area_proxima' + i + '" name="area_proxima[]" type="text" placeholder="FTM Exemplo..."  class="form-control untqd" >'+
+                '<input id="resumo-1[]' + i + '" name="resumo-1[]" type="text" placeholder="FTM Exemplo..."  class="form-control untqd tableInput" >'+
                 '</td>'+
                 '<td>'+
-                '<input id="comentario' + i + '" name="comentario[]" type="text" placeholder="ex: comentário" class="form-control total" >'+
+                '<input id="resumo-2[]' + i + '" name="resumo-2[]" type="text" placeholder="ex: comentário" class="form-control total tableInput" >'+
                 '</td>'+
                 '<td>'+
                 '<button class="btn btn-danger remove center-block" id="add" onclick="return false;"><b>X</b></button>'+
@@ -141,17 +235,17 @@
             var totalInput = totalPaginas;
 
             for (i = 1; i <= totalInput; i++) {
-                distribuicao += '<tr>'+
-                    '<td>'+
-                    '<input id="area_proxima' + i + '" name="area_proxima[]" type="text" placeholder="FTM Exemplo..."  class="form-control untqd" >'+
-                    '</td>'+
-                    '<td>'+
-                    '<input id="comentario' + i + '" name="comentario[]" type="text" placeholder="ex: comentário" class="form-control total" >'+
-                    '</td>'+
-                    '<td>'+
-                    '<button class="btn btn-danger remove center-block" id="add" onclick="return false;"><b>X</b></button>'+
-                    '</td>'+
-                    '</tr>';
+                            distribuicao += '<tr>'+
+                            '<td>'+
+                            '<input id="resumo-1' + i + '" name="resumo-1[]" type="text" placeholder="FTM Exemplo..."  class="form-control untqd tableInput" >'+
+                            '</td>'+
+                            '<td>'+
+                            '<input id="resumo-2' + i + '" name="resumo-2[]" type="text" placeholder="ex: comentário" class="form-control total tableInput" >'+
+                            '</td>'+
+                            '<td>'+
+                            '<button class="btn btn-danger remove center-block" id="add" onclick="return false;"><b>X</b></button>'+
+                            '</td>'+
+                            '</tr>';
             }
 
             $('#corpo-pro').html(distribuicao).show();

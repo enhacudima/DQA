@@ -29,6 +29,8 @@ class ReportController extends Controller
 
         $contagens=DB::table('contagemfisicas_v')
             ->orderByRaw('id DESC')
+            
+            ->groupBy('produto','nome','data_dqa','data_inicio','data_fim')
             ->get();
 
         $salesforce=DB::table('salesforces_v')

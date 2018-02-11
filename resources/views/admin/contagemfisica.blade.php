@@ -50,9 +50,7 @@
 
                         <tr id="tHeader2">
                             <th>Produto</th>
-                            <th>Saldo</th>
                             <th>Contagem Fisica</th>
-                            <th>Variance Resumo semanal & SF</th>
                             <th>Comentario</th>
                             <th>
                                 <button class="btn btn-info center-block" disabled id="add"><b>+</b> add</button>
@@ -122,17 +120,13 @@
 
                 for(i=1; i<=totalInput; i++) {
                     var produto_id = $('#produto_id'+i).val();
-                    var saldo = $('#saldo'+i).val();
                     var contagem_fisica = $('#contagem_fisica'+i).val();
-                    var variance = $('#variance'+i).val();
                     var comentario = $('#comentario'+i).val();
 
                     var params = {
                         data: cabecalho,
                         produto_id: produto_id,
-                        saldo: saldo,
                         contagem_fisica: contagem_fisica,
-                        variance: variance,
                         comentario: comentario
                     };
 
@@ -229,7 +223,7 @@
             var total = parseInt($('#add_v').val());
             var distribuicao = '<tr>'+
                 '<td>'+
-                '<select id="produtos_id'+ totalInput + '" name="produtos_id[]" class="form-control nprodutos tableInput" oninput="Calctotal(\'saldo' + totalInput + '\', \'contagem_fisica' + totalInput + '\', \'variance' + totalInput + '\');" onchange="Calctotal(\'saldo' + totalInput + '\', \'contagem_fisica' + totalInput + '\', \'variance' + totalInput + '\');">'+
+                '<select id="produtos_id'+ totalInput + '" name="produtos_id[]" class="form-control nprodutos tableInput");">'+
                 '<option value="">Carregar Lista Produto...</option>'+
                     @if(isset($produtos))
                         @foreach($produtos as $produto)
@@ -240,13 +234,7 @@
                         '</select>'+
 
                 '<td>'+
-                '<input id="saldo' + totalInput + '" name="saldo[]" disabled type="number" placeholder="0" value="1" class="form-control untqd" >'+
-                '</td>'+
-                '<td>'+
                 '<input id="contagem_fisica' + totalInput + '" name="contagem_fisica[]" type="number" placeholder="0"  class="form-control untqd tableInput" oninput="Calctotal(\'saldo' + totalInput + '\', \'contagem_fisica' + totalInput + '\', \'variance' + totalInput + '\');">'+
-                '</td>'+
-                '<td>'+
-                '<input id="variance' + totalInput + '" name="variance[]" disabled type="number" placeholder="0"  class="form-control untqd" >'+
                 '</td>'+
                 '<td>'+
                 '<input id="comentario' + totalInput + '" name="comentario[]" type="text" placeholder="ex: comentário" class="form-control total tableInput" >'+
@@ -266,7 +254,7 @@
             for (i = 1; i <= totalInput; i++) {
                 distribuicao += '<tr>'+
                     '<td>'+
-                    '<select id="produto_id'+ i + '" name="produto_id[]" class="form-control nprodutos tableInput disabled" oninput="Calctotal(\'saldo' + i + '\', \'contagem_fisica' + i + '\', \'variance' + i + '\');" onchange="Calctotal(\'saldo' + i + '\', \'contagem_fisica' + i + '\', \'variance' + i + '\');">'+
+                    '<select id="produto_id'+ i + '" name="produto_id[]" class="form-control nprodutos tableInput disabled" oninput="Calctotal( \'contagem_fisica' + i + '\');">'+
                     '<option value="">Carregar Lista Produto...</option>'+
 
                         @if(isset($produtos))
@@ -276,14 +264,9 @@
                         @endif
                             '</select>'+
 
-                    '<td>'+
-                    '<input id="saldo' + i + '" name="saldo[]" disabled value="1" type="number" placeholder="0"  class="form-control untqd" >'+
-                    '</td>'+
+
                     '<td>'+
                     '<input id="contagem_fisica' + i + '" name="contagem_fisica[]" type="number" placeholder="0"  class="form-control untqd tableInput" oninput="Calctotal(\'saldo' + i + '\', \'contagem_fisica' + i + '\', \'variance' + i + '\');">'+
-                    '</td>'+
-                    '<td>'+
-                    '<input id="variance' + i + '" name="variance[]" disabled type="number" placeholder="0"  class="form-control untqd" >'+
                     '</td>'+
                     '<td>'+
                     '<input id="comentario' + i + '" name="comentario[]" type="text" placeholder="ex: comentário" class="form-control total tableInput" >'+

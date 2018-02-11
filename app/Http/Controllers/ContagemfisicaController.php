@@ -41,9 +41,7 @@ class ContagemfisicaController extends Controller
 
                 $contagemfisica = Contagemfisica::create([
                     'produtos_id' => $request->produto_id,
-                    'saldo' => $request->saldo,
                     'contagem_fisica' => $request->contagem_fisica,
-                    'variance' => $request->variance,
                     'comentario' => $request->comentario,
 
                     'franquia_id' => $data['franquia_id'],

@@ -2,17 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Contagemfisica;
-use App\Franquia;
-use App\Http\Requests\ProdutoRequest;
-use App\Produto;
-use App\User;
+use App\QuestionarioDic;
+use App\QuestionarioStock;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class ReportController extends Controller
+class QuestionarioRecontagemController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -20,35 +15,11 @@ class ReportController extends Controller
      */
     public function index()
     {
-        $produtos = Produto::all();
-        $franquias = Franquia::all();
-        $users=User::all();
-        $contagens=Contagemfisica::all();
-
-
-        $recontagems = DB::table('recontagems_v')
-            ->orderByRaw('id DESC')
-            ->get();
-
-        $contagens = DB::table('contagemfisicas_v_v_v')
-            ->orderByRaw('id DESC')
-            ->get();
-
-        $salesforce=DB::table('salesforces_v')
-            ->orderByRaw('id DESC')
-            ->get();
-
-        $bincard=DB::table('bincards_v')
-            ->orderByRaw('id DESC')
-            ->get();
-
-        $questionario_stocks=DB::table('questionario_stocks_v')
-            ->orderByRaw('id DESC')
-            ->get();
-
-
-        return view('admin.report',compact(['recontagems','franquias','users','produtos','contagens','salesforce','bincard','questionario_stocks'])  );
-     }
+        $questoes=QuestionarioDic::where([
+            ['titulo_questionario', 'stock']
+        ])->get();
+        return view('admin.questionarioRecontagem',compact('questoes'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -57,7 +28,7 @@ class ReportController extends Controller
      */
     public function create()
     {
-        //return view('painel.produto');
+        //
     }
 
     /**
@@ -66,12 +37,23 @@ class ReportController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
-    public function store(ProdutoRequest $request)
+    public function store(Request $request)
     {
+        $data = $request->cabecalho;
 
+        $questionario = QuestionarioStock::create([
+            'questao' => $request->questao,
+            'resposta' => $request->resposta,
+
+            'franquia_id' => $data['franquia_id'],
+            'data_dqa' => $data['data_DQA'],
+            'data_inicio' => $data['data_inicio'],
+            'data_fim' => $data['data_Fim'],
+            'user_id' => $data['user_id']
+        ]);
+
+        return $questionario;
     }
-
 
     /**
      * Display the specified resource.

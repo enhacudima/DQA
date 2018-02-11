@@ -20,7 +20,7 @@ class CreateContagemfisicasTable extends Migration
             $table->date('data_dqa');
             $table->date('data_inicio');
             $table->date('data_fim');
-            $table->string('bincards_id',20)->references('id')->on('bincards');
+            $table->string('bincards_id',20)->references('id')->on('bincards')->nullable(true);
             $table->string('produtos_id',20)->references('id')->on('produtos');
             $table->double('saldo')->nullable(true);
             $table->double('contagem_fisica');

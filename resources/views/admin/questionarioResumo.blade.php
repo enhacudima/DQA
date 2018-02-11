@@ -33,7 +33,7 @@
     <div class="col-md-10 col-md-offset-1">
         <div class="row bg-title">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Questionário Resumo</h4> </div>
+                <h4 class="page-title">Questionario Stock parte 2</h4> </div>
         </div>
         <!-- /.row -->
 
@@ -83,7 +83,7 @@
                                         <hr>
                                     </div>
                                     <div class="col">
-                                        <h5 class="card-title">2.) Quais são pelo menos três recomendações para colocá-las no relatório da área a partir dos resultados do VF e instrumento do RDQA para melhorar a qualidade de dados?</h5>
+                                        <h5 class="card-title">2.) Quais são pelo menos três recomendações para colocá-las no relatório da área a partir dos resultados das discrepancias encontradas?</h5>
                                         <div >
                                             <textarea rows="5" placeholder="..." class="form-control textarea"></textarea>
                                         </div>

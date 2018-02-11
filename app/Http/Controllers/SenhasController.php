@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\QuestionarioDic;
 use App\QuestionarioStock;
+use App\Senha;
 use Illuminate\Http\Request;
 
 class SenhasController extends Controller
@@ -18,7 +19,7 @@ class SenhasController extends Controller
         $questoes=QuestionarioDic::where([
             ['titulo_questionario', 'stock']
         ])->get();
-        return view('admin.senhas',compact('questoes'));
+        return view('admin.senha',compact('questoes'));
     }
 
     /**
@@ -31,19 +32,14 @@ class SenhasController extends Controller
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        $data = $request->cabecalho;
+        $data = $request->data;
+        $main_form = $request->main_form;
 
-        $questionario = QuestionarioStock::create([
-            'questao' => $request->questao,
-            'resposta' => $request->resposta,
+        $sehas = Senha::create([
+            'ffisica' => $request->ffisica,
+
 
             'franquia_id' => $data['franquia_id'],
             'data_dqa' => $data['data_DQA'],
@@ -52,51 +48,20 @@ class SenhasController extends Controller
             'user_id' => $data['user_id']
         ]);
 
-        return $questionario;
+        return $sehas;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function getAll(Request $request)
     {
-        //
-    }
+        $data = $request->data;
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+        $sehas = Senha::where([
+            ['data_dqa', $data['data_DQA']],
+            ['data_inicio', $data['data_inicio']],
+            ['data_Fim', $data['data_Fim']]
+        ])->get();
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return $sehas;
     }
 }

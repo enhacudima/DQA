@@ -71,7 +71,7 @@
             <!--QUESTIONARIO-->
                 <div class="white-box">
                     <div class="card">
-                        <h5 class="card-header">Formulario de Cadastro</h5>
+                        <h5 class="card-header">Formulario de Cadastro de Franquias</h5>
                         <div class="panel-body">
                             <div class="row">
 

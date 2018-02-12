@@ -171,17 +171,15 @@
                                 </ul>
                             </li>
 
-                            <li class="divider"></li>
                             @if(Auth::user()->grupo=='2')
-
-                            <li class="dropdown dropdown-submenu "><a href="#" class="dropdown-toggle" data-toggle="dropdown">Parametrização</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{route('users.index')}}">Adicionar User</a></li>
-                                    <li><a href="{{route('produtos.index')}}">Produtos</a></li>
-                                    <li><a href="{{route('franquias.index')}}">Franquias</a></li>
-
-                                </ul>
-                            </li>
+                                <li class="dropdown dropdown-submenu "><a href="#" class="dropdown-toggle" data-toggle="dropdown">Parametrização</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{{route('upload-db.index')}}">Upload da BD</a></li>
+                                        <li><a href="{{route('users.index')}}">Adicionar User</a></li>
+                                        <li><a href="{{route('produtos.index')}}">Produtos</a></li>
+                                        <li><a href="{{route('franquias.index')}}">Franquias</a></li>
+                                    </ul>
+                                </li>
                             @endif
                         </ul>
                     </li>

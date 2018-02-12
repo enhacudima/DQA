@@ -56,6 +56,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/save/questionario-stock', 'QuestionarioController@store');
 
+    Route::resource('upload-db', 'UploadDController');
 
 });
 

@@ -298,6 +298,7 @@
                                     @if(isset($contagens))
                                         @foreach($contagens as $cli)
                                             <tr>
+
                                                 <td>{{$cli->id}}</td>
                                                 <td>{{$cli->data_dqa}}</td>
                                                 <td>{{$cli->data_inicio}}</td>

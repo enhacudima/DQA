@@ -30,6 +30,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/contagemfisica', 'ContagemfisicaController');
     Route::resource('/users', 'UserController');
     Route::resource('/questionario', 'QuestionarioController');
+    Route::resource('/questionarioRecontegem', 'QuestionarioRecontagemController');
+    Route::resource('/senhas', 'senhasController');
     Route::resource('/recontagem', 'RecontagemController');
     Route::resource('/resumo-stock', 'ResumoStockController');
     Route::resource('/questionario-resumo', 'QuestionarioResumoController');
@@ -53,6 +55,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/save/salesforce', 'SalesforceController@store');
     Route::get('/getAll/salesforce', 'SalesforceController@getAll');
+
+    Route::get('/save/senhas', 'SenhasController@store');
+    Route::get('/getAll/senhas', 'SenhasController@getAll');
 
     Route::get('/save/questionario-stock', 'QuestionarioController@store');
 

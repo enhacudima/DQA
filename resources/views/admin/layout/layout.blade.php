@@ -155,8 +155,9 @@
                             <li class="divider"></li>
                             <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Quetionario</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{route('questionario.index')}}">Stock</a></li>
-                                    <li><a href="{{route('questionario-resumo.index')}}">Resumo</a></li>
+                                    <li><a href="{{route('questionario.index')}}">Stock-Part1</a></li>
+                                    <li><a href="{{route('questionario-resumo.index')}}">Stock-Part2</a></li>
+                                    <li><a href="{{route('questionarioRecontegem.index')}}">Recontegem</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Recontagem</a>
@@ -165,9 +166,9 @@
                                     <li><a href="{{route('salesforce.index')}}">Salesforce</a></li>
                                     <li><a href="{{route('contagemfisica.index')}}">Contagem Fisica</a></li>
                                     <li class="divider"></li>
-
                                     <li><a href="{{route('recontagem.index')}}">Recontagem do livro</a></li>
-
+                                    <li class="divider"></li>
+                                    <li><a href="{{route('senhas.index')}}">Senhas</a></li>
                                 </ul>
                             </li>
 

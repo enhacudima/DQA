@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\QuestionarioDic;
-use App\QuestionarioStock;
-use App\Senha;
+use App\Salesforce;
+use App\Senhass;
 use Illuminate\Http\Request;
 
 class SenhasController extends Controller
@@ -16,10 +15,8 @@ class SenhasController extends Controller
      */
     public function index()
     {
-        $questoes=QuestionarioDic::where([
-            ['titulo_questionario', 'stock']
-        ])->get();
-        return view('admin.senha',compact('questoes'));
+
+        return view('admin.senha');
     }
 
     /**
@@ -34,13 +31,13 @@ class SenhasController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->data;
-        $main_form = $request->main_form;
+       $data = $request->data;
 
-        $sehas = Senha::create([
+
+        $senhas = Senhass::create([
+
             'ffisica' => $request->ffisica,
-
-
+            'mfisica' => $request->mfisica,
             'franquia_id' => $data['franquia_id'],
             'data_dqa' => $data['data_DQA'],
             'data_inicio' => $data['data_inicio'],
@@ -48,7 +45,8 @@ class SenhasController extends Controller
             'user_id' => $data['user_id']
         ]);
 
-        return $sehas;
+
+        return $senhas;
     }
 
 

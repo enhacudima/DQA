@@ -3,11 +3,7 @@
 @section('content')
 
     <style>
-        #nr-campos{
-            background: #f8fbf8;
-            margin-bottom: 20px;
-            padding: 15px;
-        }
+
         .page-title{
             color: #30a5ff;
             margin-left: 10px;
@@ -22,13 +18,7 @@
             border-color: rgb(53, 126, 189);
 
         }
-        .glyphicon { margin-right:5px; }
 
-        .textarea{
-            border: 1px solid #ccc;
-            outline: 0;
-            box-shadow: inset 0px 0px 0px 1px #ccc;
-        }
     </style>
     <div class="col-md-10 col-md-offset-1">
         <div class="row bg-title">
@@ -36,48 +26,28 @@
                 <h4 class="page-title">Recontagem Senhas</h4> </div>
         </div>
         <!-- /.row -->
+            @include('admin.cabecalho')
+<div class="white-box">
 
-        <form class="form-horizontal form-material" id="senhasnafranquia" method="POST" action="{{ route('bincard.store')}}">
+        <form class="form-horizontal form-material" id="senhasnafranquia" method="POST" onsubmit="return false;">
         {{ csrf_field() }}
         <!--User ID-->
-            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-
-            @include('admin.cabecalho')
-
-            <div class="form-group">
-                <table  class="table table-bordered table-hover table-sortable col-md-12">
-                    <thead>
-                    <tr>
-                        <th>Senhas Fisicas confirmadas</th>
-                        <th>Senhas Fisicas Ativadas no Movecardo</th>
-                    </tr>
-                    </thead>
-
-                    <tbody id="corpo-pro">
-                    <td>
+            <div class="form-group" style="padding: 20px">
+                    <div class="col-md-6">
+                        <label for="ffisica">Senhas Fisicas confirmadas</label>
                         <input id="ffisica" name="ffisica" type="number" placeholder="0"  class="form-control tableInput" >
-                        </td>
-                    <td>
-                        <input id="" name="" type="number" placeholder="0"  class="form-control tableInput" >
-                    </td>
-                    </tr>
 
-                    </tbody>
-                </table>
-                <div class="form-group">
-                    <div class="form-group col-md-6">
 
+                        </div>
+                    <div class="col-md-6">
+                        <label for="mfisica">Senhas Fisicas Ativadas no Movecardo</label>
+                        <input id="mfisica" name="mfisica" type="number" placeholder="0"  class="form-control tableInput" >
+                    <br>
                                 <button class="btn btn-success pull-right" id="save_nafranquia">Gravar</button>
-
                     </div>
-
-                    <div colspan="form-group col-md-6">
-                                <button class="btn btn-success pull-right" id="save_contagem">Gravar</button>
-
-                    </div>
-                </div>
 
             </div>
+</div>
         </form>
     </div>
 
@@ -107,15 +77,19 @@
 
             if(cabecalho.franquia_id && cabecalho.data_DQA && cabecalho.data_inicio && cabecalho.data_Fim){
 
-                    var ffisica= $(ffisica).val();
+                    var ffisica= $("#ffisica").val();
+                    var mfisica=$("#mfisica").val();
 
 
                     var params = {
                         data: cabecalho,
-                        ffisica: ffisica};
+                        ffisica: ffisica,
+                        mfisica:mfisica
 
+                    };
+                     console.log(params);
 
-                    if(ffisica){
+                    if(ffisica || mfisica){
                         $.ajax({
                             type: "get",
                             url: '{{url('/save/senhas')}}',
@@ -153,37 +127,11 @@
 
             if(cabecalho.franquia_id && cabecalho.data_DQA && cabecalho.data_inicio && cabecalho.data_Fim) {
                 $('.tableInput').prop("disabled", false);
-                fillFiels();
             }else{
                 $('.tableInput').prop("disabled", true);
             }
         });
 
-        function fillFiels(){
-            $('.tableInput').val('');
-
-            var cabecalho = getFormObj('cabec');
-
-            if(cabecalho.franquia_id && cabecalho.data_DQA && cabecalho.data_inicio && cabecalho.data_Fim){
-                $('.tableInput').prop("disabled", false);
-                $.ajax({
-                    type: "get",
-                    url: '{{url('/getAll/senhas')}}',
-                    data: {data: cabecalho},
-                    success: function (data) {
-                        console.log(data);
-                        for(i=0; i<data.length; i++){
-                            $('#'+data[i].codigo).val(data[i].total);
-                            // $('#'+data[i].codigo).css("background-color", "#c5e1a5");
-                        }
-                    },
-
-                    error: function (data) {
-                        console.log(data);
-                    }
-                })
-            }else $('.tableInput').prop("disabled", true);
-        }
 
 
     </script>

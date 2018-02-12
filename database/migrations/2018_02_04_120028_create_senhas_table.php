@@ -21,7 +21,7 @@ class CreateSenhasTable extends Migration
             $table->date('data_inicio');
             $table->date('data_fim');
 
-            $table->integer('senhas');
+            $table->integer('ffisica');
             $table->integer('user_id')->references('id')->on('users');
             $table->timestamps();
         });

@@ -47,6 +47,8 @@ class ReportController extends Controller
             ->get();
 
 
+
+
         return view('admin.report',compact(['recontagems','franquias','users','produtos','contagens','salesforce','bincard','questionario_stocks'])  );
      }
 

@@ -160,7 +160,6 @@
                                 $('.alert').removeClass('danger');
                                 $('.alert').addClass('success');
                                 $('.alert').html('Dados salvos com sucesso!');
-                                alert('salvo');
 
                                 console.log(data);
 
@@ -178,6 +177,7 @@
                             }
                         });
                     @endforeach
+                    alert('Salvo com sucesso!');
                 @endif
             }else alert('Erro.:\n\n Verifique se todos campos do cabeçalho foram preenchidos!');
         });

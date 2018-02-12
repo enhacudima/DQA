@@ -59,7 +59,7 @@
     </div>
     <!-- /.row -->
 
-    <div>
+    <div class="col-md-12">
         @include('admin.cabecalho')
         <div id="alert" class="alert alert-success text-center hidden"></div>
     </div>
@@ -68,6 +68,9 @@
             <form class="form-horizontal form-material" id="main_form" onsubmit="return false;">
                 <div id="alert" class="alert alert-success text-center hidden"></div>
                 {{ csrf_field() }}
+
+                <input type="hidden" id="codigo" name="codigo" value="{{$codigo+1}}">
+                <input type="hidden" id="categoria" name="categoria" value="stock_parte_1">
 
                     <!--QUESTIONARIO-->
                 <div class="white-box">
@@ -95,7 +98,7 @@
                             <div class="form-group">
                                 <div class="col-sm-12" >
                                     <br>
-                                    <button class="btn btn-success pull-right" id="save_contagem" style="margin-bottom: 50px">Gravar</button>
+                                    <button class="btn btn-success pull-right tableInput" id="save_contagem" style="margin-bottom: 50px">Gravar</button>
                                 </div>
                             </div>
                         </div>
@@ -124,8 +127,21 @@
             }
         });
 
-        //pega todos os dados do formulário e retorna um array onde o indice é o nome do input
-        function getFormObj(formId) {
+
+        /*********************************************/
+
+         $('#save_contagem').click(function () {
+            alert('Dados salvos com sucesso!');
+
+            $('.tableInput').prop('checked', false);
+
+            var valAtual = parseFloat($('#codigo').val());
+            $('#codigo').val(valAtual+1);
+            console.log(valAtual+1);
+        });
+
+         //pega todos os dados do formulário e retorna um array onde o indice é o nome do input
+         function getFormObj(formId) {
             var formObj = {};
             var inputs = $('#'+formId).serializeArray();
             $.each(inputs, function (i, input) {
@@ -134,54 +150,45 @@
             return formObj;
         }
 
-        $('#save_contagem').click(function () {
+         $('.tableInput').change(function () {
             var cabecalho = getFormObj('cabec');
+            var questao = $(this).attr("name");
+            var resposta = $(this).val();
+            var codigo = $('#codigo').val();
+            var categoria = $('#categoria').val();
 
             if(cabecalho.franquia_id && cabecalho.data_DQA && cabecalho.data_inicio && cabecalho.data_Fim){
 
-                @if(isset($questoes))
-                    @foreach($questoes as $q)
-                        /*
-                        var tipoQuestionario = '{$q->codigo}}'.slice(0, '{$q->codigo}}'.indexOf("-"));
-                        alert(res);
+                $.ajax({
+                    type: "get",
+                    url: '{{url('/save/questionario-stock')}}',
+                    data: {cabecalho:cabecalho, questao:questao, resposta:resposta, codigo:codigo, categoria:categoria},
+                    success: function (data) {
+                        $('.alert').removeClass('hidden');
+                        $('.alert').removeClass('danger');
+                        $('.alert').addClass('success');
+                        $('.alert').html('Dados salvos com sucesso!');
 
-                        if()
-                        */
+                        console.log(data);
+                        console.log(('Dados salvos com sucesso!'));
+                    },
 
-                        var resposta = ($('input[name="{{$q->codigo}}"]:checked').val());
-                        var questao = ($('input[name="{{$q->codigo}}"]:checked').attr("name"));
+                    error: function (data) {
 
-                        $.ajax({
-                            type: "get",
-                            url: '{{url('/save/questionario-stock')}}',
-                            data: {cabecalho:cabecalho, resposta:resposta, questao:questao},
-                            success: function (data) {
-                                $('.alert').removeClass('hidden');
-                                $('.alert').removeClass('danger');
-                                $('.alert').addClass('success');
-                                $('.alert').html('Dados salvos com sucesso!');
+                        $('#alert').removeClass('hidden');
+                        $('#alert').removeClass('success');
+                        $('#alert').addClass('danger');
+                        $('#alert').html('Erro ao gravar!');
 
-                                console.log(data);
-
-                                $("input[type='radio']").val(0);
-                            },
-
-                            error: function (data) {
-
-                                $('#alert').removeClass('hidden');
-                                $('#alert').removeClass('success');
-                                $('#alert').addClass('danger');
-                                $('#alert').html('Erro ao gravar!');
-
-                                console.log(data);
-                            }
-                        });
-                    @endforeach
-                    alert('Salvo com sucesso!');
-                @endif
+                        console.log(data);
+                    }
+                });
             }else alert('Erro.:\n\n Verifique se todos campos do cabeçalho foram preenchidos!');
         });
 
+
+
+         /***************************end*****************/
 
         $('.index').change(function () {
             var cabecalho = getFormObj('cabec');
@@ -195,26 +202,6 @@
             }
         });
 
-    </script>
-
-    <script>
-        var totalInput=5;
-        $(document).ready(function () {
-            createForm(totalInput);
-        });
-
-        $(document).on('click','button.remove', function () {
-            $(this).closest('tr').remove();
-            return false;
-        });
-
-
-
-
-
-        $('input').click(function () {
-            $('.alert').hide();
-        });
     </script>
 
 

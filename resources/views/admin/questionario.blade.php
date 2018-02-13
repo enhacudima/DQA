@@ -66,7 +66,6 @@
 
     <div class="col-xs-12">
             <form class="form-horizontal form-material" id="main_form" onsubmit="return false;">
-                <div id="alert" class="alert alert-success text-center hidden"></div>
                 {{ csrf_field() }}
 
                 <input type="hidden" id="codigo" name="codigo" value="{{$codigo+1}}">
@@ -131,7 +130,15 @@
         /*********************************************/
 
          $('#save_contagem').click(function () {
-            alert('Dados salvos com sucesso!');
+            //alert('Dados salvos com sucesso!');
+
+             $('.alert').removeClass('hidden');
+             $('.alert').removeClass('danger');
+             $('.alert').addClass('success');
+             $('.alert').html('Dados salvos com sucesso!');
+
+             setTimeout( "$('.alert').hide();", 3000);
+
 
             $('.tableInput').prop('checked', false);
 
@@ -164,10 +171,6 @@
                     url: '{{url('/save/questionario-stock')}}',
                     data: {cabecalho:cabecalho, questao:questao, resposta:resposta, codigo:codigo, categoria:categoria},
                     success: function (data) {
-                        $('.alert').removeClass('hidden');
-                        $('.alert').removeClass('danger');
-                        $('.alert').addClass('success');
-                        $('.alert').html('Dados salvos com sucesso!');
 
                         console.log(data);
                         console.log(('Dados salvos com sucesso!'));

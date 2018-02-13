@@ -43,6 +43,7 @@ class UploadDController extends Controller
         $nameF = $request->nome_ficheiro;
 
         $nome='';
+        $linhas=0;
 
         if ($nameF=='Sales Force'){
             $nome='Sales Force';
@@ -67,6 +68,7 @@ class UploadDController extends Controller
                     $csv_falesForce->franquia_id = $franquia_id;
                     $csv_falesForce->user_id = $user_id;
                     $dd = $csv_falesForce->save ();
+                    $linhas++;
 /*
                    $dd= DB::select('call store_sales_force_update(?,?,?,?,?,?,?,?,?,?)',
                            array(
@@ -120,6 +122,7 @@ class UploadDController extends Controller
                      $csv_dhis2->total = $total;
                      $csv_dhis2->user_id = $user_id;
                      $dd = $csv_dhis2->save ();
+                     $linhas++;
                  }
                  fclose ( $handle );
              }
@@ -127,7 +130,7 @@ class UploadDController extends Controller
 
         }
 
-        return redirect()->route('upload-db.index')->with('message', "Carregamento da BD $nome efectuada com sucesso com sucesso!");
+        return redirect()->route('upload-db.index')->with('message', "Carregamento da BD $nome efectuada com sucesso com sucesso! \n# Tolatl de linhas $linhas");
     }
 
     /**

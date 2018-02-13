@@ -37,6 +37,10 @@
             color: #FFFFFF;
             background: #30a5ff;
         }
+        .btn-val{
+            color: #fff;
+            background: #1f22255c;
+        }
         .titulo{
             color: #30a5ff;
             font-size: 18px;
@@ -63,7 +67,7 @@
                                             <table  class="table table-bordered table-hover table-sortable">
                                                 <thead>
                                                 <tr id="tHeader1">
-                                                    <th colspan="7" class="text-center titulo"> Registos por pagina</th>
+                                                    <th colspan="6" class="text-center titulo"> Registos por pagina</th>
                                                 </tr>
                                                 <tr>
                                                     <th colspan="2" class="linha-cin text-right" style="color: #30a3ff;"> Número da página</th>
@@ -74,7 +78,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn botao-nr-pag" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                    <input type="text" id="nrPagina" class="form-control text-center nrPagina index" value="1" min="1">
+                                                                    <input type="text" id="nrPagina" name="nrPagina" class="form-control text-center nrPagina index" value="1" min="1">
                                                                     <span class="input-group-btn data-up">
                                                                         <button class="btn botao-nr-pag" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -83,7 +87,7 @@
                                                         </div>
                                                     </th>
 
-                                                    <th colspan="4"></th>
+                                                    <th colspan="3"></th>
                                                 </tr>
                                                 <tr id="tHeader2">
                                                     <th colspan="2" class="text-center">Desagredação</th>
@@ -91,18 +95,28 @@
                                                     <th>20 - 24 anos</th>
                                                     <th>&ge;25 anos</th>
                                                     <th>N/A</th>
-                                                    <th>Total</th>
                                                 </tr>
                                                 </thead>
                                                 <tbody id="corpo">
                                                 <!--Linha 1 (Distribuição de contraceptivos 25+ e 25-)-->
                                                     <tr>
                                                         <td colspan="2">Distribuição de contraceptivos 25+ e 25-</td>
-                                                        <td><input type="number" class="form-control" min="0"disabled></td>
-                                                        <td><input type="number" class="form-control" min="0"disabled></td>
-                                                        <td><input type="number" class="form-control" min="0"disabled></td>
-                                                        <td><input type="number" class="form-control tableInput" min="0" name="dc_na" id="dc_na" ></td>
-                                                        <td><input type="number" class="form-control" min="0" name="dc_na_t" id="dc_na_t" disabled></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>
+                                                            <div class="col-xs-12">
+                                                                <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                    <input type="text" name="dc_na" id="dc_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                    <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
                                                     </tr>
 
                                                     <!--Linha 2 (Nova utente de PF)-->
@@ -110,38 +124,236 @@
                                                         <tr class="linha-cin">
                                                             <td rowspan="4">Nova utente de PF</td>
                                                             <td>Pílula</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_pill_19" id="nup_pill_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_pill_24" id="nup_pill_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_pil_25" id="nup_pil_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_pil_na" id="nup_pil_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="nup_pil_t" id="nup_pil_t" disabled></td>
+                                                    <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                                <span class="input-group-btn data-dwn">
+                                                                                    <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                </span>
+                                                                        <input type="text" name="nup_pill_19" id="nup_pill_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                                    <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                </span>
+                                                                    </div>
+                                                                </div>
+                                                    </td>
+
+                                                    <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                                <span class="input-group-btn data-dwn">
+                                                                                    <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                </span>
+                                                                        <input type="text" name="nup_pill_24" id="nup_pill_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                                    <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                </span>
+                                                                    </div>
+                                                                </div>
+                                                    </td>
+                                                    <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                                <span class="input-group-btn data-dwn">
+                                                                                    <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                </span>
+                                                                        <input type="text" name="nup_pil_25" id="nup_pil_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                                    <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                </span>
+                                                                    </div>
+                                                                </div>
+                                                    </td>
+                                                    <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                                <span class="input-group-btn data-dwn">
+                                                                                    <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                                </span>
+                                                                        <input type="text" name="nup_pil_na" id="nup_pil_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                                    <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                                </span>
+                                                                    </div>
+                                                                </div>
+                                                    </td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>Injectavel</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_19" id="nup_inj_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_24" id="nup_inj_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_25" id="nup_inj_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_inj_na" id="nup_inj_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="nup_inj_t" id="nup_inj_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="nup_inj_19" id="nup_inj_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="nup_inj_24" id="nup_inj_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="nup_inj_25" id="nup_inj_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="nup_inj_na" id="nup_inj_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>Implante</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_19" id="nup_imp_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_24" id="nup_imp_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_25" id="nup_imp_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_imp_na" id="nup_imp_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="nup_imp_t" id="nup_imp_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="nup_imp_19" id="nup_imp_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="nup_imp_24" id="nup_imp_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="nup_imp_25" id="nup_imp_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="nup_imp_na" id="nup_imp_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>DIU</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_19" id="nup_diu_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_24" id="nup_diu_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_25" id="nup_diu_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="nup_diu_na" id="nup_diu_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="nup_diu_t" id="nup_diu_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="nup_diu_19" id="nup_diu_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="nup_diu_24" id="nup_diu_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="nup_diu_25" id="nup_diu_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="nup_diu_na" id="nup_diu_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </tr>
 
@@ -150,38 +362,238 @@
                                                         <tr>
                                                             <td rowspan="4">Continuadora de PF</td>
                                                             <td>Pílula</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_19" id="cp_pil_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_24" id="cp_pil_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_25" id="cp_pil_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_pil_na" id="cp_pil_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="cp_pil_t" id="cp_pil_t" disabled></td>
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="cp_pil_19" id="cp_pil_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="cp_pil_24" id="cp_pil_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="cp_pil_25" id="cp_pil_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="cp_pil_na" id="cp_pil_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Injectavel</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_19" id="cp_inj_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_24" id="cp_inj_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_25" id="cp_inj_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_inj_na" id="cp_inj_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="cp_inj_t" id="cp_inj_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="cp_inj_19" id="cp_inj_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="cp_inj_24" id="cp_inj_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="cp_inj_25" id="cp_inj_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="cp_inj_na" id="cp_inj_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Implante</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_19" id="cp_imp_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_24" id="cp_imp_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_25" id="cp_imp_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_imp_na" id="cp_imp_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="cp_imp_t" id="cp_imp_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="cp_imp_19" id="cp_imp_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="cp_imp_24" id="cp_imp_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="cp_imp_25" id="cp_imp_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="cp_imp_na" id="cp_imp_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>DIU</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_19" id="cp_diu_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_24" id="cp_diu_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_25" id="cp_diu_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="cp_diu_na" id="cp_diu_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="cp_diu_t" id="cp_diu_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="cp_diu_19" id="cp_diu_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="cp_diu_24" id="cp_diu_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="cp_diu_25" id="cp_diu_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="cp_diu_na" id="cp_diu_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </tr>
 
@@ -190,29 +602,179 @@
                                                         <tr class="linha-cin">
                                                             <td rowspan="4">Pílula</td>
                                                             <td>Utentes Novas no método</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_19" id="pil_unm_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_24" id="pil_unm_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_25" id="pil_unm_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_unm_na" id="pil_unm_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="pil_unm_t" id="pil_unm_t" disabled></td>
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="pil_unm_19" id="pil_unm_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="pil_unm_24" id="pil_unm_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="pil_unm_25" id="pil_unm_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="pil_unm_na" id="pil_unm_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>Utentes que continuam o metodo</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_19" id="pil_ucm_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_24" id="pil_ucm_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_25" id="pil_ucm_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_ucm_na" id="pil_ucm_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="pil_ucm_t" id="pil_ucm_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="pil_ucm_19" id="pil_ucm_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="pil_ucm_24" id="pil_ucm_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="pil_ucm_25" id="pil_ucm_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="pil_ucm_na" id="pil_ucm_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>Total de ciclos</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_19" id="pil_tc_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_24" id="pil_tc_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_25" id="pil_tc_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="pil_tc_na" id="pil_tc_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="pil_tc_t" id="pil_tc_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="pil_tc_19" id="pil_tc_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="pil_tc_24" id="pil_tc_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="pil_tc_25" id="pil_tc_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="pil_tc_na" id="pil_tc_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </tr>
 
@@ -221,29 +783,179 @@
                                                         <tr>
                                                             <td rowspan="4">Injectaveis</td>
                                                             <td>Utentes Novas</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_un_19" id="inj_un_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_un_24" id="inj_un_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_un_25" id="inj_un_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_un_na" id="inj_un_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="inj_un_t" id="inj_un_t" disabled></td>
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="inj_un_19" id="inj_un_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="inj_un_24" id="inj_un_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="inj_un_25" id="inj_un_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="inj_un_na" id="inj_un_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Utentes seguintes</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_us_19" id="inj_us_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_us_24" id="inj_us_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_us_25" id="inj_us_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_us_na" id="inj_us_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="inj_us_t" id="inj_us_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="inj_us_19" id="inj_us_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="inj_us_24" id="inj_us_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="inj_us_25" id="inj_us_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="inj_us_na" id="inj_us_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Total de injectaveis por tipo</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_19" id="inj_tipt_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_24" id="inj_tipt_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_25" id="inj_tipt_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="inj_tipt_na" id="inj_tipt_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="inj_tipt_t" id="inj_tipt_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="inj_tipt_19" id="inj_tipt_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="inj_tipt_24" id="inj_tipt_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="inj_tipt_25" id="inj_tipt_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="inj_tipt_na" id="inj_tipt_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </tr>
 
@@ -252,29 +964,179 @@
                                                         <tr class="linha-cin">
                                                             <td rowspan="4">Implante</td>
                                                             <td>Utentes Novas</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_un_19" id="imp_un_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_un_24" id="imp_un_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_un_25" id="imp_un_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_un_na" id="imp_un_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="imp_un_t" id="imp_un_t" disabled></td>
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="imp_un_19" id="imp_un_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="imp_un_24" id="imp_un_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="imp_un_25" id="imp_un_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="imp_un_na" id="imp_un_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>Utentes que continuam o método</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_19" id="imp_ucm_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_24" id="imp_ucm_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_25" id="imp_ucm_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_ucm_na" id="imp_ucm_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="imp_ucm_t" id="imp_ucm_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="imp_ucm_19" id="imp_ucm_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="imp_ucm_24" id="imp_ucm_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="imp_ucm_25" id="imp_ucm_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="imp_ucm_na" id="imp_ucm_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
 
                                                         <tr class="linha-cin">
                                                             <td>Total de Implantes por tipo</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_19" id="imp_tipt_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_24" id="imp_tipt_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_25" id="imp_tipt_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="imp_tipt_na" id="imp_tipt_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="imp_tipt_t" id="imp_tipt_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="imp_tipt_19" id="imp_tipt_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="imp_tipt_24" id="imp_tipt_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="imp_tipt_25" id="imp_tipt_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="imp_tipt_na" id="imp_tipt_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </tr>
 
@@ -283,41 +1145,241 @@
                                                         <tr>
                                                             <td rowspan="3">DIU</td>
                                                             <td>Utentes Novas</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_un_19" id="diu_un_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_un_24" id="diu_un_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_un_25" id="diu_un_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_un_na" id="diu_un_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="diu_un_t" id="diu_un_t" disabled></td>
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="diu_un_19" id="diu_un_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="diu_un_24" id="diu_un_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="diu_un_25" id="diu_un_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="diu_un_na" id="diu_un_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Utentes que continuam o método</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_19" id="diu_ucm_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_24" id="diu_ucm_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_25" id="diu_ucm_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_ucm_na" id="diu_ucm_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="diu_ucm_t" id="diu_ucm_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="diu_ucm_19" id="diu_ucm_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="diu_ucm_24" id="diu_ucm_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="diu_ucm_25" id="diu_ucm_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="diu_ucm_na" id="diu_ucm_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
 
                                                         <tr>
                                                             <td>Total de DIU por tipo</td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_19" id="diu_tdpt_19"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_24" id="diu_tdpt_24"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_25" id="diu_tdpt_25"></td>
-                                                            <td><input type="number" class="form-control tableInput" min="0" name="diu_tdpt_na" id="diu_tdpt_na"></td>
-                                                            <td><input type="number" class="form-control" min="0" name="diu_tdpt_t" id="diu_tdpt_t" disabled></td>
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="diu_tdpt_19" id="diu_tdpt_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="diu_tdpt_24" id="diu_tdpt_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="diu_tdpt_25" id="diu_tdpt_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+
+                                                            <td>
+                                                                <div class="col-xs-12">
+                                                                    <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                        <input type="text" name="diu_tdpt_na" id="diu_tdpt_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
                                                         </tr>
                                                     </tr>
 
                                                 <tr>
                                                     <tr>
                                                     <td colspan="2">N/A</td>
-                                                    <td><input type="number" class="form-control tableInput" min="0" name="na_19" id="na_19"></td>
-                                                    <td><input type="number" class="form-control tableInput" min="0" name="na_24" id="na_24"></td>
-                                                    <td><input type="number" class="form-control tableInput" min="0" name="na_25" id="na_25"></td>
-                                                    <td><input type="number" class="form-control tableInput" min="0" name="na_na" id="na_na"></td>
-                                                    <td><input type="number" class="form-control" min="0" name="na_t" id="na_t" disabled></td>
-                                                    </tr>
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="na_19" id="na_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="na_24" id="na_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="na_25" id="na_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="text" name="na_na" id="na_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    </tr >
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -327,11 +1389,46 @@
                         </form>
                     </div>
     </div>
+    <script>
+        /**
+         * Input adicionar o numero de página
+         */
+        $(function() {
+            var action;
 
+            $(".number-spinner button").click(function () {
+                btn = $(this);
+                input = btn.closest('.number-spinner').find('input');
+                btn.closest('.number-spinner').find('button').prop("disabled", false);
+
+                if (btn.attr('data-dir') == 'up') {
+                    if ( input.attr('max') == undefined || parseInt(input.val()) < parseInt(input.attr('max')) ) {
+                        input.val(parseInt(input.val())+1);
+                    }else{
+                        btn.prop("disabled", true);
+                    }
+                } else {
+                    if ( input.attr('min') == undefined || parseInt(input.val()) > parseInt(input.attr('min')) ) {
+                        input.val(parseInt(input.val())-1);
+                    }else{
+                        btn.prop("disabled", true);
+                    }
+                }
+                if(input.attr('name')=='nrPagina')
+                    fillFiels();
+                else {
+                    btn.css('color', '#ddd');
+                    save($(this).closest('.number-spinner').find('input'));
+                }
+
+            });
+        });
+    </script>
 
     <script>
         $(document).ready(function () {
-            $('.tableInput').prop("disabled", true);;
+            $('.tableInput').prop("disabled", true);
+            $('.btn-val').prop("disabled", true);
         })
 
         $.ajaxSetup({
@@ -350,24 +1447,22 @@
             return formObj;
         }
 
-        function calcularTotal() {
-            var $row = $(this).closest("tr"),        // Finds the closest row <tr>
-                $tds = $row.find("td:nth-child(4)"); // Finds the 2nd <td> element
-
-           // alert($tds);
-        }
-
         var input = null;
-
         $('.tableInput').change(function () {
+            save($(this));
+        })
+        /*
+        $('.btn-val').click(function () {
+            save($(this).closest('.number-spinner').find('input'));
+        });
+*/
+        function save(input) {
             var formData = getFormObj('cabec');
             var nr_pagina = $('#nrPagina').val();
 
-            calcularTotal();
-
-            //var blank = (formData.transacao) ? true:false;
+                if(input.attr('name')!='nrPagina')
                 if(formData.franquia_id && formData.data_DQA && formData.data_inicio && formData.data_Fim){
-                    input = $(this);
+                    //input = $(this);
                     var valor = input.val(); //get value from input
                     var name = input.attr("name"); //get input name
                     //alert(name);
@@ -390,18 +1485,15 @@
                         }
                     })
                 }else alert('Erro.:\n\n Verifique se todos campos do cabeçalho foram preenchidos!');
-        });
+        }
 
 
         $('.index').change(function () {
             fillFiels();
         });
-        $('.botao-nr-pag').click(function () {
-            fillFiels();
-        });
 
         function fillFiels(){
-            $('.tableInput').val('');
+            $('.tableInput').val('0');
             $('.tableInput').css("background-color", "#fff");
 
             var formData = getFormObj('cabec');
@@ -409,6 +1501,7 @@
 
             if(formData.franquia_id && formData.data_DQA && formData.data_inicio && formData.data_Fim && nrPagina){
                 $('.tableInput').prop("disabled", false);
+                $('.btn-val').prop("disabled", false);
                 $.ajax({
                     type: "get",
                     url: '{{url('/getAll/recontagem')}}',
@@ -428,43 +1521,12 @@
             }else $('.tableInput').prop("disabled", true);
         }
 
-
-    </script>
-
-    <script>
-        /**
-         * Input adicionar o numero de página
-         */
-        $(function() {
-            var action;
-            $(".number-spinner button").mousedown(function () {
-                btn = $(this);
-                input = btn.closest('.number-spinner').find('input');
-                btn.closest('.number-spinner').find('button').prop("disabled", false);
-
-                if (btn.attr('data-dir') == 'up') {
-                    action = setInterval(function(){
-                        if ( input.attr('max') == undefined || parseInt(input.val()) < parseInt(input.attr('max')) ) {
-                            input.val(parseInt(input.val())+1);
-                        }else{
-                            btn.prop("disabled", true);
-                            clearInterval(action);
-                        }
-                    }, 80);
-                } else {
-                    action = setInterval(function(){
-                        if ( input.attr('min') == undefined || parseInt(input.val()) > parseInt(input.attr('min')) ) {
-                            input.val(parseInt(input.val())-1);
-                        }else{
-                            btn.prop("disabled", true);
-                            clearInterval(action);
-                        }
-                    }, 80);
-                }
-            }).mouseup(function(){
-                clearInterval(action);
-            });
+        $('.tableInput').click(function () {
+           $(this).css('background','#fff');
         });
+
     </script>
+
+
 
 @endsection()

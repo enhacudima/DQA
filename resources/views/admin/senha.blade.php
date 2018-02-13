@@ -26,10 +26,15 @@
                 <h4 class="page-title">Recontagem Senhas</h4> </div>
         </div>
         <!-- /.row -->
+        <div>
             @include('admin.cabecalho')
-<div class="white-box">
+            <div id="alert" hidden class="alert alert-success text-center">
+                Dados salvos com sucesso!
+            </div>
+        </div>
 
         <form class="form-horizontal form-material" id="senhasnafranquia" method="POST" onsubmit="return false;">
+<div class="white-box">
         {{ csrf_field() }}
         <!--User ID-->
             <div class="form-group" style="padding: 20px">
@@ -95,11 +100,9 @@
                             url: '{{url('/save/senhas')}}',
                             data: params,
                             success: function (data) {
-                                $('#alert').removeClass('hidden');
-                                $('#alert').removeClass('danger');
-                                $('#alert').addClass('success');
-                                $('#alert').html('Dados salvos com sucesso!');
-                                alert('salvo');
+
+                                $('.alert').show();
+                                setTimeout( "$('.alert').hide();", 3000);
 
                                 console.log(data);
 

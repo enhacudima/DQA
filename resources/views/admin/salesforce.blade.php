@@ -28,13 +28,15 @@
     <div class="col-md-10 col-md-offset-1">
         <div class="row bg-title">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Bin Card de Produtos</h4> </div>
+                <h4 class="page-title">Salesforce</h4> </div>
         </div>
         <!-- /.row -->
 
-        <div>
+        <div class="row">
             @include('admin.cabecalho')
-            <div id="alert" class="alert alert-success text-center hidden"></div>
+            <div id="alert" hidden class="alert alert-success text-center">
+                Dados salvos com sucesso!
+            </div>
         </div>
 
         <form class="form-horizontal form-material" id="main_form" onsubmit="return false;">
@@ -160,11 +162,9 @@
                             url: '{{url('/save/salesforce')}}',
                             data: params,
                             success: function (data) {
-                                $('#alert').removeClass('hidden');
-                                $('#alert').removeClass('danger');
-                                $('#alert').addClass('success');
-                                $('#alert').html('Dados salvos com sucesso!');
-                                alert('salvo');
+
+                                $('.alert').show();
+                                setTimeout( "$('.alert').hide();", 3000);
 
                                 console.log(data);
 

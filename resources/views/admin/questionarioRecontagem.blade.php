@@ -45,7 +45,9 @@
         <!-- /.row -->
         <div class="row">
             @include('admin.cabecalho')
-            <div id="alert" class="alert alert-success text-center hidden"></div>
+            <div id="alert" hidden class="alert alert-success text-center">
+                Dados salvos com sucesso!
+            </div>
         </div>
 
         <form class="form-horizontal form-material" method="POST" id="mainForm" onsubmit="return false;">
@@ -163,9 +165,9 @@
         });
 
         $('#save_contagem').click(function () {
-            $('#alert').html('Dados salvos com sucesso!');
 
-            alert('Dados salvos com sucesso!');
+            $('.alert').show();
+            setTimeout( "$('.alert').hide();", 3000);
 
             $('.tableInput').val('');
 

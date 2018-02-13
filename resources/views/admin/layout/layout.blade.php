@@ -89,6 +89,14 @@
             text-align: center;
             color: #fff;
         }
+
+        #alert{
+            position: fixed;
+            top: 50px;
+            z-index: 10;
+            left: 0;
+            right: 0;
+        }
     </style>
 
     <script>

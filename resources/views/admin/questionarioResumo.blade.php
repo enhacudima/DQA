@@ -29,13 +29,7 @@
             outline: 0;
             box-shadow: inset 0px 0px 0px 1px #ccc;
         }
-        #alert{
-            position: fixed;
-            top: 50px;
-            z-index: 10;
-            left: 0;
-            right: 0;
-        }
+
     </style>
     <div class="col-md-10 col-md-offset-1">
         <div class="row bg-title">
@@ -45,7 +39,9 @@
         <!-- /.row -->
         <div class="row">
             @include('admin.cabecalho')
-            <div id="alert" class="alert alert-success text-center hidden"></div>
+            <div id="alert" hidden class="alert alert-success text-center">
+                Dados salvos com sucesso!
+            </div>
         </div>
 
                 <form class="form-horizontal form-material" method="POST" id="mainForm" onsubmit="return false;">
@@ -163,9 +159,10 @@
         });
 
         $('#save_contagem').click(function () {
-            $('#alert').html('Dados salvos com sucesso!');
 
-            alert('Dados salvos com sucesso!');
+            $('.alert').show();
+            setTimeout( "$('.alert').hide();", 3000);
+
 
             $('.tableInput').val('');
 

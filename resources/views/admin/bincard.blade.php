@@ -32,9 +32,11 @@
         </div>
         <!-- /.row -->
 
-        <div>
+        <div class="row">
             @include('admin.cabecalho')
-            <div id="alert" class="alert alert-success text-center hidden"></div>
+            <div id="alert" hidden class="alert alert-success text-center">
+                Dados salvos com sucesso!
+            </div>
         </div>
 
                 <form class="form-horizontal form-material" id="main_form" onsubmit="return false;">
@@ -159,11 +161,9 @@
                             url: '{{url('/save/bin-card')}}',
                             data: params,
                             success: function (data) {
-                                $('#alert').removeClass('hidden');
-                                $('#alert').removeClass('danger');
-                                $('#alert').addClass('success');
-                                $('#alert').html('Dados salvos com sucesso!');
-                                alert('salvo');
+
+                                $('.alert').show();
+                                setTimeout( "$('.alert').hide();", 3000);
 
                                 console.log(data);
 

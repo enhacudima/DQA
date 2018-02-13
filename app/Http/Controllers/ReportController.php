@@ -42,14 +42,12 @@ class ReportController extends Controller
             ->orderByRaw('id DESC')
             ->get();
 
-        $questionario_stocks=DB::table('questionario_stocks_v')
-            ->orderByRaw('id DESC')
-            ->get();
 
 
 
 
-        return view('admin.report',compact(['recontagems','franquias','users','produtos','contagens','salesforce','bincard','questionario_stocks'])  );
+
+        return view('admin.report',compact(['recontagems','franquias','users','produtos','contagens','salesforce','bincard'])  );
      }
 
     /**

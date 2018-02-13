@@ -635,33 +635,9 @@
                                     </tr>
                                     </thead>
                                     <tbody>
+<!--
 
-                                    @if(isset($questionario_stocks))
-                                        @foreach($questionario_stocks as $cli)
-                                            <tr>
-
-                                                <td>{{$cli->id}}</td>
-                                                <td>{{$cli->data_dqa}}</td>
-                                                <td>{{$cli->data_inicio}}</td>
-                                                <td>{{$cli->data_fim}}</td>
-                                                <td>{{$cli->questao}}</td>
-                                                <td>{{$cli->resposta}}</td>
-                                                <td>{{$cli->franquia_id}}</td>
-                                                <td>{{$cli->province}}</td>
-                                                <td>{{$cli->districts}}</td>
-                                                <td>{{$cli->bairro}}</td>
-                                                <td>{{$cli->tipo}}</td>
-                                                <td>{{$cli->modelo}}</td>
-                                                <td>{{$cli->nome}}</td>
-                                                <td>{{$cli->enfermeira}}</td>
-                                                <td>{{$cli->telefone}}</td>
-                                                <td>{{$cli->lat}}</td>
-                                                <td>{{$cli->log}}</td>
-                                                <td>{{$cli->name}}</td>
-
-                                            </tr>
-                                        @endforeach
-                                    @endif
+-->
                                     </tbody>
                                 </table>
                             </div>

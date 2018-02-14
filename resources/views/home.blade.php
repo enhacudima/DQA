@@ -23,13 +23,7 @@
 
     <!--row -->
     <div class="row">
-        <div class="col-md-4">
-            {!! $chart->render() !!}
-        </div>
 
-        <div class="col-md-4">
-            {!! $user->render() !!}
-        </div>
         <div class="col-md-4">
             {!! $clinica->render() !!}
         </div>
@@ -39,16 +33,6 @@
     <hr>
 
     <div class="row">
-        <div class="col-md-4">
-            {!! $percent->render() !!}
-        </div>
-
-        <div class="col-md-4">
-            {!! $user->render() !!}
-        </div>
-        <div class="col-md-4">
-            {!! $clinica->render() !!}
-        </div>
 
     </div>
 

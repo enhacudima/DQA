@@ -37,9 +37,9 @@ class HomeController extends Controller
     {
 
       $clinica = Charts::database(Franquia::all(), 'bar', 'highcharts')
-            ->title("Franquia")
+            ->title("Franquias por Provincias")
             ->elementLabel("Total")
-            ->dimensions(200, 150)
+            ->dimensions(200, 100)
             ->responsive(true)
             ->groupBy('province');
 
@@ -51,25 +51,12 @@ class HomeController extends Controller
             ->responsive(true)
             ->groupBy('grupo');
 
-        $user = Charts::database(User::all(), 'pie', 'highcharts')
-            ->title("Usuarios por grupo")
-            ->elementLabel("Total")
-            ->dimensions(200, 150)
-            ->responsive(true)
-            ->groupBy('grupo'); // Usuários vão ser agrupados pelo campo série
-
-
-          $percent=Charts::create('percentage', 'justgage')
-                    ->title('My nice chart')
-                    ->elementLabel('My nice label')
-                    ->values([65,0,100])
-                    ->responsive(false)
-                    ->height(300)
-                    ->width(0);
 
 
 
-        return view('home',compact(['chart','user','clinica','percent']));
+
+
+        return view('home',compact(['chart','clinica']));
     }
 
     public function showChangePasswordForm(){

@@ -75,7 +75,7 @@
                                     <th>Modelo</th>
                                     <th>Nome</th>
                                     <th>Enfermeira</th>
-                                    <th>Nome</th>
+                                    <th>Telefone</th>
                                     <th>Observações</th>
                                     <th>Lat</th>
                                     <th>log</th>
@@ -121,54 +121,7 @@
     <!--and Lista de usuarios -->
 
     <hr>
-    <!--Lista de usuarios -->
-    <div class="row">
-        <div class="col-md-12">
-            <div class="white-box">
-                <div class="card">
-                    <h5 class="card-header">Lista de Uruarios</h5>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div id="morris-area-chart2" style="height: 370px; overflow: scroll;">
-                                <table class="table display nowrap "  id="user" cellspacing="0" style="width: 100%">
 
-                                        <thead>
-                                        <tr>
-                                            <th>Nome</th>
-                                            <th>Email</th>
-                                            <th>Grupo</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        @if(isset($users))
-                                            @foreach($users as $cli)
-                                                <tr>
-                                                    <td>{{$cli->name}}</td>
-                                                    <td>{{$cli->email}}</td>
-                                                    @if( $cli->grupo == 2)
-                                                        <td>Admin</td>
-                                                    @else
-                                                        <td>Normal</td>
-                                                    @endif
-
-                                                </tr>
-                                            @endforeach
-                                        @endif
-                                        </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-    </div>
-
-    </div>
-    <!--and lista de usuarios -->
-
-        <hr>
     <!--Lvro de registro -->
     <div class="row">
     <div class="col-md-12">

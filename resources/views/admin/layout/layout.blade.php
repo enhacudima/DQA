@@ -185,6 +185,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a href="{{route('upload-db.index')}}">Upload da BD</a></li>
                                         <li><a href="{{route('users.index')}}">Adicionar User</a></li>
+                                        <li><a href="{{route('listusers.index')}}">Lista de Usuarios</a></li>
                                         <li><a href="{{route('produtos.index')}}">Produtos</a></li>
                                         <li><a href="{{route('franquias.index')}}">Franquias</a></li>
                                     </ul>

@@ -31,12 +31,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/users', 'UserController');
     Route::resource('/questionario', 'QuestionarioController');
     Route::resource('/questionarioRecontegem', 'QuestionarioRecontagemController');
-    Route::resource('/senhas', 'senhasController');
+    Route::resource('/senhas', 'SenhasController');
     Route::resource('/recontagem', 'RecontagemController');
     Route::resource('/resumo-stock', 'ResumoStockController');
     Route::resource('/questionario-resumo', 'QuestionarioResumoController');
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
     Route::resource('/users', 'UserController');
+    Route::resource('/listusers', 'ListuserController');
     Route::resource('/produtos', 'ProdutoController');
     Route::resource('/report', 'ReportController');
     Route::resource('/resumogeral', 'ResumogeralController');

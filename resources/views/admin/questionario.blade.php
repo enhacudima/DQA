@@ -74,11 +74,11 @@
                     <!--QUESTIONARIO-->
                 <div class="white-box">
                     <div class="card">
-                        <h5 class="card-header">Perguntas</h5>
+                        <h5 class="card-header" >Perguntas</h5>
                         <div class="card-body">
                             @if(isset($questoes))
                                 @foreach($questoes as $q)
-                                    <div class="col">
+                                    <div class="col" id="{{$q->codigo}}">
                                         <h5 class="card-title">{{$q->questao}}</h5>
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="{{'id-1-'.$q->id}}" name="{{$q->codigo}}" value="Sim" class="custom-control-input tableInput">
@@ -163,7 +163,12 @@
             var resposta = $(this).val();
             var codigo = $('#codigo').val();
             var categoria = $('#categoria').val();
-
+/*
+            var q = $(this).prevUntil("div:first").find('h5:first').text();
+             //var q = $(this).prevUntil("H5."+questao).text();
+             alert(q);
+             console.log($(this).prevUntil("div:first").find('h5:first'));
+*/
             if(cabecalho.franquia_id && cabecalho.data_DQA && cabecalho.data_inicio && cabecalho.data_Fim){
 
                 $.ajax({

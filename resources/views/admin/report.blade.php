@@ -180,12 +180,12 @@
                                             <td>{{$cli->bairro}}</td>
                                             <td>{{$cli->tipo}}</td>
                                             <td>{{$cli->modelo}}</td>
-                                            <td>{{$cli->nome}}</td>
+                                            <td>{{$cli->franquia}}</td>
                                             <td>{{$cli->enfermeira}}</td>
                                             <td>{{$cli->telefone}}</td>
                                             <td>{{$cli->lat}}</td>
                                             <td>{{$cli->log}}</td>
-                                            <td>{{$cli->name}}</td>
+                                            <td>{{$cli->user}}</td>
 
                                         </tr>
                                     @endforeach
@@ -269,12 +269,12 @@
                                                 <td>{{$cli->bairro}}</td>
                                                 <td>{{$cli->tipo}}</td>
                                                 <td>{{$cli->modelo}}</td>
-                                                <td>{{$cli->nome}}</td>
+                                                <td>{{$cli->franquia}}</td>
                                                 <td>{{$cli->enfermeira}}</td>
                                                 <td>{{$cli->telefone}}</td>
                                                 <td>{{$cli->lat}}</td>
                                                 <td>{{$cli->log}}</td>
-                                                <td>{{$cli->name}}</td>
+                                                <td>{{$cli->user}}</td>
 
                                             </tr>
                                         @endforeach
@@ -359,12 +359,12 @@
                                                 <td>{{$cli->bairro}}</td>
                                                 <td>{{$cli->tipo}}</td>
                                                 <td>{{$cli->modelo}}</td>
-                                                <td>{{$cli->nome}}</td>
+                                                <td>{{$cli->franquia}}</td>
                                                 <td>{{$cli->enfermeira}}</td>
                                                 <td>{{$cli->telefone}}</td>
                                                 <td>{{$cli->lat}}</td>
                                                 <td>{{$cli->log}}</td>
-                                                <td>{{$cli->name}}</td>
+                                                <td>{{$cli->user}}</td>
 
                                             </tr>
                                         @endforeach
@@ -449,12 +449,12 @@
                                                 <td>{{$cli->bairro}}</td>
                                                 <td>{{$cli->tipo}}</td>
                                                 <td>{{$cli->modelo}}</td>
-                                                <td>{{$cli->nome}}</td>
+                                                <td>{{$cli->franquia}}</td>
                                                 <td>{{$cli->enfermeira}}</td>
                                                 <td>{{$cli->telefone}}</td>
                                                 <td>{{$cli->lat}}</td>
                                                 <td>{{$cli->log}}</td>
-                                                <td>{{$cli->name}}</td>
+                                                <td>{{$cli->user}}</td>
 
                                             </tr>
                                         @endforeach
@@ -724,13 +724,13 @@
                                         <th>DATA FIM DQA</th>
                                         <th>SENHAS FISICAS NA FRANQUIA</th>
                                         <th>SENHAS FISICAS CONFIRMADAS NO MOVERCARDO</th>
-                                        <th>ID FRANQUIA</th>
                                         <th>PROVINCIA</th>
                                         <th>DISTRITO</th>
                                         <th>BAIRRO</th>
+                                        <th>ID FRANQUIA</th>
+                                        <th>NOME FRANQUIA</th>
                                         <th>TIPO FRANQUIA</th>
                                         <th>MODELO FRANQUIA</th>
-                                        <th>NOME FRANQUIA</th>
                                         <th>NOME ENFERMEIRA</th>
                                         <th>TELEFONE</th>
                                         <th>LAT</th>
@@ -741,9 +741,33 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-<!--
 
--->
+                                      @if(isset($senhas))
+                                        @foreach($senhas as $cli)
+
+                                            <tr>
+                                                <td>{{$cli->id}}</td>
+                                                <td>{{$cli->data_dqa}}</td>
+                                                <td>{{$cli->data_inicio}}</td>
+                                                <td>{{$cli->data_fim}}</td>
+                                                <td>{{$cli->ffisica}}</td>
+                                                <td>{{$cli->mfisica}}</td>
+                                                <td>{{$cli->province}}</td>
+                                                <td>{{$cli->districts}}</td>
+                                                <td>{{$cli->bairro}}</td>
+                                                <td>{{$cli->franquia_id}}</td>
+                                                <td>{{$cli->franquia}}</td>
+                                                <td>{{$cli->tipo}}</td>
+                                                <td>{{$cli->modelo}}</td>
+                                                <td>{{$cli->enfermeira}}</td>
+                                                <td>{{$cli->telefone}}</td>
+                                                <td>{{$cli->lat}}</td>
+                                                <td>{{$cli->log}}</td>
+                                                <td>{{$cli->user}}</td>
+                                            </tr>
+                                        @endforeach
+                                      @endif
+
                                     </tbody>
                                 </table>
                             </div>

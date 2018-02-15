@@ -38,6 +38,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
     Route::resource('/users', 'UserController');
     Route::resource('/listusers', 'ListuserController');
+    Route::resource('/questionariodeverficacao', 'questionarioverficacaoController');
     Route::resource('/produtos', 'ProdutoController');
     Route::resource('/report', 'ReportController');
     Route::resource('/resumogeral', 'ResumogeralController');
@@ -56,6 +57,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/save/salesforce', 'SalesforceController@store');
     Route::get('/getAll/salesforce', 'SalesforceController@getAll');
+
+    Route::get('/save/questionariodeverficacao', 'questionariodeverficacaoController@store');
+    Route::get('/getAll/questionariodeverficacao', 'questionariodeverficacaoController@getAll');
 
     Route::get('/save/senhas', 'SenhasController@store');
     Route::get('/getAll/senhas', 'SenhasController@getAll');

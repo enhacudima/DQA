@@ -89,7 +89,7 @@
                 "scrollX": true,
                 dom: 'Bfrtip',
                 buttons: [
-                    'csv', 'excel', 'pdf', 'print'
+                    'csv', 'excel', 'pdf', 'print','colvis'
                 ]
             } );
 

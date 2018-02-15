@@ -614,16 +614,20 @@
 </div>
 
 
+
+
     <script>
+
         $(document).ready(function() {
             $('#produto').DataTable( {
                 "scrollY": 200,
                 "scrollX": true,
                 dom: 'Bfrtip',
                 buttons: [
-                    'csv', 'excel', 'pdf', 'print'
+                    'csv', 'excel', 'pdf', 'print','colvis'
                 ]
             } );
+
 
 
         } );
@@ -636,9 +640,10 @@
                 "scrollX": true,
                 dom: 'Bfrtip',
                 buttons: [
-                    'csv', 'excel', 'pdf', 'print'
+                    'csv', 'excel', 'pdf', 'print','colvis'
                 ]
             } );
+
 
 
         } );
@@ -652,7 +657,7 @@
                 "scrollX": true,
                 dom: 'Bfrtip',
                 buttons: [
-                    'csv', 'excel', 'pdf', 'print'
+                    'csv', 'excel', 'pdf', 'print','colvis'
                 ]
             } );
 
@@ -667,7 +672,7 @@
             "scrollX": true,
             dom: 'Bfrtip',
             buttons: [
-                'csv', 'excel', 'pdf', 'print'
+                'csv', 'excel', 'pdf', 'print','colvis'
             ]
         } );
 
@@ -682,7 +687,7 @@
             "scrollX": true,
             dom: 'Bfrtip',
             buttons: [
-                'csv', 'excel', 'pdf', 'print'
+                'csv', 'excel', 'pdf', 'print','colvis'
             ]
         } );
 
@@ -697,7 +702,7 @@
             "scrollX": true,
             dom: 'Bfrtip',
             buttons: [
-                'csv', 'excel', 'pdf', 'print'
+                'csv', 'excel', 'pdf', 'print','colvis'
             ]
         } );
 
@@ -712,7 +717,7 @@
             "scrollX": true,
             dom: 'Bfrtip',
             buttons: [
-                'csv', 'excel', 'pdf', 'print'
+                'csv', 'excel', 'pdf', 'print','colvis'
             ]
         } );
 
@@ -726,7 +731,7 @@
                 "scrollX": true,
                 dom: 'Bfrtip',
                 buttons: [
-                    'csv', 'excel', 'pdf', 'print'
+                    'csv', 'excel', 'pdf', 'print','colvis'
                 ]
             } );
 
@@ -742,7 +747,7 @@
             "scrollX": true,
             dom: 'Bfrtip',
             buttons: [
-                'csv', 'excel', 'pdf', 'print'
+                'csv', 'excel', 'pdf', 'print','colvis'
             ]
         } );
 

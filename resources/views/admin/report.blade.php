@@ -472,6 +472,84 @@
 
     </div>
     <!--and bincard -->
+
+    <hr>
+    <!--Questionario Verificacao -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="white-box">
+                <div class="card">
+                    <h5 class="card-header">QUESTIONARIO DE VERIFICAÇÃO DE INSTRUÇÕES</h5>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div id="morris-area-chart2" style="height: 370px; overflow: scroll;">
+                                <table class="table display nowrap "  id="questionario_verificacao" cellspacing="0" style="width: 100%">
+
+                                    <thead>
+                                    <tr>
+
+                                        <th>ID</th>
+                                        <th>DATA DQA</th>
+                                        <th>DATA INICIO DQA</th>
+                                        <th>DATA FIM DQA</th>
+                                        <th>QUESTÃO</th>
+                                        <th>RESPOSTA</th>
+                                        <th>PROVINCIA</th>
+                                        <th>DISTRITO</th>
+                                        <th>BAIRRO</th>
+                                        <th>ID FRANQUIA</th>
+                                        <th>NOME FRANQUIA</th>
+                                        <th>TIPO FRANQUIA</th>
+                                        <th>MODELO FRANQUIA</th>
+                                        <th>NOME ENFERMEIRA</th>
+                                        <th>TELEFONE</th>
+                                        <th>LAT</th>
+                                        <th>LOG</th>
+                                        <th>USUARIO</th>
+
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    @if(isset($questionario_verificacao))
+                                        @foreach($questionario_verificacao as $cli)
+                                            <tr>
+                                                <td>{{$cli->id}}</td>
+                                                <td>{{$cli->data_dqa}}</td>
+                                                <td>{{$cli->data_inicio}}</td>
+                                                <td>{{$cli->data_fim}}</td>
+                                                <td>{{$cli->questao}}</td>
+                                                <td>{{$cli->resposta}}</td>
+                                                <td>{{$cli->province}}</td>
+                                                <td>{{$cli->districts}}</td>
+                                                <td>{{$cli->bairro}}</td>
+                                                <td>{{$cli->franquia_id}}</td>
+                                                <td>{{$cli->franquia}}</td>
+                                                <td>{{$cli->tipo}}</td>
+                                                <td>{{$cli->modelo}}</td>
+                                                <td>{{$cli->enfermeira}}</td>
+                                                <td>{{$cli->telefone}}</td>
+                                                <td>{{$cli->lat}}</td>
+                                                <td>{{$cli->log}}</td>
+                                                <td>{{$cli->user}}</td>
+                                            </tr>
+                                        @endforeach
+                                    @endif
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--and Questionario Verificacao -->
+
          <hr>
     <!--Questionario Stock -->
     <div class="row">
@@ -809,6 +887,18 @@
         } );
         $(document).ready(function() {
             $('#questionario_recontagem').DataTable( {
+                "scrollY": 200,
+                "scrollX": true,
+                dom: 'Bfrtip',
+                buttons: [
+                    'csv', 'excel', 'pdf', 'print'
+                ]
+            } );
+
+
+        } );
+        $(document).ready(function() {
+            $('#questionario_verificacao').DataTable( {
                 "scrollY": 200,
                 "scrollX": true,
                 dom: 'Bfrtip',

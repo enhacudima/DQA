@@ -43,7 +43,7 @@ class ReportController extends Controller
             ->get();
 
         $questionario_stock = DB::table('questionario')
-            ->join('franquias', 'questionario.franquia_id', '=', 'franquias.franquia_id')
+            ->join('franquias', 'questionario.franquia_id', '=', 'franquias.id')
             ->join('users', 'questionario.user_id', '=', 'users.id')
             ->join('questionario_dics', 'questionario.questao', '=', 'questionario_dics.codigo')
             ->select(
@@ -68,7 +68,7 @@ class ReportController extends Controller
 
 
         $questionario_recontagem = DB::table('questionario')
-            ->join('franquias', 'questionario.franquia_id', '=', 'franquias.franquia_id')
+            ->join('franquias', 'questionario.franquia_id', '=', 'franquias.id')
             ->join('users', 'questionario.user_id', '=', 'users.id')
             ->join('questionario_dics', 'questionario.questao', '=', 'questionario_dics.codigo')
             ->select(
@@ -89,9 +89,33 @@ class ReportController extends Controller
             )
             ->where('questionario.categoria', 'recontagem')
             ->get();
+
+        $questionario_verificacao = DB::table('questionario')
+            ->join('franquias', 'questionario.franquia_id', '=', 'franquias.id')
+            ->join('users', 'questionario.user_id', '=', 'users.id')
+            ->join('questionario_dics', 'questionario.questao', '=', 'questionario_dics.codigo')
+            ->select(
+                'questionario.*',
+                'franquias.province',
+                'franquias.franquia_id',
+                'franquias.districts',
+                'franquias.bairro',
+                'franquias.tipo',
+                'franquias.modelo',
+                'franquias.enfermeira',
+                'franquias.telefone',
+                'franquias.lat',
+                'franquias.log',
+                'questionario_dics.questao',
+                'franquias.nome as franquia',
+                'users.name as user'
+            )
+            ->where('questionario.categoria', 'verificacao')
+            ->get();
+
 //dd($questionario_recontagem);
 
-        return view('admin.report',compact(['recontagems','franquias','users','produtos','contagens','salesforce','bincard', 'questionario_stock', 'questionario_recontagem'])  );
+        return view('admin.report',compact(['recontagems','franquias','users','produtos','contagens','salesforce','bincard', 'questionario_stock', 'questionario_recontagem', 'questionario_verificacao'])  );
      }
 
     /**

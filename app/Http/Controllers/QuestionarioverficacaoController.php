@@ -14,10 +14,11 @@ class QuestionarioverficacaoController extends Controller
     public function index()
     {
         $codigo =  DB::table('questionario')
-            ->where('categoria', 'verficacao')
+            ->where('categoria', 'verificacao')
             ->max('codigo');
+
         $questoes=QuestionarioDic::where([
-            ['titulo_questionario', 'verficacao']
+            ['titulo_questionario', 'verificacao']
             ])->get();
 
         return view('admin.questionarioverficacao',compact(['questoes','codigo']));
@@ -49,5 +50,6 @@ class QuestionarioverficacaoController extends Controller
                 'user_id' => $data['user_id']
             ]
         );
+        return $questionario;
     }
 }

@@ -78,7 +78,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn botao-nr-pag" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                    <input type="text" id="nrPagina" name="nrPagina" class="form-control text-center nrPagina index" value="1" min="1">
+                                                                    <input type="number" id="nrPagina" name="nrPagina" class="form-control text-center nrPagina index" value="1" min="1">
                                                                     <span class="input-group-btn data-up">
                                                                         <button class="btn botao-nr-pag" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -110,7 +110,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                    <input type="text" name="dc_na" id="dc_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                    <input type="number" name="dc_na" id="dc_na" class="form-control text-center tableInput" value="0" min="0">
                                                                     <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -130,7 +130,7 @@
                                                                                 <span class="input-group-btn data-dwn">
                                                                                     <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                                 </span>
-                                                                        <input type="text" name="nup_pill_19" id="nup_pill_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_pill_19" id="nup_pill_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                                     <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                                 </span>
@@ -144,7 +144,7 @@
                                                                                 <span class="input-group-btn data-dwn">
                                                                                     <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                                 </span>
-                                                                        <input type="text" name="nup_pill_24" id="nup_pill_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_pill_24" id="nup_pill_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                                     <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                                 </span>
@@ -157,7 +157,7 @@
                                                                                 <span class="input-group-btn data-dwn">
                                                                                     <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                                 </span>
-                                                                        <input type="text" name="nup_pil_25" id="nup_pil_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_pil_25" id="nup_pil_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                                     <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                                 </span>
@@ -170,7 +170,7 @@
                                                                                 <span class="input-group-btn data-dwn">
                                                                                     <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                                 </span>
-                                                                        <input type="text" name="nup_pil_na" id="nup_pil_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_pil_na" id="nup_pil_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                                     <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                                 </span>
@@ -187,7 +187,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="nup_inj_19" id="nup_inj_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_inj_19" id="nup_inj_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -201,7 +201,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="nup_inj_24" id="nup_inj_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_inj_24" id="nup_inj_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -215,7 +215,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="nup_inj_25" id="nup_inj_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_inj_25" id="nup_inj_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -229,7 +229,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="nup_inj_na" id="nup_inj_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_inj_na" id="nup_inj_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -246,7 +246,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="nup_imp_19" id="nup_imp_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_imp_19" id="nup_imp_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -260,7 +260,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="nup_imp_24" id="nup_imp_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_imp_24" id="nup_imp_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -274,7 +274,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="nup_imp_25" id="nup_imp_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_imp_25" id="nup_imp_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -288,7 +288,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="nup_imp_na" id="nup_imp_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_imp_na" id="nup_imp_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -305,7 +305,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="nup_diu_19" id="nup_diu_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_diu_19" id="nup_diu_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -319,7 +319,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="nup_diu_24" id="nup_diu_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_diu_24" id="nup_diu_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -333,7 +333,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="nup_diu_25" id="nup_diu_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_diu_25" id="nup_diu_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -347,7 +347,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="nup_diu_na" id="nup_diu_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="nup_diu_na" id="nup_diu_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -368,7 +368,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="cp_pil_19" id="cp_pil_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="cp_pil_19" id="cp_pil_19" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -382,7 +382,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="cp_pil_24" id="cp_pil_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="cp_pil_24" id="cp_pil_24" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -396,7 +396,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="cp_pil_25" id="cp_pil_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="cp_pil_25" id="cp_pil_25" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -410,7 +410,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="cp_pil_na" id="cp_pil_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="cp_pil_na" id="cp_pil_na" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -427,7 +427,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="cp_inj_19" id="cp_inj_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="cp_inj_19" id="cp_inj_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -441,7 +441,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="cp_inj_24" id="cp_inj_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="cp_inj_24" id="cp_inj_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -455,7 +455,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="cp_inj_25" id="cp_inj_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="cp_inj_25" id="cp_inj_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -469,7 +469,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="cp_inj_na" id="cp_inj_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="cp_inj_na" id="cp_inj_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -486,7 +486,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="cp_imp_19" id="cp_imp_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="cp_imp_19" id="cp_imp_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -500,7 +500,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="cp_imp_24" id="cp_imp_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="cp_imp_24" id="cp_imp_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -514,7 +514,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="cp_imp_25" id="cp_imp_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="cp_imp_25" id="cp_imp_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -528,7 +528,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="cp_imp_na" id="cp_imp_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="cp_imp_na" id="cp_imp_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -545,7 +545,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="cp_diu_19" id="cp_diu_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="cp_diu_19" id="cp_diu_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -559,7 +559,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="cp_diu_24" id="cp_diu_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="cp_diu_24" id="cp_diu_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -573,7 +573,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="cp_diu_25" id="cp_diu_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="cp_diu_25" id="cp_diu_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -587,7 +587,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="cp_diu_na" id="cp_diu_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="cp_diu_na" id="cp_diu_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -608,7 +608,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="pil_unm_19" id="pil_unm_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="pil_unm_19" id="pil_unm_19" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -622,7 +622,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="pil_unm_24" id="pil_unm_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="pil_unm_24" id="pil_unm_24" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -636,7 +636,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="pil_unm_25" id="pil_unm_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="pil_unm_25" id="pil_unm_25" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -650,7 +650,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="pil_unm_na" id="pil_unm_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="pil_unm_na" id="pil_unm_na" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -667,7 +667,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="pil_ucm_19" id="pil_ucm_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="pil_ucm_19" id="pil_ucm_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -681,7 +681,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="pil_ucm_24" id="pil_ucm_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="pil_ucm_24" id="pil_ucm_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -695,7 +695,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="pil_ucm_25" id="pil_ucm_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="pil_ucm_25" id="pil_ucm_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -709,7 +709,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="pil_ucm_na" id="pil_ucm_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="pil_ucm_na" id="pil_ucm_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -726,7 +726,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="pil_tc_19" id="pil_tc_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="pil_tc_19" id="pil_tc_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -740,7 +740,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="pil_tc_24" id="pil_tc_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="pil_tc_24" id="pil_tc_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -754,7 +754,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="pil_tc_25" id="pil_tc_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="pil_tc_25" id="pil_tc_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -768,7 +768,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="pil_tc_na" id="pil_tc_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="pil_tc_na" id="pil_tc_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -789,7 +789,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="inj_un_19" id="inj_un_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="inj_un_19" id="inj_un_19" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -803,7 +803,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="inj_un_24" id="inj_un_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="inj_un_24" id="inj_un_24" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -817,7 +817,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="inj_un_25" id="inj_un_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="inj_un_25" id="inj_un_25" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -831,7 +831,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="inj_un_na" id="inj_un_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="inj_un_na" id="inj_un_na" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -848,7 +848,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="inj_us_19" id="inj_us_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="inj_us_19" id="inj_us_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -862,7 +862,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="inj_us_24" id="inj_us_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="inj_us_24" id="inj_us_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -876,7 +876,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="inj_us_25" id="inj_us_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="inj_us_25" id="inj_us_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -890,7 +890,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="inj_us_na" id="inj_us_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="inj_us_na" id="inj_us_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -907,7 +907,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="inj_tipt_19" id="inj_tipt_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="inj_tipt_19" id="inj_tipt_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -921,7 +921,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="inj_tipt_24" id="inj_tipt_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="inj_tipt_24" id="inj_tipt_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -935,7 +935,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="inj_tipt_25" id="inj_tipt_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="inj_tipt_25" id="inj_tipt_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -949,7 +949,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="inj_tipt_na" id="inj_tipt_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="inj_tipt_na" id="inj_tipt_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -970,7 +970,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="imp_un_19" id="imp_un_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="imp_un_19" id="imp_un_19" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -984,7 +984,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="imp_un_24" id="imp_un_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="imp_un_24" id="imp_un_24" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -998,7 +998,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="imp_un_25" id="imp_un_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="imp_un_25" id="imp_un_25" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1012,7 +1012,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="imp_un_na" id="imp_un_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="imp_un_na" id="imp_un_na" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1029,7 +1029,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="imp_ucm_19" id="imp_ucm_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="imp_ucm_19" id="imp_ucm_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1043,7 +1043,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="imp_ucm_24" id="imp_ucm_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="imp_ucm_24" id="imp_ucm_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1057,7 +1057,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="imp_ucm_25" id="imp_ucm_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="imp_ucm_25" id="imp_ucm_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1071,7 +1071,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="imp_ucm_na" id="imp_ucm_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="imp_ucm_na" id="imp_ucm_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1088,7 +1088,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="imp_tipt_19" id="imp_tipt_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="imp_tipt_19" id="imp_tipt_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1102,7 +1102,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="imp_tipt_24" id="imp_tipt_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="imp_tipt_24" id="imp_tipt_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1116,7 +1116,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="imp_tipt_25" id="imp_tipt_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="imp_tipt_25" id="imp_tipt_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1130,7 +1130,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="imp_tipt_na" id="imp_tipt_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="imp_tipt_na" id="imp_tipt_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1151,7 +1151,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="diu_un_19" id="diu_un_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="diu_un_19" id="diu_un_19" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1165,7 +1165,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="diu_un_24" id="diu_un_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="diu_un_24" id="diu_un_24" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1179,7 +1179,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="diu_un_25" id="diu_un_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="diu_un_25" id="diu_un_25" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1193,7 +1193,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="diu_un_na" id="diu_un_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="diu_un_na" id="diu_un_na" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1210,7 +1210,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="diu_ucm_19" id="diu_ucm_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="diu_ucm_19" id="diu_ucm_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1224,7 +1224,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="diu_ucm_24" id="diu_ucm_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="diu_ucm_24" id="diu_ucm_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1238,7 +1238,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="diu_ucm_25" id="diu_ucm_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="diu_ucm_25" id="diu_ucm_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1252,7 +1252,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="diu_ucm_na" id="diu_ucm_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="diu_ucm_na" id="diu_ucm_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1269,7 +1269,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="diu_tdpt_19" id="diu_tdpt_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="diu_tdpt_19" id="diu_tdpt_19" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1283,7 +1283,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="diu_tdpt_24" id="diu_tdpt_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="diu_tdpt_24" id="diu_tdpt_24" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1297,7 +1297,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="diu_tdpt_25" id="diu_tdpt_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="diu_tdpt_25" id="diu_tdpt_25" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1311,7 +1311,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                        <input type="text" name="diu_tdpt_na" id="diu_tdpt_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                        <input type="number" name="diu_tdpt_na" id="diu_tdpt_na" class="form-control text-center tableInput" value="0" min="0">
                                                                         <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1330,7 +1330,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="na_19" id="na_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="na_19" id="na_19" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1344,7 +1344,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="na_24" id="na_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="na_24" id="na_24" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1358,7 +1358,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="na_25" id="na_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="na_25" id="na_25" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>
@@ -1372,7 +1372,7 @@
                                                                     <span class="input-group-btn data-dwn">
                                                                         <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
                                                                     </span>
-                                                                <input type="text" name="na_na" id="na_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <input type="number" name="na_na" id="na_na" class="form-control text-center tableInput" value="0" min="0">
                                                                 <span class="input-group-btn data-up">
                                                                         <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
                                                                     </span>

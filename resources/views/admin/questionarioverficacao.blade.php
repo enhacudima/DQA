@@ -54,7 +54,7 @@
     </style>
 <div class="col-md-10 col-md-offset-1">
     <div class="row bg-title">
-        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        <div class="col-xs-12">
             <h4 class="page-title">Questionario verficação de instrumentos</h4> </div>
     </div>
     <!-- /.row -->
@@ -69,7 +69,7 @@
                 {{ csrf_field() }}
 
                 <input type="hidden" id="codigo" name="codigo" value="{{$codigo+1}}">
-                <input type="hidden" id="categoria" name="categoria" value="stock_parte_1">
+                <input type="hidden" id="categoria" name="categoria" value="verificacao">
 
                     <!--QUESTIONARIO-->
                 <div class="white-box">
@@ -168,7 +168,7 @@
 
                 $.ajax({
                     type: "get",
-                    url: '{{url('/save/questionarioverficacao')}}',
+                    url: '{{url('/save/questionariodeverficacao')}}',
                     data: {cabecalho:cabecalho, questao:questao, resposta:resposta, codigo:codigo, categoria:categoria},
                     success: function (data) {
 
@@ -177,12 +177,12 @@
                     },
 
                     error: function (data) {
-
+/*
                         $('#alert').removeClass('hidden');
                         $('#alert').removeClass('success');
                         $('#alert').addClass('danger');
                         $('#alert').html('Erro ao gravar!');
-
+*/
                         console.log(data);
                     }
                 });

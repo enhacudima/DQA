@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Notifications\meuResetDeSenha;
 
 class User extends Authenticatable
 {
@@ -33,5 +34,9 @@ class User extends Authenticatable
     public function cabecalho()
     {
         return $this->hasMany('App\cabecalho');
+    }
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new meuResetDeSenha($token));
     }
 }

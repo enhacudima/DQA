@@ -11,6 +11,9 @@ class Franquia extends Model
      *
      * @var array
      */
+
+    protected $table = 'franquias';
+
     protected $fillable = [
         'franquia_id', 'province', 'districts', 'user_id','bairro','tipo','modelo','nome','telefone','observacoes','lat','log','enfermeira',
     ];

@@ -82,15 +82,7 @@ class ReportController extends Controller
                 'users.name as user'
             )
             ->get();
-/*
-        $salesforce_vs_recontagem = DB::table('salesforces')
-            ->join('recontagems', 'salesforces.user_id', '=', 'users.id')
-            ->select(
-                'dhis2.*',
-                'users.name as user'
-            )
-            ->get();
-*/
+
         $bincard = DB::table('bincards')
             ->join('franquias', 'bincards.franquia_id', '=', 'franquias.id')
             ->join('users', 'bincards.user_id', '=', 'users.id')

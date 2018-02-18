@@ -959,6 +959,246 @@
                                                         </tr>
                                                     </tr>
 
+                                                <!--Linha 4 (Sayana Press)-->
+                                                <tr class="linha-cin">
+                                                <tr>
+                                                    <td rowspan="4">Sayana Press</td>
+                                                    <td>Utentes Novas</td>
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_un_19" id="s_un_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_un_24" id="s_un_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_un_25" id="s_un_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_un_na" id="s_un_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Utentes que continuam o método</td>
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_uc_19" id="s_uc_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_uc_24" id="s_uc_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_uc_25" id="s_uc_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_uc_na" id="s_uc_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Total de Sayanas distribuidas pela enfermeira</td>
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_tde_19" id="s_tde_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_tde_24" id="s_tde_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_tde_25" id="s_tde_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_tde_na" id="s_tde_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Total de Sayanas distribuidas pela promotora</td>
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_tdp_19" id="s_tdp_19" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_tdp_24" id="s_tdp_24" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_tdp_25" id="s_tdp_25" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+
+                                                    <td>
+                                                        <div class="col-xs-12">
+                                                            <div class="input-group number-spinner">
+                                                                    <span class="input-group-btn data-dwn">
+                                                                        <button class="btn btn-val " data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+                                                                    </span>
+                                                                <input type="number" name="s_tdp_na" id="s_tdp_na" class="form-control text-center tableInput" value="0" min="0">
+                                                                <span class="input-group-btn data-up">
+                                                                        <button class="btn btn-val " data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+                                                                    </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                </tr>
+
                                                     <!--Linha 4 (Implante)-->
                                                     <tr class="linha-cin">
                                                         <tr class="linha-cin">

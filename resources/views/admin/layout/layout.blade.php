@@ -59,12 +59,12 @@
 
 
         footer {
-            padding: 20px;
+            padding: 15px;
             color: #fff;
             text-align: center;
-            background-color: #f57f17;
+            background-color: rgba(245,127,23,.8);
             position:fixed;
-            bottom:0%;
+            bottom: 0px;
             left: 0;
             right: 0;
             z-index: 10;

@@ -22,8 +22,6 @@ class ReportController extends Controller
     {
         $produtos = Produto::all();
         $franquias = Franquia::all();
-        $users=User::all();
-        $contagens=Contagemfisica::all();
 
         $recontagems = DB::table('recontagems')
             ->join('franquias', 'recontagems.franquia_id', '=', 'franquias.id')
@@ -49,78 +47,13 @@ class ReportController extends Controller
             )
             ->get();
 
-        /*
-        $contagens = DB::table('contagemfisicas_v_v_v')
-            ->orderByRaw('id DESC')
-            ->get();
-        */
 
-        $contagens = DB::table('contagemfisicas')
-            //->selectRaw(DB::raw('UM(contagemfisicas.entradas')
-            ->join('franquias', 'contagemfisicas.franquia_id', '=', 'franquias.id')
-            ->rightJoin('users', 'contagemfisicas.user_id', '=', 'users.id')
-            ->rightJoin('produtos', 'contagemfisicas.produtos_id', '=', 'produtos.id')
-            ->select(
-                DB::raw(
-                    'SUM(contagemfisicas.contagem_fisica) as somma, 
-                    contagemfisicas.*,
-                    produtos.nome as produto, 
-                    produtos.codigo, 
-                    produtos.unidade, 
-                    franquias.province,
-                    franquias.franquia_id,
-                    franquias.districts,
-                    franquias.bairro,
-                    franquias.tipo,
-                    franquias.modelo,
-                    franquias.enfermeira,
-                    franquias.telefone,
-                    franquias.lat,
-                    franquias.log,
-                    franquias.nome as franquia,
-                    users.name as user'
-                )
-            )
-            ->groupBy('contagemfisicas.produtos_id')
-            ->groupBy('contagemfisicas.franquia_id')
-            ->groupBy('contagemfisicas.user_id')
-            ->groupBy('contagemfisicas.data_dqa')
-            ->groupBy('contagemfisicas.data_inicio')
-            ->groupBy('contagemfisicas.data_fim')
-            ->groupBy('contagemfisicas.id')
-            ->groupBy('contagemfisicas.bincards_id')
-            ->get();
-dd($contagens);
+        $contagens = DB::table('contagemfisicas_v')->get();
 
-        /*
-        $contagens = DB::table('contagemfisicas')
-            ->join('franquias', 'contagemfisicas.franquia_id', '=', 'franquias.id')
-            ->join('users', 'contagemfisicas.user_id', '=', 'users.id')
-            ->join('produtos', 'contagemfisicas.produtos_id', '=', 'produtos.id')
-            ->select(
-                'contagemfisicas.*',
-                'produtos.nome as produto',
-                'produtos.codigo',
-                'produtos.unidade',
-                'franquias.province',
-                'franquias.franquia_id',
-                'franquias.districts',
-                'franquias.bairro',
-                'franquias.tipo',
-                'franquias.modelo',
-                'franquias.enfermeira',
-                'franquias.telefone',
-                'franquias.lat',
-                'franquias.log',
-                'franquias.nome as franquia',
-                'users.name as user'
-            )
-            ->get();
-*/
         $salesforce = DB::table('salesforces')
             ->join('franquias', 'salesforces.franquia_id', '=', 'franquias.id')
             ->join('users', 'salesforces.user_id', '=', 'users.id')
-            ->join('produtos', 'salesforces.produtos_id', '=', 'produtos.id')
+            ->join('produtos', 'salesforces.produtos_id', '=', 'produtos.codigo')
             ->select(
                 'salesforces.*',
                 'produtos.nome as produto',
@@ -141,6 +74,23 @@ dd($contagens);
             )
             ->get();
 
+
+        $dhis2 = DB::table('dhis2')
+            ->join('users', 'dhis2.user_id', '=', 'users.id')
+            ->select(
+                'dhis2.*',
+                'users.name as user'
+            )
+            ->get();
+/*
+        $salesforce_vs_recontagem = DB::table('salesforces')
+            ->join('recontagems', 'salesforces.user_id', '=', 'users.id')
+            ->select(
+                'dhis2.*',
+                'users.name as user'
+            )
+            ->get();
+*/
         $bincard = DB::table('bincards')
             ->join('franquias', 'bincards.franquia_id', '=', 'franquias.id')
             ->join('users', 'bincards.user_id', '=', 'users.id')
@@ -165,7 +115,7 @@ dd($contagens);
             )
             ->get();
 
-        $questionario_stock = DB::table('questionario')
+        $questionario_stocks = DB::table('questionario')
             ->join('franquias', 'questionario.franquia_id', '=', 'franquias.id')
             ->join('users', 'questionario.user_id', '=', 'users.id')
             ->join('questionario_dics', 'questionario.questao', '=', 'questionario_dics.codigo')
@@ -236,27 +186,9 @@ dd($contagens);
             ->where('questionario.categoria', 'verificacao')
             ->get();
 
-        $senhas = DB::table('senhas')
-            ->join('franquias', 'senhas.franquia_id', '=', 'franquias.id')
-            ->join('users', 'senhas.user_id', '=', 'users.id')
-            ->select(
-                'senhas.*',
-                'franquias.province',
-                'franquias.franquia_id',
-                'franquias.districts',
-                'franquias.bairro',
-                'franquias.tipo',
-                'franquias.modelo',
-                'franquias.enfermeira',
-                'franquias.telefone',
-                'franquias.lat',
-                'franquias.log',
-                'franquias.nome as franquia',
-                'users.name as user'
-            )
-            ->get();
+        $senhas = DB::table('senhas_v')->get();
 
-        return view('admin.report',compact(['recontagems','franquias','users','produtos','contagens','salesforce','bincard', 'questionario_stock', 'questionario_recontagem', 'questionario_verificacao', 'senhas'])  );
+        return view('admin.report',compact(['recontagems','franquias','produtos','contagens','salesforce','dhis2','bincard', 'questionario_stocks', 'questionario_recontagem', 'questionario_verificacao', 'senhas', '$salesforce_vs_recontagem'])  );
      }
 
     /**

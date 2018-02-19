@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ProdutoRequest;
 use App\Produto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ResumogeralController extends Controller
 {
@@ -16,7 +17,16 @@ class ResumogeralController extends Controller
      */
     public function index()
     {
-        return view('admin.resumogeral');
+        $salesforce_vs_dhis2 = DB::table('dhis2_v')
+            ->join('salesforce_v', 'dhis2_v.metodo', '=', 'salesforce_v.metodo')
+            ->select(
+                'dhis2_v.*',
+                'salesforce_v.total_sf'
+            )
+            ->where('dhis2_v.franquia_id','salesforce_v.franquia_id')
+            ->get();
+        dd($salesforce_vs_dhis2);
+        return view('admin.resumogeral', compact('salesforce_vs_dhis2'));
      }
 
     /**

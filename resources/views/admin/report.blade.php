@@ -315,6 +315,7 @@
                                                                                 <th>DATA DQA</th>
                                                                                 <th>DATA INICIO DQA</th>
                                                                                 <th>DATA FIM DQA</th>
+                                                                                <th>NÚMERO DO LIVRO</th>
                                                                                 <th>NÚMERO DA PAGINA</th>
                                                                                 <th>ATIVIDADE</th>
                                                                                 <th>TIPO ATIVIDADE</th>
@@ -345,6 +346,7 @@
                                                                                         <td>{{$cli->data_dqa}}</td>
                                                                                         <td>{{$cli->data_inicio}}</td>
                                                                                         <td>{{$cli->data_fim}}</td>
+                                                                                        <td>{{$cli->nr_livro}}</td>
                                                                                         <td>{{$cli->nr_pagina}}</td>
                                                                                         <td>{{$cli->atividade}}</td>
                                                                                         <td>{{$cli->tipo_atividade}}</td>

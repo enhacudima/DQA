@@ -12,7 +12,7 @@ class Recontagem extends Model
     protected $table = 'recontagems';
 
     protected $fillable = [
-        'franquia_id', 'data_dqa', 'data_inicio', 'data_fim', 'nr_pagina', 'total', 'codigo', 'user_id'
+        'franquia_id', 'data_dqa', 'nr_livro', 'data_inicio', 'data_fim', 'nr_pagina', 'total', 'codigo', 'user_id'
     ];
 
     /**

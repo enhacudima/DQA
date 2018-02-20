@@ -56,7 +56,8 @@ class recontagemController extends Controller
                 'franquia_id' => $data['franquia_id'],
                 'data_dqa' => $data['data_DQA'],
                 'data_inicio' => $data['data_inicio'],
-                'data_fim' => $data['data_Fim']
+                'data_fim' => $data['data_Fim'],
+                'nr_livro' => $request->nr_livro
             ],
             [
                 'nr_pagina' => $request->nr_pagina,
@@ -66,6 +67,7 @@ class recontagemController extends Controller
                 'data_dqa' => $data['data_DQA'],
                 'data_inicio' => $data['data_inicio'],
                 'data_fim' => $data['data_Fim'],
+                'nr_livro' => $request->nr_livro,
                 'user_id' => $data['user_id']
             ]
         );

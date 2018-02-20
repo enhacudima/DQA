@@ -163,6 +163,7 @@
                             <li class="divider"></li>
                             <li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Quetionario</a>
                                 <ul class="dropdown-menu">
+                                    <li><a href="{{route('rdqa.index')}}">RDQA</a></li>
                                     <li><a href="{{route('questionariodeverficacao.index')}}">Verficação</a></li>
                                     <li><a href="{{route('questionario.index')}}">Stock-Part1</a></li>
                                     <li><a href="{{route('questionario-resumo.index')}}">Stock-Part2</a></li>

@@ -71,7 +71,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/save/questionario-recontagem', 'QuestionarioRecontagemController@store');
 
     Route::resource('upload-db', 'UploadDController');
-
+    Route::resource('rdqa', 'RdqaDController');
 });
 
 Route::get('/get/districts', function (){

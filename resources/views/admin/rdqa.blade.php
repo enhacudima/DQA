@@ -71,41 +71,241 @@
                 <input type="hidden" id="codigo" name="codigo" value="{{$codigo+1}}">
                 <input type="hidden" id="categoria" name="categoria" value="verificacao">
 
-                    <!--QUESTIONARIO-->
+                    <!--structure-->
                 <div class="white-box">
                     <div class="card">
-                        <h5 class="card-header">Perguntas</h5>
+                        <h5 class="card-header">I - M&E Structure, Functions and Capabilities</h5>
                         <div class="card-body">
-                            @if(isset($questoes))
-                                @foreach($questoes as $q)
+                            @if(isset($structure))
+                                @foreach($structure as $q)
                                     <div class="col">
-                                        <h5 class="card-title">{{$q->questao}}</h5>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="{{'id-1-'.$q->id}}" name="{{$q->codigo}}" value="Sim" class="custom-control-input tableInput">
-                                            <label class="custom-control-label" for="{{'id-1-'.$q->id}}">Sim</label>
-                                        </div>
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="Não" class="custom-control-input tableInput">
-                                            <label class="custom-control-label" for="{{'id-2-'.$q->id}}">Não</label>
-                                        </div>
+                                        @if($q->tipo_input=='radio')
+                                            <h5 class="card-title">{{$q->questao}}</h5>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-1-'.$q->id}}" name="{{$q->codigo}}" value="Yes - completely" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-1-'.$q->id}}"  style="color: #8ad919;">Yes - completely</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="Partly" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: #f6941e;">Partly</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: Red;">No - not at all  </label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  >N/A</label>
+                                            </div>
+                                            <div class="custom-control  custom-radio">
+                                                <input type="text" id="{{'id-2-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
+                                            </div>
                                         <hr>
+                                         @endif
                                     </div>
                                 @endforeach
                             @endif
-
-
-                            <div class="form-group">
-                                <div class="col-sm-12" >
-                                    <br>
-                                    <button class="btn btn-success pull-right tableInput" id="save_contagem" style="margin-bottom: 50px">Gravar</button>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
 
+                <!--indicator-->
+                <div class="white-box">
+                    <div class="card">
+                        <h5 class="card-header">II- Indicator Definitions and Reporting Guidelines</h5>
+                        <div class="card-body">
+                            @if(isset($indicator))
+                                @foreach($indicator as $q)
+                                    <div class="col">
+                                        @if($q->tipo_input=='radio')
+                                            <h5 class="card-title">{{$q->questao}}</h5>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-1-'.$q->id}}" name="{{$q->codigo}}" value="Yes - completely" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-1-'.$q->id}}"  style="color: #8ad919;">Yes - completely</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="Partly" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: #f6941e;">Partly</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: Red;">No - not at all  </label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  >N/A</label>
+                                            </div>
+                                            <div class="custom-control  custom-radio">
+                                                <input type="text" id="{{'id-2-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
+                                            </div>
+                                            <hr>
+                                        @endif
+                                    </div>
+                                @endforeach
+                            @endif
 
+                        </div>
+                    </div>
+                </div>
 
+                <!--datacollection-->
+                <div class="white-box">
+                    <div class="card">
+                        <h5 class="card-header">III - Data-collection and Reporting Forms and Tools</h5>
+                        <div class="card-body">
+                            @if(isset($structure))
+                                @foreach($structure as $q)
+                                    <div class="col">
+                                        @if($q->tipo_input=='radio')
+                                            <h5 class="card-title">{{$q->questao}}</h5>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-1-'.$q->id}}" name="{{$q->codigo}}" value="Yes - completely" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-1-'.$q->id}}"  style="color: #8ad919;">Yes - completely</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="Partly" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: #f6941e;">Partly</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: Red;">No - not at all  </label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  >N/A</label>
+                                            </div>
+                                            <div class="custom-control  custom-radio">
+                                                <input type="text" id="{{'id-2-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
+                                            </div>
+                                            <hr>
+                                        @endif
+                                    </div>
+                                @endforeach
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+                <!--datamanagement-->
+                <div class="white-box">
+                    <div class="card">
+                        <h5 class="card-header">IV- Data Management Processes</h5>
+                        <div class="card-body">
+                            @if(isset($datamanagement))
+                                @foreach($datamanagement as $q)
+                                    <div class="col">
+                                        @if($q->tipo_input=='radio')
+                                            <h5 class="card-title">{{$q->questao}}</h5>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-1-'.$q->id}}" name="{{$q->codigo}}" value="Yes - completely" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-1-'.$q->id}}"  style="color: #8ad919;">Yes - completely</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="Partly" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: #f6941e;">Partly</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: Red;">No - not at all  </label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  >N/A</label>
+                                            </div>
+                                            <div class="custom-control  custom-radio">
+                                                <input type="text" id="{{'id-2-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
+                                            </div>
+                                            <hr>
+                                        @endif
+                                    </div>
+                                @endforeach
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+                <!--linkswith-->
+                <div class="white-box">
+                    <div class="card">
+                        <h5 class="card-header">Links with National Reporting System</h5>
+                        <div class="card-body">
+                            @if(isset($linkswith))
+                                @foreach($linkswith as $q)
+                                    <div class="col">
+                                        @if($q->tipo_input=='radio')
+                                            <h5 class="card-title">{{$q->questao}}</h5>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-1-'.$q->id}}" name="{{$q->codigo}}" value="Yes - completely" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-1-'.$q->id}}"  style="color: #8ad919;">Yes - completely</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="Partly" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: #f6941e;">Partly</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: Red;">No - not at all  </label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  >N/A</label>
+                                            </div>
+                                            <div class="custom-control  custom-radio">
+                                                <input type="text" id="{{'id-2-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
+                                            </div>
+                                            <hr>
+                                        @endif
+                                    </div>
+                                @endforeach
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+                <!--useofdata-->
+                <div class="white-box">
+                    <div class="card">
+                        <h5 class="card-header">VI - Use of data for decision making</h5>
+                        <div class="card-body">
+                            @if(isset($useofdata))
+                                @foreach($useofdata as $q)
+                                    <div class="col">
+                                        @if($q->tipo_input=='radio')
+                                            <h5 class="card-title">{{$q->questao}}</h5>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-1-'.$q->id}}" name="{{$q->codigo}}" value="Yes - completely" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-1-'.$q->id}}"  style="color: #8ad919;">Yes - completely</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="Partly" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: #f6941e;">Partly</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: Red;">No - not at all  </label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  >N/A</label>
+                                            </div>
+                                            <div class="custom-control  custom-radio">
+                                                <input type="text" id="{{'id-2-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
+                                            </div>
+                                            <hr>
+                                        @endif
+                                    </div>
+                                @endforeach
+                            @endif
+
+                                <div class="form-group">
+                                    <div class="col-sm-12" >
+                                        <br>
+                                        <button class="btn btn-success pull-right tableInput" id="save_contagem" style="margin-bottom: 50px">Gravar</button>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
             </form>
 
 

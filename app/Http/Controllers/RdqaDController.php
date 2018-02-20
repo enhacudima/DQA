@@ -15,11 +15,31 @@ class RdqaDController extends Controller
             ->where('categoria', 'verificacao')
             ->max('codigo');
 
-        $questoes=QuestionarioDic::where([
-            ['titulo_questionario', 'verificacao']
+        $structure=QuestionarioDic::where([
+            ['titulo_questionario', 'structure']
         ])->get();
 
-        return view('admin.rdqa',compact(['questoes','codigo']));
+        $indicator=QuestionarioDic::where([
+            ['titulo_questionario', 'indicator']
+        ])->get();
+
+        $datacollection=QuestionarioDic::where([
+            ['titulo_questionario', 'datacollection']
+        ])->get();
+
+        $datamanagement=QuestionarioDic::where([
+            ['titulo_questionario', 'datamanagement']
+        ])->get();
+
+        $linkswith=QuestionarioDic::where([
+            ['titulo_questionario', 'linkswith']
+        ])->get();
+
+        $useofdata=QuestionarioDic::where([
+            ['titulo_questionario', 'useofdata']
+        ])->get();
+
+        return view('admin.rdqa',compact(['questoes', 'codigo', 'structure', 'indicator', 'datacollection', 'datamanagement', 'linkswith', 'useofdata']));
     }
 
 

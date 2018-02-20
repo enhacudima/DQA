@@ -154,7 +154,7 @@
             <div class="collapse navbar-collapse" id="navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">DQA</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="{{route('about.index')}}">About</a></li>
                     <li class="dropdown hoves"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="{{route('home')}}" class="">Dashboard</a></li>

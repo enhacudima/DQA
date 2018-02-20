@@ -72,6 +72,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('upload-db', 'UploadDController');
     Route::resource('rdqa', 'RdqaDController');
+    Route::resource('about', 'AboutController');
 });
 
 Route::get('/get/districts', function (){

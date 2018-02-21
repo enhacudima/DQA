@@ -3,8 +3,14 @@
 
     <link rel="stylesheet" type="text/css" href="//necolas.github.io/normalize.css/4.1.1/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
 <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
 
     header{
         width:20%;
@@ -13,6 +19,7 @@
         left:5%;
         top: 160px;
         z-index: 5;
+        text-align: center;
         text-decoration: none;
     }
     header h1{
@@ -32,6 +39,11 @@
         color:#333;
         padding:5px 0;
         text-decoration: none;
+    }
+    navs > ul > li >a:hover{
+        background: #5fc32b;
+        text-decoration: none;
+        color: #fff;
     }
     .box{
         position:absolute;
@@ -83,8 +95,14 @@
     #company:target ~ header #link-company a,
     #service:target ~ header #link-service a,
     #contact:target ~ header #link-contact a{
-        background: #333;
+        background: rgba(245,127,23,.8);;
         color: #fff;
+    }
+
+    #contact:target ~ header #link-contact a {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgba(255,255,255, 0.8);
     }
 </style>
 <section id="home" class="content">
@@ -133,12 +151,12 @@
     </article>
 </section>
 <header>
-    <h1>Guião de Utilizador</h1>
+    <h1 style="text-align: center" >Guião de Utilizador</h1>
     <navs>
         <ul>
             <li id="link-home"><a href="#home">Sobre</a></li>
             <li id="link-company"><a href="#company">Recomendações </a></li>
-            <li id="link-service"><a href="#service">Serviços</a></li>
+            <li id="link-service"><a href="#service">Formularios</a></li>
             <li id="link-contact"><a href="#contact">Relatórios</a></li>
         </ul>
     </navs>

@@ -69,7 +69,7 @@
                 {{ csrf_field() }}
 
                 <input type="hidden" id="codigo" name="codigo" value="{{$codigo+1}}">
-                <input type="hidden" id="categoria" name="categoria" value="verificacao">
+                <input type="hidden" id="categoria" name="categoria" value="rdqa">
 
                     <!--structure-->
                 <div class="white-box">
@@ -90,15 +90,15 @@
                                                 <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: #f6941e;">Partly</label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
-                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: Red;">No - not at all  </label>
+                                                <input type="radio" id="{{'id-3-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-3-'.$q->id}}"  style="color: Red;">No - not at all  </label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
-                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  >N/A</label>
+                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-4-'.$q->id}}"  >N/A</label>
                                             </div>
                                             <div class="custom-control  custom-radio">
-                                                <input type="text" id="{{'id-2-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
+                                                <input type="text" id="{{'id-5-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
                                             </div>
                                         <hr>
                                          @endif
@@ -128,15 +128,15 @@
                                                 <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: #f6941e;">Partly</label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
-                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: Red;">No - not at all  </label>
+                                                <input type="radio" id="{{'id-3-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-3-'.$q->id}}"  style="color: Red;">No - not at all  </label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
-                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  >N/A</label>
+                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-4-'.$q->id}}"  >N/A</label>
                                             </div>
                                             <div class="custom-control  custom-radio">
-                                                <input type="text" id="{{'id-2-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
+                                                <input type="text" id="{{'id-5-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
                                             </div>
                                             <hr>
                                         @endif
@@ -167,15 +167,15 @@
                                                 <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: #f6941e;">Partly</label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
-                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: Red;">No - not at all  </label>
+                                                <input type="radio" id="{{'id-3-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-3-'.$q->id}}"  style="color: Red;">No - not at all  </label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
-                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  >N/A</label>
+                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-4-'.$q->id}}"  >N/A</label>
                                             </div>
                                             <div class="custom-control  custom-radio">
-                                                <input type="text" id="{{'id-2-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
+                                                <input type="text" id="{{'id-5-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
                                             </div>
                                             <hr>
                                         @endif
@@ -205,15 +205,15 @@
                                                 <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: #f6941e;">Partly</label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
-                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: Red;">No - not at all  </label>
+                                                <input type="radio" id="{{'id-3-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-3-'.$q->id}}"  style="color: Red;">No - not at all  </label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
-                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  >N/A</label>
+                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-4-'.$q->id}}"  >N/A</label>
                                             </div>
                                             <div class="custom-control  custom-radio">
-                                                <input type="text" id="{{'id-2-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
+                                                <input type="text" id="{{'id-4-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
                                             </div>
                                             <hr>
                                         @endif
@@ -243,15 +243,15 @@
                                                 <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: #f6941e;">Partly</label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
-                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: Red;">No - not at all  </label>
+                                                <input type="radio" id="{{'id-3-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-3-'.$q->id}}"  style="color: Red;">No - not at all  </label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
-                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  >N/A</label>
+                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-4-'.$q->id}}"  >N/A</label>
                                             </div>
                                             <div class="custom-control  custom-radio">
-                                                <input type="text" id="{{'id-2-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
+                                                <input type="text" id="{{'id-5-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
                                             </div>
                                             <hr>
                                         @endif
@@ -281,15 +281,15 @@
                                                 <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: #f6941e;">Partly</label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
-                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  style="color: Red;">No - not at all  </label>
+                                                <input type="radio" id="{{'id-3-'.$q->id}}" name="{{$q->codigo}}" value="No - not at all" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-3-'.$q->id}}"  style="color: Red;">No - not at all  </label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-2-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
-                                                <label class="custom-control-label" for="{{'id-2-'.$q->id}}"  >N/A</label>
+                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <label class="custom-control-label" for="{{'id-4-'.$q->id}}"  >N/A</label>
                                             </div>
                                             <div class="custom-control  custom-radio">
-                                                <input type="text" id="{{'id-2-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
+                                                <input type="text" id="{{'id-5-'.$q->id.'q'}}" name="{{$q->codigo.'q'}}" style="border: 1px solid #bbbbbb;" class="form-control tableInput" placeholder="Comment...">
                                             </div>
                                             <hr>
                                         @endif

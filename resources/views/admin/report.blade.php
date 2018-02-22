@@ -384,7 +384,7 @@
                                                             <div class="panel-body">
                                                                 <div class="row">
                                                                     <div id="morris-area-chart2" style="height: 370px; overflow: scroll;">
-                                                                        <table class="table display nowrap "  id="p" cellspacing="0" style="width: 100%">
+                                                                        <table class="table display nowrap "  id="rec" cellspacing="0" style="width: 100%">
 
                                                                             <thead>
                                                                             <tr>
@@ -416,7 +416,6 @@
                                                                             </thead>
                                                                             <tbody>
 
-                                                                            @if(isset($recontagems))
                                                                                 @foreach($recontagems as $cli)
                                                                                     <tr>
                                                                                         <td>{{$cli->id}}</td>
@@ -444,7 +443,7 @@
 
                                                                                     </tr>
                                                                                 @endforeach
-                                                                            @endif
+
                                                                             </tbody>
                                                                         </table>
                                                                     </div>
@@ -1093,7 +1092,7 @@
 
     <script>
         $(document).ready(function() {
-            $('#p').DataTable( {
+            $('#rec').DataTable( {
                 "scrollY": 200,
                 "scrollX": true,
                 dom: 'Bfrtip',

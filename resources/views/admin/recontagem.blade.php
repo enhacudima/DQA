@@ -1388,14 +1388,15 @@
 
             var formData = getFormObj('cabec');
             var nrPagina = $('#nrPagina').val();
+            var nr_livro = $('#nrLivro').val();
 
-            if(formData.franquia_id && formData.data_DQA && formData.data_inicio && formData.data_Fim && nrPagina){
+            if(formData.franquia_id && formData.data_DQA && formData.data_inicio && formData.data_Fim && nrPagina && nr_livro){
                 $('.tableInput').prop("disabled", false);
                 $('.btn-val').prop("disabled", false);
                 $.ajax({
                     type: "get",
                     url: '{{url('/getAll/recontagem')}}',
-                    data: {data: formData, nr_pagina: nrPagina},
+                    data: {data: formData, nr_pagina: nrPagina, nr_livro:nr_livro},
                     success: function (data) {
                         for(i=0; i<data.length; i++){
                             $('#'+data[i].codigo).val(data[i].total);

@@ -80,9 +80,11 @@ class recontagemController extends Controller
     {
         $data = $request->data;
         $nrPagina = $request->nr_pagina;
+        $nr_livro = $request->nr_livro;
 
         $recontagem = Recontagem::where([
             ['nr_pagina', $nrPagina],
+            ['nr_livro', $nr_livro],
             ['data_dqa', $data['data_DQA']],
             ['data_inicio', $data['data_inicio']],
             ['data_Fim', $data['data_Fim']]

@@ -45,11 +45,13 @@ class ReportController extends Controller
                 'franquias.nome as franquia',
                 'users.name as user'
             )
+            ->groupBy('recontagems.id')
             ->get();
 
+/*
+        $recontagems = DB::table('recontagems_v')->get();*/
+       // dd($recontagems);
 
-        dd($recontagems);
-        
         $contagens = DB::table('contagemfisicas_v')->get();
 
         $salesforce = DB::table('salesforces')

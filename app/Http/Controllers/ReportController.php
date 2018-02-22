@@ -48,6 +48,8 @@ class ReportController extends Controller
             ->get();
 
 
+        dd($recontagems);
+        
         $contagens = DB::table('contagemfisicas_v')->get();
 
         $salesforce = DB::table('salesforces')

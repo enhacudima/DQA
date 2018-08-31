@@ -94,7 +94,7 @@
                                                 <label class="custom-control-label" for="{{'id-3-'.$q->id}}"  style="color: Red;">No - not at all  </label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" value="N/A" class="custom-control-input tableInput">
                                                 <label class="custom-control-label" for="{{'id-4-'.$q->id}}"  >N/A</label>
                                             </div>
                                             <div class="custom-control  custom-radio">
@@ -132,7 +132,7 @@
                                                 <label class="custom-control-label" for="{{'id-3-'.$q->id}}"  style="color: Red;">No - not at all  </label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" value="N/A" class="custom-control-input tableInput">
                                                 <label class="custom-control-label" for="{{'id-4-'.$q->id}}"  >N/A</label>
                                             </div>
                                             <div class="custom-control  custom-radio">
@@ -171,7 +171,7 @@
                                                 <label class="custom-control-label" for="{{'id-3-'.$q->id}}"  style="color: Red;">No - not at all  </label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" value="N/A" class="custom-control-input tableInput">
                                                 <label class="custom-control-label" for="{{'id-4-'.$q->id}}"  >N/A</label>
                                             </div>
                                             <div class="custom-control  custom-radio">
@@ -209,7 +209,7 @@
                                                 <label class="custom-control-label" for="{{'id-3-'.$q->id}}"  style="color: Red;">No - not at all  </label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" value="N/A" class="custom-control-input tableInput">
                                                 <label class="custom-control-label" for="{{'id-4-'.$q->id}}"  >N/A</label>
                                             </div>
                                             <div class="custom-control  custom-radio">
@@ -247,7 +247,7 @@
                                                 <label class="custom-control-label" for="{{'id-3-'.$q->id}}"  style="color: Red;">No - not at all  </label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" value="N/A" class="custom-control-input tableInput">
                                                 <label class="custom-control-label" for="{{'id-4-'.$q->id}}"  >N/A</label>
                                             </div>
                                             <div class="custom-control  custom-radio">
@@ -285,7 +285,7 @@
                                                 <label class="custom-control-label" for="{{'id-3-'.$q->id}}"  style="color: Red;">No - not at all  </label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" class="custom-control-input tableInput">
+                                                <input type="radio" id="{{'id-4-'.$q->id}}" name="{{$q->codigo}}" value="N/A" class="custom-control-input tableInput">
                                                 <label class="custom-control-label" for="{{'id-4-'.$q->id}}"  >N/A</label>
                                             </div>
                                             <div class="custom-control  custom-radio">

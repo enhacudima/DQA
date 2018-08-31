@@ -187,7 +187,7 @@
                                                     <!--Linha 3 (Continuadora de PF)-->
                                                     <tr class="linha-cin">
                                                         <tr>
-                                                            <td colspan="2">Continuadora de PF (Tuotal)</td>
+                                                            <td colspan="2">Continuadora de PF (Total)</td>
                                                     <td>
                                                         <div class="col-xs-12">
                                                             <div class="input-group number-spinner">

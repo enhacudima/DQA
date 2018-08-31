@@ -22,8 +22,20 @@ class UploadDController extends Controller
     {
         $franquias = Franquia::all();
         return view('admin.uploadDB',compact('franquias'));
-    }
 
+    }
+    
+    
+    //retorna o id da franquia
+    /*
+	 private function getFranquiaID($val){
+	    if (preg_match('/\d{4,}/')) {
+	       preg_match('/\d{4,}/', $val, $result, PREG_OFFSET_CAPTURE); 
+	       //print_r($result);
+	       return $result[0][0];
+	    }else return 0;
+	  }
+*/
 
     /**
      * Store a newly created resource in storage.
@@ -89,39 +101,79 @@ class UploadDController extends Controller
             }
 
         }elseif ($nameF=='DHIS2'){
-            $nome='DHIS2';
+            $nome='DHIS2';    
 
              if (($handle = fopen ( $file, 'r' )) !== FALSE) {
                  while ( ($data = fgetcsv ( $handle, 1000, ',' )) !== FALSE ) {
                      $franquia = $data [0];
                      $atividade = $data [1];
                      $idade = null;
-                     $total = 0;
+                     //$total = (int)$data [2]+(int)$data [3]+(int)$data [4];
+                     
+                     if (preg_match('/\d{4,}/', $data [0])) {
+		       preg_match('/\d{4,}/', $data [0], $result, PREG_OFFSET_CAPTURE); 
+		       //print_r($result);
+		       $franquia_id = $result[0][0];
+		    }else $franquia_id = 0;
+
+                     //$franquia_id = getFranquiaID($data [0]);
 
                      if ((int)$data [2]>0) {
                          $idade = '<=19anos';
                          $total = (int)$data [2];
-                     }elseif ((int)$data [3]>0){
+                         
+                         $csv_dhis2 = new DHIS2();
+                         $csv_dhis2->data_DQA = $data_DQA;
+                         $csv_dhis2->data_inicio = $data_inicio;
+                         $csv_dhis2->data_Fim = $data_Fim;
+                         $csv_dhis2->franquia = $franquia;
+                         $csv_dhis2->atividade = $atividade;
+                         $csv_dhis2->idade = $idade;
+                         $csv_dhis2->total = $total;
+                         $csv_dhis2->user_id = $user_id;
+                         $csv_dhis2->franquia_id = $franquia_id;
+                         $dd = $csv_dhis2->save ();
+                     }
+                     if ((int)$data [3]>0){
                          $idade = '20-24anos';
                          $total = (int)$data [3];
-                     }elseif ((int)$data [4]>0){
+                         
+                         $csv_dhis2 = new DHIS2();
+                         $csv_dhis2->data_DQA = $data_DQA;
+                         $csv_dhis2->data_inicio = $data_inicio;
+                         $csv_dhis2->data_Fim = $data_Fim;
+                         $csv_dhis2->franquia = $franquia;
+                         $csv_dhis2->atividade = $atividade;
+                         $csv_dhis2->idade = $idade;
+                         $csv_dhis2->total = $total;
+                         $csv_dhis2->user_id = $user_id;
+                         $csv_dhis2->franquia_id = $franquia_id;
+                         $dd = $csv_dhis2->save ();
+                     }
+                     if ((int)$data [4]>0){
                          $idade = '>=25anos';
                          $total = (int)$data [4];
-                     }else{
+                        
+                         $csv_dhis2 = new DHIS2();
+                         $csv_dhis2->data_DQA = $data_DQA;
+                         $csv_dhis2->data_inicio = $data_inicio;
+                         $csv_dhis2->data_Fim = $data_Fim;
+                         $csv_dhis2->franquia = $franquia;
+                         $csv_dhis2->atividade = $atividade;
+                         $csv_dhis2->idade = $idade;
+                         $csv_dhis2->total = $total;
+                         $csv_dhis2->user_id = $user_id;
+                         $csv_dhis2->franquia_id = $franquia_id;
+                         $dd = $csv_dhis2->save ();
+                     }
+                     
+                   /*  
+                    if(){
                          $idade = 'N/A';
                          $total = 0;
                      }
+                     */
 
-                     $csv_dhis2 = new DHIS2();
-                     $csv_dhis2->data_DQA = $data_DQA;
-                     $csv_dhis2->data_inicio = $data_inicio;
-                     $csv_dhis2->data_Fim = $data_Fim;
-                     $csv_dhis2->franquia = $franquia;
-                     $csv_dhis2->atividade = $atividade;
-                     $csv_dhis2->idade = $idade;
-                     $csv_dhis2->total = $total;
-                     $csv_dhis2->user_id = $user_id;
-                     $dd = $csv_dhis2->save ();
                      $linhas++;
                  }
                  fclose ( $handle );
@@ -132,6 +184,7 @@ class UploadDController extends Controller
 
         return redirect()->route('upload-db.index')->with('message', "Carregamento da BD $nome efectuada com sucesso com sucesso! \n# Tolatl de linhas $linhas");
     }
+    
 
     /**
      * @param Request $request
